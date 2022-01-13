@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- INI: instyle -->
+<style>
+    td
+    {border-left:1px solid black;
+    border-top:1px solid black;}
+    table
+    {border-right:1px solid black;
+    border-bottom:1px solid black;}
+
+        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
+
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        */
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: instyle -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Web (Concepto) -by Erick Escamilla C. (2010067)-.</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- logo, menú de navegación, redes sociales... -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <img width=64 src="/assets/images/navigation/home_icon.png" alt="Home logo" />
+                    </a>
+                </li>
+                
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/arquitecturas/arquitecturas-menu.html">Arquitecturas</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <main>
+        <section>
+            <h1 id="web-system-concept">Sistemas Web</h1>
+
+            <p>El sistema de información web, o sistema de información basado en la web, es un sistema de información que utiliza las tecnologías web de Internet para ofrecer información y servicios, a los usuarios o a otros sistemas de información/aplicaciones. Se trata de un sistema de software cuyo objetivo principal es publicar y mantener datos utilizando principios basados en el hipertexto.</p>
+
+            <!-- web_system_arch.png -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/web_system_arch.png" alt="">
+            </div>
+            
+            <h2>Arquitectura de los sistemas basados en la web</h2>
+            <h3>Arquitecturas cliente-servidor y web de 2 niveles</h3>
+
+            <p>Normalmente, cuando se navega por Internet, se utiliza un navegador web como Internet Explorer o Mozilla Firefox. El ordenador que ejecuta un navegador se llama cliente, mientras que la máquina que proporciona las páginas web se llama servidor.</p>
+
+            <p>Cuando usted se conecta a un proveedor de servicios de Internet (ISP), por ejemplo, Blue Yonder o Aol, su ordenador establece una conexión de red con un servidor web. En esta situación, su ordenador es en efecto un cliente, que está conectado a un servidor web del ISP. El servidor web, como su nombre indica, sirve a su navegador páginas web (por ejemplo, páginas HTML, ASPX, JSP, etc.).</p>
+
+            <p>Este sencillo escenario, en el que el servidor web está conectado a uno o varios clientes, se conoce como modelo de arquitectura de 2 niveles.</p>
+
+            <p>La figura B muestra cómo se accede a las páginas web a través de un navegador, utilizando una arquitectura de 2 niveles.</p>
+
+            <!-- figure_B_2_tier_arch.png -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/figure_B_2_tier_arch.png" alt="">
+            </div>
+            
+
+            <h3>Arquitecturas de 3 niveles</h3>
+
+            <p>En general, las aplicaciones informáticas constan de tres tipos de funcionalidades distintas y diferenciadas.</p>
+
+            <!-- 3_tier_arch_img.png -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/3_tier_arch_img.png" alt="">
+            </div>
+            
+            <ul>
+                <li>Servicios de presentación: Se manifiestan en forma de visualización de información y facilidades para la introducción de datos por parte del usuario.  Por lo general, es el front-end para la interacción con el usuario.  Por ejemplo, el inicio de sesión requiere una interacción en forma de recogida de información sobre el nombre de usuario y la contraseña mediante un formulario HTML.</li>
+                <li>Lógica funcional:  Toda aplicación incluye algún tipo de procesamiento de datos y esto también puede implicar la interactividad con la base de datos.  Por ejemplo, la autenticación de usuarios requiere que la unidad lógica lea las combinaciones de nombre de usuario y contraseña de una base de datos y las compare hasta llegar a una buena comparación (con suerte).</li>
+                <li>Gestión de datos:  Los datos, su almacenamiento, inserción y recuperación, su gestión y alteración son fundamentales para las aplicaciones informáticas.  Por ejemplo, un sistema de gestión de bases de datos (DBMS) es necesario para la gestión de los nombres de usuario y las contraseñas asociadas, sus propietarios, etc.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <!-- **Posible uso de: [<iframe>] -->
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+
+</body>
+
+</html>

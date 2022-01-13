@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<!-- INI: instyle -->
+<style>
+    td
+    {border-left:1px solid black;
+    border-top:1px solid black;}
+    table
+    {border-right:1px solid black;
+    border-bottom:1px solid black;}
+
+        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
+
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        */
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: instyle -->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo HTTPS (por Erick Escamilla C. -2010067-)</title>
+</head>
+<body>
+
+    <header>
+        <!-- logo, menú de navegación, redes sociales... -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <img width=64 src="/assets/images/navigation/home_icon.png" alt="Home logo" />
+                    </a>
+                </li>
+                
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/arquitecturas/arquitecturas-menu.html">Arquitecturas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1 id="protocolo-https">HTTPS</h1>
+    
+            <p>El protocolo de transferencia de hipertexto seguro (HTTPS) es la versión segura de HTTP, que es el principal protocolo utilizado para enviar datos entre un navegador web y un sitio web. HTTPS está encriptado para aumentar la seguridad de la transferencia de datos. Esto es especialmente importante cuando los usuarios transmiten datos sensibles, como al iniciar sesión en una cuenta bancaria, un servicio de correo electrónico o un proveedor de seguros médicos.</p>
+
+            <!-- Centrar imagen con [instyle] -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/https_img.png" alt="">
+            </div>
+
+            <p>Cualquier sitio web, especialmente los que requieren credenciales de inicio de sesión, debe utilizar HTTPS. En los navegadores modernos, como Chrome, los sitios web que no utilizan HTTPS están marcados de forma diferente a los que sí lo hacen. Busque un candado verde en la barra de URL para indicar que la página web es segura. Los navegadores web se toman en serio el HTTPS; Google Chrome y otros navegadores marcan todos los sitios web que no utilizan HTTPS como no seguros.</p>
+        </section>
+    </main>
+
+    <footer>
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<!-- INI: instyle -->
+<style>
+    td
+    {border-left:1px solid black;
+    border-top:1px solid black;}
+    table
+    {border-right:1px solid black;
+    border-bottom:1px solid black;}
+
+        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
+
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        */
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: instyle -->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL: concepto (por Erick Escamilla C. -2010067- )</title>
+</head>
+<body>
+
+    <header>
+        <!-- logo, menú de navegación, redes sociales... -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <img width=64 src="/assets/images/navigation/home_icon.png" alt="Home logo" />
+                    </a>
+                </li>
+                
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/arquitecturas/arquitecturas-menu.html">Arquitecturas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1 id="url-concept">URL</h1>
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+    
+            <p>Junto con el Hipertexto y HTTP, las URL son uno de los conceptos claves de la Web. Es el mecanismo usado por los navegadores para obtener cualquier recurso publicado en la web.</p>
+
+            <p>URL significa Uniform Resource Locator (Localizador de Recursos Uniforme). Una URL no es más que una direccion que es dada a un recurso único en la Web. En teoria, cada URL valida apunta a un único recurso. Dichos recursos pueden ser páginas HTML, documentos CSS, imagenes, etc. En la pr&aacute;ctica, hay algunas excepciones, siendo la más común una URL apuntando a un recurso que ya no existe o que ha sido movido. Como el recurso representado por la URL y la URL en si son manejadas por el servidor Web, depende del dueño del servidor web manejar ese recurso y su URL asociada adecuadamente.</p>
+
+            <h2 id="url-anatomy">Anatomía de una URL</h2>
+
+            <p>Aquí hay algunos ejemplos de URL:</p>
+
+            <!-- Centrar imagen con [instyle] -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/ejemplos_URL.png" alt="">
+            </div>
+
+            <!-- inserte imagen de ejemplo aquí -->
+
+            <p>Cualquiera de esas URL se puede escribir en la barra de direcciones de su navegador para indicarle que cargue la página (recurso) asociada.</p>
+
+            <p>Una URL está compuesta de diferentes partes, algunas obligatorias y otras opcionales. Veamos las partes más importantes usando la siguiente URL:</p>
+
+            <!-- url_protocolo.png -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/url_protocolo.png" alt="">
+            </div>
+            
+            <p>http es el protocolo. La primera parte de la URL indica qué protocolo debe usar el navegador. Un protocolo es un método establecido para intercambiar o transferir datos alrededor de una red informática. Por lo general, para sitios web es el protocolo HTTP o su versión segura, HTTPS. La Web requiere uno de estos dos, pero los navegadores también saben cómo manejar otros protocolos como mailto: (para abrir un cliente de correo) o ftp: para manejar la transferencia de archivos, así que no se sorprenda si ve tales protocolos.</p>
+
+            <!-- url_nombre_dominio.png -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/url_nombre_dominio.png" alt="">
+            </div>
+            
+            <p>www.example.com es el nombre de dominio. Indica qué servidor web se solicita. Alternativamente, es posible usar directamente un dirección IP, pero debido a que es menos conveniente, no se usa con frecuencia en la Web.</p>
+
+            <!-- url_puerto.png -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/url_puerto.png" alt="">
+            </div>
+
+            <p>:80 es el puerto. Indica la "puerta" técnica utilizada para acceder a los recursos en el servidor web. Por lo general, se omite si el servidor web utiliza los puertos estándar del protocolo HTTP (80 para HTTP y 443 para HTTPS) para otorgar acceso a sus recursos. De lo contrario es obligatorio.</p>
+
+            <!-- url_ruta_al_archivo.png -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/url_ruta_al_archivo.png" alt="">
+            </div>
+            
+            <p> <em>/path/to/myfile.html</em> es la ruta al recurso en el servidor web. En los primeros días de la Web, una ruta como esta representaba la ubicación de un archivo físico en el servidor web. Hoy en día, es principalmente una abstracción manejada por servidores web sin ninguna realidad física.</p>
+        </section>
+    </main>
+
+    <footer>
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+
+</body>
+</html>

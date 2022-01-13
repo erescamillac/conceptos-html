@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<!-- INI: instyle -->
+<style>
+    td
+    {border-left:1px solid black;
+    border-top:1px solid black;}
+    table
+    {border-right:1px solid black;
+    border-bottom:1px solid black;}
+
+        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
+
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        */
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: instyle -->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipervínculo (por Erick Escamilla C. -2010067-).</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- logo, menú de navegación, redes sociales... -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <img width=64 src="/assets/images/navigation/home_icon.png" alt="Home logo" />
+                    </a>
+                </li>
+                
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/arquitecturas/arquitecturas-menu.html">Arquitecturas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="hyperlink-concept">Hiperv&iacute;nculo</h1>
+
+        <p>Un hipervínculo es un elemento de un documento HTML que enlaza con otra parte del documento o con otro documento. En las páginas web, los hipervínculos suelen ser de color púrpura o azul y a veces están subrayados.</p>
+
+        <!-- .png -->
+
+        <h2>Elemento HTML Anchor &#60;a&#62; </h2>
+
+        <p>El Elemento HTML Anchor &#60;a&#62; crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL.</p>
+
+        <!-- demo_anchor_tag.png -->
+        <div class="imgbox">
+            <img class="center-fit" src="/assets/images/demo_anchor_tag.png" alt="">
+        </div>
+        
+    </main>
+
+    <footer>
+        <!-- **Posible uso de: [<iframe>] -->
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+
+</body>
+
+</html>

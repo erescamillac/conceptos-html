@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- INI: instyle -->
+<style>
+    td
+    {border-left:2px solid black;
+    border-top:2px solid black;}
+    table
+    {border-right:2px solid black;
+    border-bottom:2px solid black;}
+
+        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
+
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        */
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: instyle -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicaciones Web (Concepto) -por Erick Escamilla C. (2010067)-.</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- logo, menú de navegación, redes sociales... -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <img width=64 src="/assets/images/navigation/home_icon.png" alt="Home logo" />
+                    </a>
+                </li>
+                
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/arquitecturas/arquitecturas-menu.html">Arquitecturas</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <main>
+        <section>
+            <h1 id="web-app-concept">Aplicaciones Web</h1>
+
+            <p>Una aplicación web es un software o programa al que se puede acceder mediante cualquier navegador web. Su frontend suele crearse utilizando lenguajes como HTML, CSS, Javascript, que son soportados por los principales navegadores. Mientras que el backend puede utilizar cualquier pila de programación como LAMP, MEAN, etc. A diferencia de las aplicaciones móviles, no existe un SDK específico para desarrollar aplicaciones web.</p>
+
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/web_app.jpg" alt="">
+            </div>
+            
+
+            <p>Las aplicaciones web cobraron protagonismo con la llegada del movimiento del software como servicio (SaaS).</p>
+
+            <h2>Ventajas de las aplicaciones Web</h2>
+
+            <ol>
+                <li>En comparación con las aplicaciones de escritorio, las aplicaciones web son más fáciles de mantener, ya que utilizan el mismo código en toda la aplicación. No hay problemas de compatibilidad.</li>
+                <li>Las aplicaciones web pueden utilizarse en cualquier plataforma: Windows, Linux, Mac... ya que todas son compatibles con los navegadores modernos.</li>
+                <li>La aprobación de la tienda de aplicaciones móviles no es necesaria en las aplicaciones web.</li>
+                <li>Liberado en cualquier momento y en cualquier forma. No es necesario recordar a los usuarios que actualicen sus aplicaciones.</li>
+                <li>Puedes acceder a estas aplicaciones web las 24 horas del día y los 365 días del año desde cualquier PC.</li>
+                <li>Puede utilizar el ordenador o su dispositivo móvil para acceder a los datos necesarios.</li>
+                <li>Las aplicaciones web son una opción rentable para cualquier organización. Las licencias de asiento para el software de escritorio son caras, mientras que los SasS, por lo general, son de pago.</li>
+                <li>Las aplicaciones basadas en la web son aplicaciones habilitadas para Internet a las que se accede a través del navegador web del móvil. Por lo tanto, no es necesario descargarlas ni instalarlas.</li>
+            </ol>
+
+            <h2>Aplicación web versus sitio web</h2>
+
+            <p>A continuación se indican las principales diferencias entre una aplicación web y un sitio web:</p>
+
+            <table cellpadding="0" cellspacing="0">
+                <thead>
+                    <caption><h4>Aplicación Web VS. Sitio web</h4></caption>
+                    <tr>
+                        <th width="100">Par&aacute;metro</th>
+                        <th width="320">Aplicaci&oacute;n web</th>
+                        <th width="340">Sitio web</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Creado para</td>
+                        <td>Una aplicación web está diseñada para interactuar con el usuario final</td>
+                        <td>Un sitio web se compone principalmente de contenido estático. Es de acceso público para todos los visitantes.</td>
+                    </tr>
+                    <tr>
+                        <td>Interacción con el usuario</td>
+                        <td>En una aplicación web, el usuario no sólo lee el contenido de la página, sino que también manipula los datos restringidos.</td>
+                        <td>Un sitio web ofrece contenidos visuales y de texto que el usuario puede ver y leer, pero que no afectan a su funcionamiento.</td>
+                    </tr>
+                    <tr>
+                        <td>Autenticación</td>
+                        <td>Las aplicaciones web necesitan autenticación, ya que ofrecen un abanico de opciones mucho más amplio que los sitios web.</td>
+                        <td>La autentificación no es obligatoria para los sitios web informativos. El usuario puede pedir registrarse para obtener una actualización periódica o para acceder a opciones adicionales. Estas funciones no están disponibles para los visitantes del sitio web no registrados.</td>
+                    </tr>
+                    <tr>
+                        <td>Tarea y complejidad</td>
+                        <td>Las funciones de las aplicaciones web son bastante más altas y complejas en comparación con un sitio web.</td>
+                        <td>El sitio web muestra los datos y la información recogidos en una página específica.</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+
+        </section>
+    </main>
+
+    <footer>
+         <!-- **Posible uso de: [<iframe>] -->
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+
+</body>
+
+</html>

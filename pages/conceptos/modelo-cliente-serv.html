@@ -1,0 +1,96 @@
+<!-- Establece el tipo de estandar del documento (HTML5)-->
+<!DOCTYPE html>
+
+<!-- INI: inline style -->
+<style>
+    td
+    {border-left:1px solid black;
+    border-top:1px solid black;}
+    table
+    {border-right:1px solid black;
+    border-bottom:1px solid black;}
+
+        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        */
+        
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN : inline style -->
+
+<!-- Inicio del documento HTML -->
+<!-- El atributo [lang="es"] establece que el contenido del documento HTML se encuentra en Espaniol-->
+<html lang="es">
+<!-- La etiqueta HEAD contiene un conjunto de metadatos acerca del documento -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo (texto) mostrado en la pestania del navegador Web -->
+    <title>Modelo cliente-servidor (por Erick Escamilla C. -2010067-)</title>
+</head>
+
+<!-- Representa el contenido visible de la pagina Web -->
+<body>
+    <!-- <header> </header> <main> </main> <footer> </footer> -->
+    <header>
+        <!-- logo, menú de navegación, redes sociales... -->
+        <a href="/index.html">
+            <img width=64 src="/assets/images/navigation/home_icon.png" alt="Home logo" />
+        </a>
+        <a href="/index.html">Home</a>
+        <a href="/pages/arquitecturas/arquitecturas-menu.html">Arquitecturas</a>
+    </header>
+    <!-- Sección principal de la página -->
+    <main>
+        <section>
+            <h1 id="modelo-c-s-header">Modelo cliente-servidor</h1>
+            
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+            
+
+            <p>El modelo <em>cliente-servidor</em>  es una estructura de aplicación distribuida que divide las tareas o la carga de trabajo entre los proveedores de un recurso o servicio, llamados <strong>servidores</strong>, y los solicitantes del servicio, llamados clientes. En la arquitectura cliente-servidor, cuando el ordenador cliente envía una solicitud de datos al servidor a través de Internet, el servidor acepta el proceso solicitado y entrega los paquetes de datos solicitados al cliente. Los clientes no comparten ninguno de sus recursos. Ejemplos del modelo cliente-servidor son el correo electrónico, la World Wide Web, etc.</p>
+
+            <h2 id="funcionamiento-c-s">¿Cómo funciona el modelo cliente-servidor?</h2>
+            <p>En este artículo vamos a sumergirnos en el modelo Cliente-Servidor y echar un vistazo a cómo funciona Internet a través de los navegadores web. Este artículo nos ayudará a tener una base sólida de la WEB y nos ayudará a trabajar con las tecnologías WEB con facilidad.</p>
+
+            <ul>
+                <li><p> <strong>Cliente:</strong> cuando hablamos de la palabra cliente, significa hablar de una persona o una organización que utiliza un servicio concreto. Del mismo modo, en el mundo digital, un cliente es un ordenador (host) capaz de recibir información o utilizar un servicio concreto de los proveedores de servicios (servidores).</p>
+                </li>
+                <li> <p> <strong>Servidores:</strong> del mismo modo, cuando hablamos de la palabra Servidores, significa una persona o medio que sirve algo. En el mundo digital, un servidor es un ordenador remoto que proporciona información (datos) o acceso a determinados servicios.</p></li>
+            </ul>
+
+            <!-- CENTRAR imagen con [inline-style] -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/cliente_servidor_img.png" alt="">
+            </div>
+
+            <p>Así que, básicamente, el cliente solicita algo y el servidor lo sirve siempre que el recurso (o servicio) requerido esté disponible.</p>
+
+            <!-- target="_blank" :: abrir enlace en una NUEVA PESTAÑA del navegador -->
+            <p>Para obtener más información acerca del Modelo cliente-servidor consulte: <a href="https://www.ibm.com/docs/en/cics-ts/6.1_beta?topic=programs-clientserver-model" target="_blank">The client/server model</a>  </p>
+        </section>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+</body>
+
+</html>
+<!-- FIN del documento HTML -->

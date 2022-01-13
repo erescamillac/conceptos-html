@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- INI: instyle -->
+<style>
+    td
+    {border-left:1px solid black;
+    border-top:1px solid black;}
+    table
+    {border-right:1px solid black;
+    border-bottom:1px solid black;}
+
+        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
+
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        */
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: instyle -->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo FTP (por Erick Escamilla C. -2010067-).</title>
+</head>
+
+<body>
+
+    <header>
+         <!-- logo, menú de navegación, redes sociales... -->
+         <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <img width=64 src="/assets/images/navigation/home_icon.png" alt="Home logo" />
+                    </a>
+                </li>
+                
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/arquitecturas/arquitecturas-menu.html">Arquitecturas</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <main>
+        <section>
+            <h1 id="ftp-protocol">FTP</h1>
+
+            <p>El FTP (Protocolo de Transferencia de Archivos) se utiliza para comunicar y transferir archivos entre ordenadores en una red TCP/IP (Protocolo de Control de Transmisión/Protocolo de Internet), también conocida como Internet. Los usuarios, a los que se les ha concedido acceso, pueden recibir y transferir archivos en el servidor del Protocolo de Transferencia de Archivos (también conocido como host/sitio FTP).</p>
+
+            <h2>¿Cómo funciona el FTP?</h2>
+
+            <p>La conexión FTP necesita que dos partes se establezcan y se comuniquen en la red. Para ello, los usuarios necesitan tener permiso proporcionando credenciales al servidor FTP. Algunos servidores FTP públicos pueden no requerir credenciales para acceder a sus archivos. Esta práctica es común en el llamado FTP anónimo.</p>
+
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/ftp_imagen.jpg" alt="">
+            </div>
+            <!-- ftp_imagen.jpg -->
+            
+            <p>Hay dos canales de comunicación distintos mientras se establece una conexión FTP. El primero se llama canal de comandos, donde se inicia la instrucción y la respuesta. El otro se llama canal de datos, donde se produce la distribución de datos.</p>
+
+            <p>Para obtener o transferir un archivo, un usuario autorizado utilizará el protocolo para solicitar la creación de cambios en el servidor. A cambio, el servidor concederá ese acceso. Esta sesión se conoce como el modo de conexión activa.</p>
+
+            <p>La distribución en modo activo puede tener un problema si un cortafuegos protege la máquina del usuario. El cortafuegos no suele permitir ninguna sesión no autorizada de una parte externa.</p>
+
+            <p>El modo pasivo se utiliza si se produce ese problema. En este modo, el usuario establece tanto el canal de comandos como el de datos. Este modo pide al servidor que escuche en lugar de intentar crear una conexión con el usuario.</p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- **Posible uso de: [<iframe>] -->
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!-- INI: instyle -->
+<style>
+    td
+    {border-left:1px solid black;
+    border-top:1px solid black;}
+    table
+    {border-right:1px solid black;
+    border-bottom:1px solid black;}
+
+        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
+
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        */
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: instyle -->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El protocolo HTTP (by Erick Escamilla C. -2010067-)</title>
+</head>
+<body>
+    <!-- <header> </header> <main> </main> <footer> </footer> -->
+    <header>
+        <!-- logo, menú de navegación, redes sociales... -->
+        <a href="/index.html">
+            <img width=64 src="/assets/images/navigation/home_icon.png" alt="Home logo" />
+        </a>
+        <a href="/index.html">Home</a>
+        <a href="/pages/arquitecturas/arquitecturas-menu.html">Arquitecturas</a>
+    </header>
+
+    <main>
+        <section>
+            <h1 id="protocolo-http">HTTP</h1>
+
+            <p>HTTP es un protocolo para la obtención de recursos, como los documentos HTML. Es la base de cualquier intercambio de datos en la Web y es un protocolo cliente-servidor, lo que significa que las solicitudes son iniciadas por el destinatario, normalmente el navegador web. Un documento completo se reconstruye a partir de los diferentes subdocumentos obtenidos, por ejemplo, el texto, la descripción del diseño, las imágenes, los vídeos, los scripts, etc.</p>
+
+            <p>Los clientes y los servidores se comunican mediante el intercambio de mensajes individuales (en lugar de un flujo de datos). Los mensajes enviados por el cliente, normalmente un navegador web, se denominan peticiones y los mensajes enviados por el servidor se denominan respuestas.</p>
+
+            <!-- CENTRAR imagen con [inline-style] -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/protocolo_http.png" alt="">
+            </div>
+            
+            <p>Diseñado a principios de los años 90, HTTP es un protocolo extensible que ha evolucionado con el tiempo. Es un protocolo de capa de aplicación que se envía a través de TCP, o de una conexión TCP cifrada con TLS, aunque en teoría podría utilizarse cualquier protocolo de transporte fiable. Debido a su extensibilidad, se utiliza no sólo para obtener documentos de hipertexto, sino también imágenes y vídeos o para enviar contenido a los servidores, como ocurre con los resultados de los formularios HTML. HTTP también puede utilizarse para obtener partes de documentos y actualizar las páginas web bajo demanda.</p>
+
+            <!-- CENTRAR imagen con [inline-style] -->
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/http_structure.png" alt="">
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+
+</body>
+</html>
