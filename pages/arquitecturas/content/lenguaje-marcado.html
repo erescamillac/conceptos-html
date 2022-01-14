@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- INI: inlinestyle -->
+<style>
+    td
+    {border-left:1px solid black;
+    border-top:1px solid black;}
+    table
+    {border-right:1px solid black;
+    border-bottom:1px solid black;}
+
+        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
+
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        */
+        
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: inlinestyle -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguaje de marcado (por Erick Escamilla C. -2010067-).</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/pages/arquitecturas/arquitecturas-menu.html">
+                        <img width=64 src="/assets/images/navigation/back_icon.png" alt="Regresar">
+                    </a>
+                </li>
+                <li><a href="/index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Lenguaje de marcado (XML | HTML).</h1>
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+
+            <p>Aunque suene a un concepto publicitario, cuando hablamos de lenguaje de marca en programación web, estamos hablando de algo bien distinto. Con marca, nos estamos refiriendo a la forma de codificar un documento o web. Es una forma de definir la estructura del texto o su presentación a través de etiquetas o marcas. Este tipo de lenguajes son los que entienden los navegadores. HTML y XML, son los más conocidos.</p>
+
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/lenguaje_marcado.jpg" alt="Img lenguaje de marcado">
+            </div>
+            
+            <p>A diferencia de los lenguajes de programación, el lenguaje de marca no tiene funciones aritméticas o variables.</p>
+
+            <h2>El HTML, el lenguaje de marca más conocido</h2>
+
+            <p>Hyper Text Markup Language es el lenguaje de marcado de hipertexto. Se utiliza en las páginas y sitios web y fue creado por el padre de la web, Tim Berners Lee en 1989.</p>
+
+            <p>El lenguaje HTML es el encargado de definir los contenidos de un sitio web de forma textual y estructurada. Dicho de otra forma, es el encargado de decirle al navegador web cómo debe visualizarse el sitio web. Si el título está centrado, en negrita o si tiene un enlaces, por ejemplo, son elementos del marcado en HTML.</p>
+
+
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/html_img.jpg" alt="HTML img">
+            </div>
+
+            <p>Las ventajas de utilizar el HTML son:</p>
+
+            <ul>
+                <li>
+                    <p>Cualquier modificación del HTML puede hacerse desde un editor de texto. No es necesario ningún software o conocimiento de programa alguno.</p>
+                </li>
+                <li>
+                    <p>Puede integrar diferentes tipos de lenguaje de marcas, XML por ejemplo. Cada lenguaje define sus etiquetas para representar la información de una forma u otra.</p>
+                </li>
+            </ul>
+
+            <h2>El lenguaje XML</h2>
+
+            <p>A diferencia del HTML, el lenguaje XML o Extensible Markup Language, etiqueta toda información, entre dos marcas, pero está separado el contenido de la presentación.</p>
+
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/xml_img.png" alt="XML img">
+            </div>
+
+            <p>El XML es un lenguaje estándar, independiente, no forma parte de ninguna empresa. Es la forma segura y fiable de intercambiar información entre diferentes programas.</p>
+
+        </section>
+    </main>
+
+    <footer>
+         <!-- TODO: sustituir por uso de <iframe> -->
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+</body>
+</html>

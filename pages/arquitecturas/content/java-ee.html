@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- INI: instyle -->
+<style>
+    td
+    {border-left:1px solid black;
+    border-top:1px solid black;}
+    table
+    {border-right:1px solid black;
+    border-bottom:1px solid black;}
+
+        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
+
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        */
+        
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: instyle -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java EE (por Erick Escamilla C. -2010067-).</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../arquitecturas-menu.html">
+                        <img src="/assets/images/navigation/back_icon.png" alt="Regresar">
+                    </a>
+                </li>
+                <li><a href="/index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Java EE</h1>
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+
+            <p> <strong>Java Platform, Enterprise Edition (Java EE)</strong> es el estándar del software empresarial impulsado por la comunidad. Java EE se desarrolla mediante el Proceso de la Comunidad Java, con contribuciones de expertos del sector, organizaciones comerciales y de código abierto, grupos de usuarios de Java e innumerables personas. Cada versión integra nuevas funciones que se ajustan a las necesidades del sector, mejora la portabilidad de las aplicaciones y aumenta la productividad de los desarrolladores.</p>
+
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/java_ee_img.png" alt="Java EE img">
+            </div>
+            
+            <p>Java EE 8 sigue mejorando las API y los modelos de programación necesarios para las aplicaciones actuales y añade funciones solicitadas por nuestra comunidad mundial. Esta versión moderniza la compatibilidad con muchos estándares del sector y continúa la simplificación de las API preparadas para la empresa. Las mejoras incluyen:</p>
+
+            <ul>
+                <li>API Java Servlet 4.0 con soporte HTTP/2</li>
+                <li>Compatibilidad mejorada con JSON, incluida una nueva API de enlace JSON</li>
+                <li>Una nueva API de cliente reactivo REST</li>
+                <li>Eventos CDI asíncronos</li>
+                <li>Una nueva API de seguridad portátil</li>
+                <li>Soporte de eventos enviados por el servidor (del lado del cliente y del servidor)</li>
+                <li>Soporte para las nuevas capacidades de Java SE 8 (por ejemplo, API de fecha y hora, API de flujos, mejoras en las anotaciones)</li>
+            </ul>
+
+        </section>
+    </main>
+
+    <footer>
+        <!-- TODO: sustituir por uso de <iframe> -->
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+
+</body>
+</html>

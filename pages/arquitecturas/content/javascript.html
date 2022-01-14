@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- INI: instyle -->
+<style>
+    td
+    {border-left:1px solid black;
+    border-top:1px solid black;}
+    table
+    {border-right:1px solid black;
+    border-bottom:1px solid black;}
+
+        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
+
+        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        */
+        
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: instyle -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (por Erick Escamilla C. -2010067-)</title>
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/pages/arquitecturas/arquitecturas-menu.html">
+                        <img width=64 src="/assets/images/navigation/back_icon.png" alt="Regresar">
+                    </a>
+                </li>
+                <li><a href="/index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <main>
+        <section>
+            <h1>JavaScript</h1>
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+
+            <p>JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado. Es la tercera capa del pastel de las tecnologías web estándar, dos de las cuales (HTML y CSS) hemos cubierto con mucho más detalle en otras partes del Área de aprendizaje.</p>
+
+            <div class="imgbox">
+                <img class="center-fit" src="/assets/images/diagrama_javascript.png" alt="Diagrama JavaScript">
+            </div>
+            
+            <ul>
+                <li>
+                    <p> <strong>HTML</strong> es el lenguaje de marcado que usamos para estructurar y dar significado a nuestro contenido web, por ejemplo, definiendo párrafos, encabezados y tablas de datos, o insertando imágenes y videos en la página.</p>
+                </li>
+                <li>
+                    <p> <strong>CSS</strong> es un lenguaje de reglas de estilo que usamos para aplicar estilo a nuestro contenido HTML, por ejemplo, establecer colores de fondo y tipos de letra, y distribuir nuestro contenido en múltiples columnas. </p>
+                </li>
+                <li>
+                    <p> <strong>JavaScript</strong> es un lenguaje de secuencias de comandos que te permite crear contenido de actualización dinámica, controlar multimedia, animar imágenes y prácticamente todo lo demás. (Está bien, no todo, pero es sorprendente lo que puedes lograr con unas pocas líneas de código JavaScript).</p>
+                </li>
+            </ul>
+
+        </section>
+    </main>
+
+    <footer>
+        <!-- TODO: sustituir por uso de <iframe> -->
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+
+</body>
+
+</html>
