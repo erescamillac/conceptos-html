@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <!-- INI: instyle -->
 <style>
-    td
-    {border-left:2px solid black;
-    border-top:2px solid black;}
-    table
-    {border-right:2px solid black;
-    border-bottom:2px solid black;}
-
         /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
 
         /*
@@ -34,6 +27,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/eec-styles.css">
     <title>Aplicaciones Web (Concepto) -por Erick Escamilla C. (2010067)-.</title>
 </head>
 
@@ -86,16 +80,25 @@
 
             <p>A continuación se indican las principales diferencias entre una aplicación web y un sitio web:</p>
 
-            <table cellpadding="0" cellspacing="0">
+            <table>
+                <!-- <caption> :: "Título" de la tabla -->
+                <caption>Aplicación Web VS. Sitio web</caption>
+            
+
+                <colgroup>
+                    <col> <!-- 'Columna 1' -->
+                    <col> <!-- 'Columna 2' -->
+                </colgroup>
+                <!-- <thead> :: Fila de encabezados para la tabla -->
                 <thead>
-                    <caption><h4>Aplicación Web VS. Sitio web</h4></caption>
                     <tr>
-                        <th width="100">Par&aacute;metro</th>
-                        <th width="320">Aplicaci&oacute;n web</th>
-                        <th width="340">Sitio web</th>
+                        <!-- <th> :: Encabezado de 'columna' -->
+                       <th width="20%">Parámetro</th>
+                       <th width="40%">Aplcación Web</th>
+                       <th width="40%">Sitio Web</th>
                     </tr>
                 </thead>
-
+                <!-- tbody : Contenido de la tabla -->
                 <tbody>
                     <tr>
                         <td>Creado para</td>
@@ -117,8 +120,17 @@
                         <td>Las funciones de las aplicaciones web son bastante más altas y complejas en comparación con un sitio web.</td>
                         <td>El sitio web muestra los datos y la información recogidos en una página específica.</td>
                     </tr>
+               
+                    <!-- Atributos del elemento <table> / <td> / <tr>
+                        * rowspan: sirve para que una celda (td) ocupe más de una fila
+                        * colspan: sirve para que una celda (td) ocupe más de una columna
+                    -->
+                 
                 </tbody>
-                
+                <!-- tr : table row (Fila de tabla) -->
+                <!-- <tfoot> : Pie de tabla -->
+                <tfoot>
+                </tfoot>
             </table>
 
         </section>

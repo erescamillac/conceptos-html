@@ -1,0 +1,166 @@
+/*--Creado por Erick Escamilla Charco --*/
+/*
+Creado por Erick Escamilla Charco
+CSS -Requisitos MÍNIMOS SOLICITADOS- ::
+(1) Fondo -[background-image]-
+(2) Títulos -[<h1>, h2, h3, ...]-
+(3) Imágenes -[redondear esquinas de imágenes]-
+(4) Tablas - -bordes / colores-
+(5) Texto y párrafo -fuente, tamaño color-
+*/
+
+
+*{
+    color: white;
+}
+
+
+/*
+Creado por Erick Escamilla Charco
+(1) Fondo -[background-image]-
+*/
+body{
+    background-color: darkslateblue;
+    background-image: url(/assets/backgrounds/arkham-wallp-png.png);
+}
+
+/* (2) Títulos -[<h1>, h2, h3, ...]- */
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+    font-style: italic;
+    font-family: monospace;
+}
+
+h1{
+    font-size: 3.2rem;
+}
+
+h2{
+    font-size: 2.3rem;
+}
+
+h3{
+    font-size: 1.7rem;
+}
+
+h4{
+    font-size: 1.4rem;
+}
+
+h5{
+    font-size: 1.1rem;
+}
+
+h6{
+    font-size: 0.9rem;
+}
+
+h4, h5, h6{
+    font-style: normal;
+}
+
+/* 
+(3) Imágenes -[redondear esquinas de imágenes]- 
+-- poner bordes a imagenes...
+*/
+/*
+.img-container{
+    border: 3px solid;
+}
+*/
+
+img{
+    border-radius: 18px;
+    border: 3px solid;
+}
+
+
+/*
+(4) Tablas - -bordes / colores-
+*/
+table{
+    font-family: sans-serif;
+    border: 2px solid gray;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+caption{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+th, td{
+    border: 2px solid grey;
+    padding: .5rem;
+}
+
+
+td:first-child,
+th,
+tfoot{
+    background-color: lightsalmon;
+}
+/*--FIN: (4) : Tablas --*/
+
+/*
+    (5) Texto y párrafo -fuente, tamaño color-
+*/
+p{
+    font-size: 1rem;
+    color: rgb(227, 230, 92);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Tipos de Selectores*/
+/*
+    Selectores simples
+        - S. elementales
+            # Selector Universal -> *
+            # Selector de tipo o etiqueta -> Nombre de la etiqueta (body, h1, h2, p, etc.)
+        - S. de atributo
+            # S. de ID -> id del elemento
+            # S. de clase -> clase del elemento
+            ** otros att.
+    Selectores compuestos
+        - S. agrupados
+        - S. Combinadores
+        - Pseudoclases y pseudoelementos
+*/
+
+/*
+#id-selector
+.class-selector
+*/
+
+/* selectores de Att y [Att="valor"]*/
+
+/*
+[href]{
+    background-color: mediumorchid;
+}
+
+[href="https://google.com"]{
+    background-color: orangered;
+}
+*/
+
+/*
+ Verificar si el valor de un Att comieza con una determinada cadena
+
+[href^=color]{
+    background-color: red;
+}
+*/
+
+/*
+Seleccionar el elemento que tiene un Att [href] cuyo valor CONTENGA a la subcadena "modo" (en cualquier posición: inicio / en medio / final )
+
+[href*="modo"]{
+
+}
+*/
+
