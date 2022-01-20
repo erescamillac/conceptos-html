@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs extra (Miscelánea) -por Erick Escamilla C.-</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <h1>Inputs extra</h1>
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+
+            <form>
+                <div>
+                    <label for="color-choose">Color</label>
+                    <input id="color-chooser" type="color">
+                </div>
+                <div>
+                    <!-- [number] :: SI SE INTENTA ingresar letras el Navegador NO lo permite -->
+                    <label for="num-unidades">Número de unidades solicitadas</label>
+                    <input id="num-unidades" type="number">
+                </div>
+                <div>
+                    <label for="slider">Rango (Slider)</label>
+                    <!-- step="10" INCREMENTOS de 10 en 10 -->
+                    <input id="slider" type="range" step="10" min="0" max="30">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

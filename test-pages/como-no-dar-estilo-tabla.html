@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C&oacute;mo NO dar estilo a una tabla (por Erick Escamilla C.)</title>
+
+    <style>
+        table{
+            font-family: sans-serif;
+            border: 2px solid gray;
+            border-collapse: collapse;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        caption{
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        th, td{
+            border: 2px solid grey;
+            padding: .5rem;
+        }
+
+        tr:nth-child(4) td:nth-child(2){
+            background-color: lightseagreen;
+            letter-spacing: 90px;
+            padding-left: 50px;
+            text-transform: uppercase;
+        }
+
+        td:first-child,
+        th,
+        tfoot{
+            background-color: lightsalmon;
+        }
+
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <h1>Cómo NO dar estilo a una tabla</h1>
+            <p>por <em>Erick Escamilla C.</em></p>
+
+            <!-- Tabla -->
+            <table>
+                <!-- <caption> :: "Título" de la tabla -->
+                <caption>HORARIO DE CLASES</caption>
+            
+
+                <colgroup>
+                    <col span="5"> <!-- 'Columna 1' -->
+                    <col> <!-- 'Columna 2' -->
+                </colgroup>
+                <!-- <thead> :: Fila de encabezados para la tabla -->
+                <thead>
+                    <tr>
+                        <!-- <th> :: Encabezado de 'columna' -->
+                        <th></th>
+                        <th>L</th>
+                        <th>M</th>
+                        <th>X</th>
+                        <th>J</th>
+                        <th>V</th>
+                    </tr>
+                </thead>
+                <!-- tbody : Contenido de la tabla -->
+                <tbody>
+                    <tr>
+                        <!-- td : table data ("Celda") -->
+                        <td>08:30 - 09:30</td>
+                        <td>Matemáticas</td>
+                        <td>Matemáticas</td>
+                        <td>Sociales</td>
+                        <td>Matemáticas</td>
+                        <td>Matemáticas</td>
+                    </tr>
+                    <tr>
+                        <td>09:30 - 10:25</td>
+                        <td>Lengua</td>
+                        <td>Lengua</td>
+                        <td>Matemáticas</td>
+                        <td>Ciencias</td>
+                        <td>Lengua</td>
+                    </tr>
+                    <tr>
+                        <td>10:25 - 11:20</td>
+                        <td>Educación Física</td>
+                        <td>Ciencias</td>
+                        <td>Lengua</td>
+                        <td>Lengua</td>
+                        <td>Educación Física</td>
+                    </tr>
+                    <!-- Atributos del elemento <table> / <td> / <tr>
+                        * rowspan: sirve para que una celda (td) ocupe más de una fila
+                        * colspan: sirve para que una celda (td) ocupe más de una columna
+                    -->
+                    <tr>
+                        <td>11:20 - 11:45</td>
+                        <td colspan="5">Recreo</td>
+                    </tr>
+                    <tr>
+                        <td>11:45 - 12:40</td>
+                        <td>Inglés</td>
+                        <td>Sociales</td>
+                        <td>Inglés</td>
+                        <td>Tutoría</td>
+                        <td>Inglés</td>
+                    </tr>
+                    <tr>
+                        <td>12:40 - 13:35</td>
+                        <td>Música</td>
+                        <td>Educación Física</td>
+                        <td>Plástica</td>
+                        <td>Religión</td>
+                        <td>Música</td>
+                    </tr>
+                    <tr>
+                        <td>13:35 - 14:30</td>
+                        <td>Tecnología</td>
+                        <td>Francés</td>
+                        <td>Tecnología</td>
+                        <td>Francés</td>
+                        <td>Tecnología</td>
+                    </tr>
+                </tbody>
+                <!-- tr : table row (Fila de tabla) -->
+                <!-- <tfoot> : Pie de tabla -->
+                <tfoot>
+                    <tr>
+                        <td colspan="5">Total de asignaturas </td>
+                        <td>12</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <!-- Tabla -->
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

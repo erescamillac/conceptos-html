@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otras etiquetas de bloque (por Erick Escamilla C.)</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+
+            <!-- 
+                <address> :: Se utiliza para aportar información de CONTACTO para el article más cercano o para todo el <body>
+                <blockquote> :: Se utiliza para marcar las citas a otros autores o documentos. Se puede incluir el atributo cite para poner un enlace al documento original o fuente.
+                <pre> :: Se utiliza para tener código preformateado que necesita ser representado igual que se escribió.
+                <div> :: Se usa como DIVISIÓN del documento, semánticamente no significa nada, es un contenedor genérico que se usa generalmente para dar estilos a través de CSS o para usar algo denominado "delegación de eventos" en JavaScript
+                <hr> :: horizontal rule (regla horizontal / línea horizontal), se utiliza para decirle al navegador que se va a 'cambiar de tema' 
+            -->
+
+
+            <!-- Att [cite] NO visible al usuario; sólo información para el Navegador -->
+            <blockquote cite="https://www.entrepreneur.com/article/312598">
+                <p>
+                    Hay cosas que nunca le pregunté a mi padre. Hay preguntas que me hubiera gustado hacerle: cómo se sentía por lo que hacía su empresa (...). Me di cuenta que era parte de un sistema que no rinde cuentas.
+                </p>
+            </blockquote>
+
+            <!-- El contenido de la etiqueta [pre] se muestra en el Navegador TAL CUAL FUE ESCRITO, es decir, en este ejemplo se "respeta" el SALTO DE LÍNEA introducido en el texto sin necesidad de emplear la tag [br] -->
+            <pre>
+                Hola,
+                ¿qué tal?
+            </pre>
+
+            <!-- <div> : Contenedor genérico usado para aplicar estilos CSS o "delegación de eventos" con JavaScript -->
+            <!-- Lo SEMÁNTICAMENTE CORRECTO es que TODO el contenido de la etiqueta <div> esté relacionado 'lógicamente' de algún modo -->
+            <div id="tarjeta-id-1">
+                <h2>Nombre</h2>
+                <p>email</p>
+                <p>Descripción</p>
+            </div>
+
+            <div id="tarjeta-id-2">
+                <h2>Nombre (2)</h2>
+                <p>email (2)</p>
+                <p>Descripción (2)</p>
+            </div>
+
+            <!-- Técnicamente hablando <hr> NO tiene la finalidad de "dibujar líneas horizontales" SINO de INFORMAR al Navegador que se va a cambiar de tema -->
+            <hr>
+
+            <address>
+                Erick Escamilla C. <br>
+                Malibú 10880 <br>
+                90265 <br>
+                California
+            </address>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

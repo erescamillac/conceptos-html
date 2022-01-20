@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura básica de un formulario (por Erick Escamilla C.)</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <h1>Estructura básica de un fromulario.</h1>
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+
+            <!-- 
+                La estructura básica de un formulario se compone de 4 elementos:
+                
+                form -> es la etiqueta que ENGLOBA el Formulario
+                label -> Sirve para escribir el nombre de un Campo a rellenar
+                input -> sirve para crear un camppo que permitirá al usuario interactuar (ingresar un VALOR)
+                button -> Crea un botón que permitirá enviar el formulario
+            -->
+
+            <form>
+                <!-- El att [for] de la etiqueta LABEL sirve para asociar la etiqueta ('leyenda') a un INIPUT en particular,
+                el valor del Att [for] coincide con el ID del input. 
+                    ** Al hacer CLIC sobre el LABEL también se activa el INPUT asociado.
+                -->
+                <label for="name">Nombre</label>
+                <input id="name" type="text">
+
+                <label>
+                    Apellido
+                    <input type="text">
+                </label>
+                <button>Enviar</button>
+            </form>
+
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

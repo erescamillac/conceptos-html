@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de INPUT -Formularios HTML- (por Erick Escamilla C.)</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="/pages/arquitecturas/arquitecturas-menu.html">Arquitecturas</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!-- 
+                input type:
+                    button -> botón
+                    color: -> 'color-chooser'; se utiliza para especificar un color
+                    date: -> 'date-picker'; se utiliza para introducir una fecha
+                    datetime -> DEPRECATED (Obsoleto)
+                    datetime-local -> fecha y hora, NO funciona en Firefox
+                    email -> se utiliza para introducir un email
+                    hidden -> Campo OCULTO, puede contener valor pero NO se mostrará
+                    month -> Se utiliza para introducir un mes
+                    number -> Se utiliza para valores numéricos
+                    password -> Se utiliza para contraseñas
+                    range -> se utiliza para establecer un rango
+                    reset -> se utiliza para resetear el formulario
+                    search -> se utiliza para las barras de búsqueda
+                    submit -> se utiliza para ENVIAR el formulario
+                    tel -> se utiliza para introducir números telefónicos
+                    text -> valor por defecto (ingresar texto)
+                    time -> se utiliza para introducir una Hora
+                    url -> Se utiliza para introducir URLs
+                    week -> Se utiliza para introducir el número de semana del año
+            -->
+
+            <h1>Tipos de input (Formularios HTML)</h1>
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+
+            <form>
+                <input>
+                <!-- Comportamiento por DEFECTO: el [input] de TIPO ['button'] NO ENVÍA el formulario (y por tanto NO lo resetea)-->
+                <!-- Usualmente los INPUT de tipo ['button'] se emplean para desencadenar al tipo de funcionalidad a través de JavaScript -->
+                <input type="button" value="Realizar Acci&oacute;n JavaScript">
+                <!-- Comportameinto por DEFECTO: el elemento [button] ENVÍA el formulario y 'RESETA' la página, es decir, LIMPIA el Cuadro de texto [input] -->
+                <button>Enviar</button>
+                <input type="submit" value="ENVIAR Formulario">
+
+                <label for="fecha-nac">Fecha de Nacimiento</label>
+                <input id="fecha-nac" type="date">
+
+                <!-- EVITAR utilizar [datetime-local] YA QUE NO es soportado en TODOS los NAVEGADORES -->
+                <label for="fecha-hora-local">Fecha y Hora (local)</label>
+                <input id="fecha-hora-local" type="datetime-local">
+
+                <label for="solo-fecha">Fecha</label>
+                <input id="solo-fecha" type="date">
+
+                <label for="solo-hora">Hora</label>
+                <input id="solo-hora" type="time">
+
+                <label for="">Mes (de un a&ntilde;o espec&iacute;fico)</label>
+                <input type="month">
+
+                <!-- INPUT type [week] NO funcional en Firefox -->
+                <label for="semana-anio">Semana del a&ntilde;o (1-52)</label>
+                <input id="semana-anio" type="week">
+                
+            </form>
+
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
