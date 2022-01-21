@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/eec-styles.css">
+    <title>FTP, ejemplos. (por Erick Escamilla C. -2010067-)</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../web-apps-1-menu.html">
+                        <img width="64" src="/assets/images/navigation/back_icon.png" alt="Regresar">
+                    </a>
+                </li>
+                <li>
+                    <a href="/index.html">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>FTP, ejemplos.</h1>
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+
+            <h2>¿Qué es el FTP?</h2>
+            <p>El FTP (Protocolo de Transferencia de Archivos) se utiliza para comunicar y transferir archivos entre ordenadores en una red TCP/IP (Protocolo de Control de Transmisión/Protocolo de Internet), también conocida como Internet. Los usuarios, a los que se les ha concedido acceso, pueden recibir y transferir archivos en el servidor del Protocolo de Transferencia de Archivos (también conocido como host/sitio FTP).</p>
+
+            <h2>¿Cómo funciona el FTP?</h2>
+
+            <p>La conexión FTP necesita que dos partes se establezcan y se comuniquen en la red. Para ello, los usuarios necesitan tener permiso proporcionando credenciales al servidor FTP. Algunos servidores FTP públicos pueden no requerir credenciales para acceder a sus archivos. Esta práctica es común en el llamado FTP anónimo.</p>
+
+            <p>Hay dos canales de comunicación distintos mientras se establece una conexión FTP. El primero se llama canal de comandos, donde se inicia la instrucción y la respuesta. El otro se llama canal de datos, donde se produce la distribución de datos.</p>
+
+            <p>Para obtener o transferir un archivo, un usuario autorizado utilizará el protocolo para solicitar la creación de cambios en el servidor. A cambio, el servidor concederá ese acceso. Esta sesión se conoce como el modo de conexión activa.</p>
+
+            <p>La distribución en modo activo puede tener un problema si un cortafuegos protege la máquina del usuario. El cortafuegos no suele permitir ninguna sesión no autorizada de una parte externa.</p>
+
+            <p>El <strong>modo pasivo</strong> se utiliza si se produce ese problema. En este modo, el usuario establece tanto el canal de comandos como el de datos. Este modo pide al servidor que <strong>escuche</strong> en lugar de intentar crear una conexión con el usuario.</p>
+
+            <h2>Cómo utilizar el FTP</h2>
+
+            <p>Hay tres enfoques sobre cómo establecer una conexión FTP. Un método muy sencillo es el uso de un FTP de línea de comandos, como el uso de Command prompt para Windows o Terminal en Mac/Linux. Los desarrolladores todavía lo utilizan hoy en día para transferir archivos mediante FTP.</p>
+
+            <p>Un usuario también puede utilizar un navegador web para comunicarse con el servidor FTP. Un navegador web es más conveniente cuando los usuarios quieren acceder a grandes directorios en el servidor. Sin embargo, suele ser menos fiable y más lento que el uso de un programa FTP dedicado.</p>
+
+            <p>Hoy en día, la práctica más común para utilizar FTP, especialmente para un desarrollador web, es mediante el uso de un cliente FTP.</p>
+
+            <p>Un cliente FTP proporciona más libertad en comparación con la línea de comandos y el navegador web. También es más fácil de gestionar y más potente en comparación con los otros métodos.</p>
+
+            <p>También hay más funciones disponibles mientras se utiliza un cliente de este tipo. Por ejemplo, permite a los usuarios transferir un archivo grande y utilizar la utilidad de sincronización.</p>
+
+            <h2>Cómo conectarse al FTP de Hostinger</h2>
+
+            <p>Hay muchos clientes FTP para elegir. Desde aplicaciones gratuitas de código abierto hasta opciones premium. Para el propósito de este artículo, usaremos <strong>FileZilla</strong>, un cliente FTP de código abierto y popular.</p>
+
+            <p>Primero necesitaremos un servidor FTP, y podemos configurar uno utilizando nuestra cuenta de Hostinger.</p>
+
+            <ol>
+                <li>
+                    <div>
+                        Acceda a su cuenta de Hostinger y navegue hasta la sección de <strong>cuentas FTP</strong> 
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        Cree una nueva cuenta FTP rellenando un nuevo nombre de usuario y contraseña
+                    </div>
+                    <div class="imgbox">
+                        <img width="70%" class="center-fit" src="../imgs/new-ftp-account.png" alt="New FTP Account.png">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        Verás nuevos servidores FTP (Hostname) bajo la lista de cuentas FTP activas
+                    </div>
+                    <div class="imgbox">
+                        <img width="70%" class="center-fit" src="../imgs/ftp-accounts-list.png" alt="FTP Accounts List.png">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        En FileZilla, introduzca el nombre de host, el nombre de usuario y la contraseña y pulse el botón Quickconnect. También puedes rellenar el número de puerto. De lo contrario, el puerto 21 se utiliza por defecto.
+                    </div>
+                    <div class="imgbox">
+                        <img width="70%" class="center-fit" src="../imgs/fillezilla-quickconnect.png" alt="Fillezilla Quickconnect.png">
+                    </div>
+                </li>
+                <li>
+                    La ventana de estado le indicará si está conectado al servidor FTP. Como puede ver en la ventana del Sitio Remoto, estos son los archivos que tiene el servidor.
+                </li>
+            </ol>
+
+            <h2>Servidores de protocolo de transferencia de archivos</h2>
+
+            <p>Con estas soluciones, podrá programar transferencias masivas a intervalos, mediante activadores de eventos, o incluso por la noche o los fines de semana. Los mejores proveedores de FTP tienen características que pueden ayudarle en caso de recuperación de desastres. La mayoría de los servidores FTP soportan los protocolos FTPS y SFTP que le dan más seguridad que los servidores FTP tradicionales.</p>
+
+            <p>Estos protocolos encriptan los archivos durante la transmisión y, por tanto, son más seguros. Los servidores FTP seguros pueden cifrar los datos en reposo y en movimiento.</p>
+
+            <h3>Lista de servidores FTP populares en línea</h3>
+
+            <p>Aquí está la lista de servidores FTP populares:</p>
+
+            <ol>
+                <li>JSCAPE</li>
+                <li>GoAnywhere</li>
+                <li>Progress MOVEit</li>
+                <li>FileZilla</li>
+                <li>Cerberus</li>
+                <li>Globalscape</li>
+                <li>Titan Server</li>
+                <li>IIS FTPS Server</li>
+                <li>Core FTP</li>
+                <li>Sysax Multi Server</li>
+                <li>OpenSSH</li>
+            </ol>
+
+            <table>
+                <caption>Comparación de los mejores servidores FTP</caption>
+                <thead>
+                    <tr>
+                        <th>Herramientas</th>
+                        <th>Mejor para</th>
+                        <th>Acerca de la herramienta</th>
+                        <th>Protocolos compatibles</th>
+                        <th>Prueba gratuita</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>JSCAPE</div>
+                            <div>
+                                <img src="../imgs/jscape-logo.png" alt="JSCAPE logo.png">
+                            </div>
+                        </td>
+                        <td>Gestione de forma segura sus procesos de transferencia de archivos.</td>
+                        <td>Software y servicios de transferencia de archivos gestionados.</td>
+                        <td>FTP, FTPS, SFTP, AS2, OFTP2 y más</td>
+                        <td>Disponible durante 7 días</td>
+                        <td>Obtenga un presupuesto.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>GoAnywhere</div>
+                            <div>
+                                <img src="../imgs/goanywhere-logo.png" alt="GoAnywhere.png">
+                            </div>
+                        </td>
+                        <td>Intercambio seguro de datos.</td>
+                        <td>Solución de transferencia de archivos gestionada</td>
+                        <td>FTP, SFTP, FTPS, HTTPS y más</td>
+                        <td>Disponible durante 30 días</td>
+                        <td>Obtenga un presupuesto.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>Progress MOVEit</div>
+                            <div>
+                                <img src="../imgs/progress-logo.png" alt="Progress MOVEit.png">
+                            </div>
+                        </td>
+                        <td>Funciones de seguridad avanzadas</td>
+                        <td>Software MFT</td>
+                        <td>FTPS, SFTP, etc.</td>
+                        <td>--</td>
+                        <td>Obtenga un presupuesto.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>FilleZilla</div>
+                            <div>
+                                <img src="../imgs/filezilla-logo.png" alt="Filezilla-logo.png">
+                            </div>
+                        </td>
+                        <td>Soluciones FTP gratuitas, Cliente y Servidor.</td>
+                        <td>Servidor FTP y FTPS gratuito y de código abierto</td>
+                        <td>FTP, FTPS y SFTP</td>
+                        <td>No</td>
+                        <td>Gratis</td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+    <footer>
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+</body>
+</html>

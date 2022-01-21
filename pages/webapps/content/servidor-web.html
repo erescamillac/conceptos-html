@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/eec-styles.css">
+    <title>Servidor Web y uso (por Erick Escamilla C. -2010067-)</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../web-apps-1-menu.html">
+                        <img width="64" src="/assets/images/navigation/back_icon.png" alt="Regresar">
+                    </a>
+                </li>
+                <li>
+                    <a href="/index.html">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Servidor Web y uso.</h1>
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+
+            <h2>¿Qué es un servidor WEB?</h2>
+            <p>Con "Servidor web" podemos referirnos a <em>hardware</em> o <em>software</em>, o a ambos trabajando juntos.</p>
+
+            <ol>
+                <li>
+                    En cuanto a hardware, un servidor web es una computadora que almacena los archivos que componen un sitio web (ej.  documentos HTML , imágenes, hojas de estilos CSS y archivo JavaScript) y los entrega al dispositivo del usuario final. Está conectado a internet y es accesible a través de un nombre de dominio como mozilla.org.
+                </li>
+                <li>
+                    En cuanto a software, un servidor web tiene muchas partes encargadas del control sobre cómo tienen acceso los usuarios a los archivos, por lo menos un servidor HTTP. Un servidor HTTP es una pieza de software que comprende URLs (direcciones web) y HTTP (el protocolo que tu navegador usa para ver las páginas web).
+                </li>
+            </ol>
+
+            <p>
+                Al nivel más básico, siempre que un navegador necesite un archivo almacenado en un  servidor web, el navegador hará una solicitud al servidor mediante la vía HTTP. Cuando la petición llega al servidor web correcto (hardware), el  servidor HTTP  (software) envía el archivo antes solicitado, tambien a través de HTTP.
+            </p>
+
+            <div class="imgbox">
+                <img class="center-fit" width="75%" src="../imgs/web-server-and-browser.svg" alt="Web server and browser">
+            </div>
+
+            <p>Para publicar un sitio web, necesitarás un servidor web dinámico o estático.</p>
+
+            <p>Un <strong>servidor web estático</strong>, o pila, consiste en una computadora (hardware) con un servidor HTTP (software). Llamamos a este "estático" debido a que el servidor envía los archivos almacenados "tal cual" a tu navegador.</p>
+
+            <p>Un <strong>servidor web dinámico</strong> consiste en un servidor web estático con un software extra , lo común es que sea una aplicación servidor y una  base de datos. Llamamos a esto "dinámico" por que la aplicacion servidor actualiza los archivos almacenados en la base de datos antes de enviarlos mediante el servidor HTTP.</p>
+
+            <p>Por ejemplo, para ver la página que ves en tu navegador finalmente, el servidor aplicación puede mostrar el diseño HTML con contenido desde una base de datos. Sitios como MDN o Wikipedia tienen cientos de páginas web, que no son realmente archivos HTML, si no una estrucura HTML asociada a una gigantesca base de datos. Esto hace mas fácil y rápido el mantenimiento y entrega del contenido.</p>
+
+            <h2>Uso de Apache HTTP Server</h2>
+            <h3>Apache HTTP Server</h3>
+
+            <div class="imgbox">
+                <img width="75%" class="center-fit" src="../imgs/apache-300x116.png" alt="Apache logo">
+            </div>
+
+            <p>El servidor web Apache HTTP es uno de los servidores web más antiguos y populares, lanzado en 1995. Es un software libre y de código abierto mantenido y desarrollado por la Apache Software Foundation. Según las estadísticas, alrededor del 34,1% de las aplicaciones web y los sitios web se ejecutan en el servidor web Apache. El software Apache acepta solicitudes de directorio (HTTP) de diversos usuarios de Internet y devuelve los datos solicitados en forma de archivos y páginas web.</p>
+
+            <p>Es uno de los servidores web más rápidos, fiables y seguros, adaptado para manejar un tráfico intenso con una configuración mínima. El software está escrito en lenguaje C y es compatible con cualquier sistema operativo como Linux, Apache Windows, Novell Netware, Mac OS X, Solaris, OS/2, Unix-like, FreeBSD, etc. El software Apache comparte la información solicitada desde el servidor al cliente a través del protocolo HTTP.</p>
+
+            <p>La infraestructura de código abierto ayuda a los desarrolladores a ver y colaborar con el código fuente. Además, hay un montón de módulos de Apache que ayudan a los administradores del servidor a ampliar sus características, activar y desactivar las funcionalidades adicionales. Para la configuración de estos módulos, se requiere acceso a .htaccess. mod_fcgid, mod_ftp, mod_domain, mod_mbox, mod_pop3, mod_arm4, mod_smtpd, Sandbox son algunos de los módulos de Apache HTTP Server. El software también incluye funciones adicionales en módulos de extensión externos como mod_gzip. Este módulo puede ayudar a reducir el tamaño de las páginas web que se sirven a través de HTTP. Del mismo modo, ModSecurity, otro módulo, ayuda a gestionar la detección de intrusiones para las aplicaciones web.</p>
+
+            <h4>Características clave</h4>
+            <ol>
+                <li>Fácil de configurar</li>
+                <li>Rápido y seguro</li>
+                <li>Escrito en el lenguaje C</li>
+                <li>Su estructura modular lo hace más flexible</li>
+                <li>Compatible con cualquier lenguaje de programación, incluyendo PHP, Python, etc.</li>
+            </ol>
+
+            <h3>Cómo configurar el servidor web Apache + MySQL (LAMP Stack) en Linux en GCP</h3>
+
+            <p>Para configurar e instalar el Servidor Web Apache con la Pila LAMP en cualquiera de las plataformas en la nube, la forma recomendada es utilizar la imagen disponible en el mercado de la nube. Viene preconfigurada con la pila LAMP completa: servidor web Apache, servidor MySQL, PHP, PHPMyadmin y Let's Encrypt. </p>
+
+            <h4>Desplegar Apache en Ubuntu Server 20.04 LTS</h4>
+
+            <p>El Servidor Web Apache viene preinstalado con toda la pila LAMP (Servidor Web Apache, PHP, MySQL, PHPMyadmin) en Ubuntu Server.</p>
+
+            <p>Este servidor web Apache también viene preinstalado con phpMyadmin, lo que le permite administrar sus bases de datos a través de una interfaz gráfica de usuario (gestión de bases de datos, tablas, columnas, relaciones, índices, usuarios, permisos, etc).</p>
+
+            <p>El servidor web Apache viene preinstalado con los módulos Apache - Mod_wsgi y Mod_Security y varias extensiones PHP.</p>
+
+            <h4>¿Cómo conectarse a una MV Linux en GCP?</h4>
+
+            <p>En este documento, se describe cómo conectarse a instancias de máquina virtual (VM) de Linux con Google Cloud Console y la herramienta de línea de comandos de gcloud. Para obtener información sobre cómo funcionan las conexiones SSH en Compute Engine, incluida la configuración y el almacenamiento de claves SSH, consulta <a href="https://cloud.google.com/compute/docs/instances/ssh" target="blank">Conexiones SSH a VM de Linux</a>.</p>
+
+            <p>Para conocer otras formas de conectarte a las VM de Linux, como el uso de herramientas de terceros, incluida PuTTY, consulta <a href="https://cloud.google.com/compute/docs/instances/connecting-advanced" target="blank">Conéctate a VM mediante métodos avanzados</a>.</p>
+
+            <h5>Antes de comenzar</h5>
+
+            <ul>
+                <li>
+                    Si deseas usar los ejemplos de línea de comandos en esta guía, haz lo siguiente:
+                    <ol>
+                        <li>Instala la <a href="https://cloud.google.com/compute/docs/gcloud-compute">herramienta de línea de comandos de gcloud</a> o actualízala a la última versión.</li>
+                        <li>
+                            <a href="https://cloud.google.com/compute/docs/gcloud-compute#set_default_zone_and_region_in_your_local_client">
+                                Configura una región y una zona predeterminadas.
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+
+            <h5>Conéctate a las VM</h5>
+
+            <p>Para conectarte a instancias de Linux mediante Google Cloud Console completa los siguientes pasos.</p>
+
+            <ol>
+                <li>
+                    <div>
+                        En Cloud Console, ve a la página <strong>Instancias de VM.</strong> 
+                    </div>
+                    <div>
+                        <a href="https://console.cloud.google.com/compute/instances?_ga=2.65232302.1059439276.1642702856-2056311808.1642702856&_gac=1.157708488.1642703066.Cj0KCQiAraSPBhDuARIsAM3Js4rsVGmbqBIbOVIepxw4Dndc5f7UIDxGOLQLARXXPNV37jOEVdkrdScaAqxIEALw_wcB">Ir a instancias de VM</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        En la lista de instancias de máquinas virtuales, haz clic en <strong>SSH</strong> en la fila de la instancia a la que deseas conectarte.
+                    </div>
+                    <div class="imgbox">
+                        <img width="70%" src="../imgs/gcp-vm-instances.png" alt="Listado de instancias.png">
+                    </div>
+
+                </li>
+            </ol>
+
+
+        </section>
+    </main>
+    <footer>
+        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
+        <p>Hosting:</p>
+        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    </footer>
+</body>
+</html>

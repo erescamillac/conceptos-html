@@ -113,7 +113,27 @@ p{
     font-size: 1rem;
     color: rgb(227, 230, 92);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
 }
+
+ul, li{
+    font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* -- INI: Centrado de imagenes -- */
+.imgbox {
+    display: grid;
+    height: 100%;
+}
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+/* -- FIN: Centrado de imagenes -- */
 
 /*Tipos de Selectores*/
 /*
