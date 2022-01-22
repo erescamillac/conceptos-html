@@ -1,0 +1,169 @@
+/*-- Estilo de calculadora por Erick Escamilla Charco --*/
+/*
+    Basado en el Tutotial:
+        https://www.youtube.com/watch?v=CI2GwL--ll8
+*/
+/* Modified by Erick Escamilla C. (2010067) */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(28, 14, 104);
+}
+
+#container{
+    width: 1000px;
+    /* height: 550px; */
+    /*TODO: agregar +120 px [height] para espacio de Radio buttons (sen, cos, tan) */
+    /* +300 px */
+    /* height: 850px; */
+    /* - 50px */
+    height: 800px;
+
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../imgs/bgImg.jpg);
+    margin: 20px auto;
+}
+
+#calculator{
+    width: 320px;
+    height: 520px;
+    /*TODO: agregar +120 px [height] para espacio de Radio buttons (sen, cos, tan) --*/
+    /* + 300 px */
+    /* height: 820px; */
+    /* -50px */
+    height: 770px;
+    background-color: #eaedef;
+    margin: 0 auto;
+    top: 20px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#result{
+    height: 120px;
+}
+
+#temperature-Cnv{
+    height: 77px;
+}
+
+#powerContainer{
+    height: 77px;
+}
+
+#trigoContainer{
+    height: 77px;
+}
+
+#keyboard{
+    height: 400px;
+}
+
+#history{
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+}
+
+label{
+    color: black;
+}
+
+/*
+ Uso de [descendant selector] Selector DESCENDIENTE, para seleccionar cualquier ELEMENTO [p] que se encuentre
+ ANIDADO dentro de un elemento contenerdor cuyo ID sea [history], necesario para 'sobreescribir' la Regla de estilo
+ aplicada a TODOS los elementos [p] con alineación de texto JUSTIFICADA, como se muestra en la hoja de estilo
+ [/assets/css/eec-styles.css]
+*/
+
+#history p{
+    text-align: right;
+}
+
+#history-value{
+    font-size: 15px;
+    color: #919191;
+}
+
+#output{
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+}
+
+/*
+ Uso de [descendant selector] Selector DESCENDIENTE, para seleccionar cualquier ELEMENTO [p] que se encuentre
+ ANIDADO dentro de un elemento contenerdor cuyo ID sea [output], necesario para 'sobreescribir' la Regla de estilo
+ aplicada a TODOS los elementos [p] con alineación de texto JUSTIFICADA, como se muestra en la hoja de estilo
+ [/assets/css/eec-styles.css]
+*/
+
+/* https://stackoverflow.com/questions/16946878/how-do-i-select-an-element-that-has-a-certain-class/16946953 */
+
+#output p{
+    text-align: right;
+}
+
+#output-value{
+    font-size: 30px;
+    color: darkslateblue;
+}
+
+.operator, .number, .empty {
+    width: 50px;
+    height: 50px;
+    /* margin: 15px; */
+    margin: 10px;
+    float: left;
+    border-radius: 30%;
+    border-width: 1px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.number, .empty{
+    background-color: #eaedef;
+    border-width: 0;
+}
+
+.number, .operator{
+    cursor: pointer;
+}
+
+.operator:active, .number:active{
+    font-size: 0.9rem;
+}
+
+.operator:focus, .number:focus, .empty:focus{
+    outline: 0;
+}
+
+.operator, .number{
+    color: black;
+}
+
+button:nth-child(4){
+    font-size: 1.4rem;
+    background-color: #20b2aa;
+}
+
+button:nth-child(8){
+    font-size: 1.4rem;
+    background-color: #ffa500;
+}
+
+button:nth-child(12){
+    font-size: 1.4rem;
+    background-color: #f08080;
+}
+
+button:nth-child(16){
+    font-size: 1.4rem;
+    background-color: #7d93e0;
+}
+
+button:nth-child(20){
+    font-size: 1.4rem;
+    background-color: #9477af;
+}

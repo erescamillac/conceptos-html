@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/eec-styles.css">
+    <link rel="stylesheet" type="text/css" href="css/calculator-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,700">
+    <title>Calculadora simple con JavaScript (por Erick Escamilla C. -2010067-).</title>
+</head>
+<body>
+    <script src="js/calculator-script.js">
+
+    </script>
+    <header></header>
+    <main>
+        <section>
+            <!--
+                Usando JS entregue una pagina web que permita:
+
+                (1) Convertir la temperatura entre grados  fahrenheit a Celsius.
+                (2) Elevar a una potencia dada un numero.
+                (3) Calcular el seno, coseno y tangente de grados (use radio buttons).
+
+                Nota: todo debe ser en una sola pagina, use 3 bloques de código.
+            -->
+            <h1>Calculadora simple</h1>
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+
+            <p>Inspirado en el Tutorial: <a href="https://www.youtube.com/watch?v=CI2GwL--ll8" target="blank">https://www.youtube.com/watch?v=CI2GwL--ll8</a></p>
+
+            <div id="container">
+            <form>
+                <div id="calculator">
+                    <!-- [div:result] :: se utiliza para mostrar el RESULTADO de la operación, simula el 'DISPLAY' de la Calc. -->
+                    <div id="result">
+                        <div id="history">
+                            <!-- valor del 'histórico' (registro de la operación actual :: operandos y operadores 'Acumulados hasta el momento')-->
+                            <p id="history-value"></p>
+                        </div>
+                        <!-- [div:output] Es el contenedor que 'REALMENTE' muestra el RESULTADO de la operación -->
+                        <div id="output">
+                            <!-- VALOR del RESULTADO de la operación -->
+                            <p id="output-value"></p>
+                        </div>
+                    </div>
+                    <!-- TODO : Agergar DIV ['intermedio'] para Radio buttons (sen, cos, tan) -->
+                    <div id="temperature-Cnv">
+                        <button type="button" class="operator" id="f-to-c" onclick="operatorHandler('f-to-c')">F to C</button>
+                        <button type="button" class="operator" id="c-to-f" onclick="operatorHandler('c-to-f')">C to F</button>
+                    </div>
+
+                    <div id="powerContainer">
+                        <button type="button" class="operator" id="power" onclick="operatorHandler('^')">^</button>
+                    </div>
+
+                    <div id="trigoContainer">
+                        <div>
+                            <input type="radio" id="sin" name="grupo-trigo" value="sin" onclick="radioBtnHandler()">
+                            <label for="sin">SIN</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="cos" name="grupo-trigo" value="cos" onclick="radioBtnHandler()">
+                            <label for="cos">COS</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="tan" name="grupo-trigo" value="tan" onclick="radioBtnHandler()">
+                            <label for="tan">TAN</label>
+                        </div>
+                      
+                    </div>
+                    <!-- [div:keyboard] :: se utiliza para mostrar las 'Teclas' de la calculadora -->
+                    <div id="keyboard">
+                        <!-- INI: teclado -->
+                        <!-- <button type="button" class="operator" id="clear" onclick="operatorHandler()">C</button> --> 
+                        <button type="button" class="operator" id="clear" onclick="operatorHandler('clear')">C</button>
+                        <button type="button" class="operator" id="backspace" onclick="operatorHandler('backspace')">CE</button>
+                        <button type="button" class="operator" id="%" onclick="operatorHandler('%')">%</button>
+                        <!-- 4th child (4to Botón), el botón de la División ..-->
+                        <button type="button" class="operator" id="/" onclick="operatorHandler('/')">&#247;</button>
+                        <button type="button" class="number" id="7" onclick="numberHandler('7')">7</button>
+                        <button type="button" class="number" id="8" onclick="numberHandler('8')">8</button>
+                        <button type="button" class="number" id="9" onclick="numberHandler('9')">9</button>
+                        <button type="button" class="operator" id="*" onclick="operatorHandler('*')">&times;</button>
+                        <button type="button" class="number" id="4" onclick="numberHandler('4')">4</button>
+                        <button type="button" class="number" id="5" onclick="numberHandler('5')">5</button>
+                        <button type="button" class="number" id="6" onclick="numberHandler('6')">6</button>
+                        <button type="button" class="operator" id="-" onclick="operatorHandler('-')">-</button>
+                        <button type="button" class="number" id="1" onclick="numberHandler('1')">1</button>
+                        <button type="button" class="number" id="2" onclick="numberHandler('2')">2</button>
+                        <button type="button" class="number" id="3" onclick="numberHandler('3')">3</button>
+                        <button type="button" class="operator" id="+" onclick="operatorHandler('+')">+</button>
+                        <button type="button" class="empty" id="empty"></button>
+                        <button type="button" class="number" id="0" onclick="numberHandler('0')">0</button>
+                        <button type="button" class="empty" id="empty"></button>
+                        <button type="button" class="operator" id="=" onclick="operatorHandler('=')">=</button>
+                        <!-- FIN: teclado -->
+                    </div>
+                </div> <!-- Cierre de [calculator] -->
+            </form>
+            </div> <!-- Cierre de [container] -->
+
+
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
