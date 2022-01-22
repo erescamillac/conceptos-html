@@ -25,6 +25,8 @@ function printOutput(num){
     // document.getElementById("output-value").innerText = num;
     if( num == "" ){
         document.getElementById("output-value").innerText = num;
+    }else if( esNumero(num) ){
+        document.getElementById("output-value").innerText = num.toLocaleString();
     }else{
         document.getElementById("output-value").innerText = getFormattedNumber(num);
     }
@@ -121,7 +123,11 @@ function operatorHandler( strOperator ){
         }
         if(output!="" || history!=""){
             output= output=="" ? output : reverseNumberFormat(output);
-            history = history+output;
+
+            if( !history.includes("sin") && !history.includes("cos") && !history.includes("tan") ){
+                history = history + output;
+            }
+            
             if(strOperator == "="){
                 console.log( "Se presiono el Simbolo de ['='] se procede a EVALUAR la Expresion {" + history + "}" );
                 var result = evaluarExpresion(history);
@@ -157,10 +163,14 @@ function operatorHandler( strOperator ){
 }
 
 function evaluarExpresion( strMathExpression ){
+    let radians;
     console.log( "EVALUATE (eec) :: [[ " + strMathExpression + " ]]" );
     if( !strMathExpression.includes("sin") && !strMathExpression.includes("cos") && !strMathExpression.includes("tan") 
         && !strMathExpression.includes("f-to-c") && !strMathExpression.includes("c-to-f") 
-        && !strMathExpression.includes("^") ){
+        && !strMathExpression.includes("^") 
+        && !strMathExpression.includes("sin")
+        && !strMathExpression.includes("cos")
+        && !strMathExpression.includes("tan") ){
         // La función eval() evalúa un código JavaScript representado como una cadena de caracteres (string)
         // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/eval
         return eval( strMathExpression );
@@ -223,8 +233,48 @@ function evaluarExpresion( strMathExpression ){
             return "Se necesitan 2 args. p. Eval. POTENCIA (" + operandosPotencia.length + ")";
         }
 
+    }else if( strMathExpression.includes("sin") ){
+        strMathExpression = strMathExpression.replaceAll( "sin", "" );
+        strMathExpression = strMathExpression.replaceAll( "(", "" );
+        strMathExpression = strMathExpression.replaceAll( ")", "" );
+        console.log( "Valor Original del Ángulo en GRADOS : [ " + strMathExpression + " ]" );
+        // grados a RAD :: degreesToRad()
+        radians = degreesToRad( strMathExpression );
+        // Calcular SIN
+        console.log( "SIN-rad(" + radians + ") == [" + Math.sin(radians) + "]" );
+        return Math.sin( radians );
+    }else if( strMathExpression.includes("cos") ){
+        strMathExpression = strMathExpression.replaceAll( "cos", "" );
+        strMathExpression = strMathExpression.replaceAll( "(", "" );
+        strMathExpression = strMathExpression.replaceAll( ")", "" );
+        console.log( "Valor Original del Ángulo en GRADOS : [ " + strMathExpression + " ]" );
+        radians = degreesToRad( strMathExpression );
+        // Calcular COS
+        console.log( "COS-rad(" + radians + ") == [" + Math.cos(radians) + "]" );
+        return Math.cos( radians );
+    }else if( strMathExpression.includes("tan") ){
+        strMathExpression = strMathExpression.replaceAll( "tan", "" );
+        strMathExpression = strMathExpression.replaceAll( "(", "" );
+        strMathExpression = strMathExpression.replaceAll( ")", "" );
+        console.log( "Valor original del Ángulo en GRADOS : [ " + strMathExpression + " ]" );
+        radians = degreesToRad( strMathExpression );
+        // Calcular TAN
+        console.log( "TAN-rad(" + radians + ") == [" + Math.tan(radians) + "]" );
+        return Math.tan(radians);
     }else{
         return "-NO es posible Evaluar la Expr {" + strMathExpression + "}-";
+    }
+}
+
+function degreesToRad(degrees){
+    let nDegrees, rad;
+    if( esNumero(degrees) ){
+        // OK - continuar con conversión a RAD
+        nDegrees = Number(degrees);
+        rad = nDegrees * ( Math.PI / 180 );
+        return rad;
+    }else{
+        return 0;
     }
 }
 
@@ -235,14 +285,53 @@ function esNumero( valor ){
 function radioBtnHandler(){
     console.log( "radioBtnHandler ..." );
     let output = getOutput();
+    let history = getHistory();
 
     /*--INI: Determinar el RadioButton seleccionado --*/
-
+    var radioButtons = document.getElementsByName( 'grupo-trigo' );
+    var valorRadioSelecc;
+              
+            for(i = 0; i < radioButtons.length; i++) {
+                if(radioButtons[i].checked){
+                    /*-- --*/
+                    valorRadioSelecc = radioButtons[i].value;
+                    console.log( "valorRadioSelecc: [ " + valorRadioSelecc + " ]" );
+                }
+                /*
+                    document.getElementById("result").innerHTML
+                        = "Gender: "+ele[i].value;
+                */
+                
+            }
     /*++FIN: Determianr el RadioButton seleccionado ++*/
 
-    if( output != "" ){
+    console.log( "Valor Seleccionado EEC: [[ " + valorRadioSelecc + " ]]" );
 
+    // [history] || [output]
+    // [output] Actual ...
+
+    console.log( "output actual: [[ " + output + " ]]" );
+
+    if( output != "" ){
+        // cambiar [history] sin(xxx), or cos(xxx), or tan(xxx)
+        history =  valorRadioSelecc + "(" +  output + ")";
+        printHistory( history );
+        // printHistory()
     }
+
+    history = getHistory();
+
+    if( history != "" ){
+        if( history.includes("sin") ){
+            history = history.replaceAll( "sin", valorRadioSelecc );
+        }else if( history.includes("cos") ){
+            history = history.replaceAll( "cos", valorRadioSelecc );
+        }else if( history.includes("tan") ){
+            history = history.replaceAll( "tan", valorRadioSelecc );
+        }
+        printHistory(history);
+    }
+
 }
 
 function numberHandler( numeroPresionado ){
