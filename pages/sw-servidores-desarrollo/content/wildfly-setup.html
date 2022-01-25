@@ -35,10 +35,10 @@
                     <a href="#wildfly8-install">Instalación de WildFly 8</a>
                 </li>
                 <li>
-                    <a href="eclipse-4-4-install">Instalación de Eclipse 4.4</a>
+                    <a href="#eclipse-4-4-install">Instalación de Eclipse 4.4</a>
                 </li>
                 <li>
-                    <a href="jboss-tools-4-2-install">Instalación de JBoss Tools 4.2</a>
+                    <a href="#jboss-tools-4-2-install">Instalación de JBoss Tools 4.2</a>
                 </li>
             </ol>
 
@@ -91,6 +91,147 @@
                     <div class="imgbox">
                         <img class="center-fit" width="65%" src="../imgs/unzip-file.png" alt="Unzip file.png">
                     </div>
+                </li>
+                <li>
+                    <p>
+                        Utilice el script <code>&#60;Directorio WildFly&#62;\bin\standalone.bat</code> para iniciar el servidor WildFly y comprobar la instalación. Tras el arranque, debería poder acceder al servidor web en <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Abra el enlace <strong>Consola de administración</strong> y siga las instrucciones para añadir un <em>nuevo usuario de gestión</em>.
+                        <div class="imgbox">
+                            <img class="center-fit" width="60%" src="../imgs/management-console-wfly.png" alt="Management console Wildfly.png">
+                        </div>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Después de crear un usuario, vuelva a visitar la <strong>Consola de Administración</strong>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Vaya a <a href="http://localhost:9990/console/App.html#deployments" target="_blank">Manage Deployments</a> y haga clic en <strong>Add Content</strong> para subir <a href="https://wwu-pi.github.io/tutorials/lectures/eai/hsqldb.jar">hsqldb.jar</a>. Asegúrese de que el archivo desplegado está <strong>habilitado</strong>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Vaya a <strong>Configuración</strong> -> <strong>Conector</strong> -> <a href="http://localhost:9990/console/App.html#datasources" target="_blank">Fuentes de datos</a> y haga clic en <strong>Añadir</strong> . Utilice la siguiente información para crear un <em>origen de datos (datasource)</em>:
+                    </p>
+                    <ul type="circle">
+                        <li>Nombre: <strong>DefaultDS</strong></li>
+                        <li>Nombre JNDI: <strong>java:/DefaultDS</strong></li>
+                        <li>Elija <strong>hsqldb.jar</strong> como controlador</li>
+                        <li>URL de conexión: <strong>jdbc:hsqldb:${jboss.server.data.dir}${/}hypersonic${/}localDB;shutdown=true</strong></li>
+                        <li>nombre de usuario: <strong>sa</strong></li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>Habilite</strong> el nuevo <strong>origen de datos</strong>. También puede utilizar la <em>JBoss-CLI</em> para desplegar el controlador <em>HSQLDB</em> y añadir la fuente de datos: <code>./jboss-cli.sh -c "deploy ~/Downloads/hsqldb.jar,data-source add --driver-name=hsqldb.jar --use-ccm=false --jta=false --user-name=sa --name=DefaultDS --jndi-name=java:/DefaultDS --connection-url=jdbc:hsqldb:\$\{jboss.server.data.dir\}\$\{/\}hypersonic\$\{/\}localDB;shutdown=true"</code></p>
+                </li>
+                <li>
+                    <p>
+                        Para detener el servidor, pulse CTRL-C en la ventana de la consola que se abrió durante el paso 3.
+                    </p>
+                </li>
+            </ol>
+
+            <h2 id="eclipse-4-4-install">Instalación de Eclipse 4.4</h2>
+
+            <ol>
+                <li>
+                    <p><strong>Descargue</strong> el <strong>IDE Eclipse para desarrolladores de Java EE</strong> para su sistema operativo (versión 4.4.2, Luna SR2) desde <a href="https://www.eclipse.org/downloads/packages/release/luna/sr2/eclipse-ide-java-ee-developers" target="_blank">http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunasr2</a>.</p>
+                    <div class="imgbox">
+                        <img class="center-fit" width="70%" src="../imgs/eclipse-download-page.png" alt="Eclipse Downoad Page.png">
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <strong>Extrae</strong> el archivo descargado, por ejemplo, <code>eclipse-jee-luna-SR2-win32-x86_64.zip</code>, a un directorio de tu ordenador, por ejemplo, <code>C:\EAI</code>. Esto creará un subdirectorio, como <code>C:\EAI\eclipse</code>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Inicie Eclipse</strong>. El ejecutable <strong>eclipse.exe</strong> se encuentra en el directorio de instalación. Espere a que aparezca la ventana "Workspace Launcher" y seleccione un <strong>directorio de espacio de trabajo</strong>, por ejemplo <code>C:\EAI\projects</code>. Esta ruta <strong>tampoco debe contener espacios</strong>. El directorio del espacio de trabajo es donde se almacenarán todos sus proyectos. Puede marcar la casilla <em>"Usar esto como predeterminado y no volver a preguntar"</em> para evitar que este diálogo aparezca en el siguiente inicio. Haga clic en <strong>"Aceptar"</strong> para cerrar el diálogo y llegar a la ventana de la mesa de trabajo.
+                    </p>
+                </li>
+            </ol>
+
+            <h2 id="jboss-tools-4-2-install">Instalación de JBoss Tools 4.2 para Eclipse</h2>
+
+            <ol>
+                <li>
+                    <p>
+                        Seleccione <strong>"Ayuda->Eclipse Marketplace..."</strong> en la barra de menú de Eclipse. Elija "Eclipse Marketplace" si se le pide un catálogo de mercado.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Busque "JBoss Tools" e instale <strong>JBoss Tools (Luna)</strong>, versión 4.2.x.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Espere a que termine el "Cálculo de requisitos..." y asegúrese de que todas las características están marcadas, luego <strong>confirme</strong>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Acepte los acuerdos de licencia</strong> y haga clic en <strong>"Finalizar"</strong>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Cuando se complete la descarga, aparecerá una advertencia de seguridad sobre "Contenido no firmado". <strong>Acepte con "OK"</strong> para comenzar con la instalación.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Cuando se le pida que lo haga, <strong>"Reinicie ahora"</strong>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Después de <strong>cerrar</strong> la ventana <strong>"Welcome"</strong>, verá la perspectiva "Java EE". La perspectiva seleccionada se indica en la esquina superior derecha, como se muestra en la siguiente figura:
+                    </p>
+                    <div class="imgbox">
+                        <img class="center-fit" width="60%" src="../imgs/java-ee-perspective.png" alt="Java EE perspective.png">
+                    </div>
+                    <p>
+                        Si el botón Java EE no está visible, puede cambiar a la perspectiva Java EE a través de "Ventana->Abrir Perspectiva->Otra..." . En el cuadro de diálogo "Abrir perspectiva" haga doble clic en la entrada Java EE.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Active</strong> la pestaña de vista <strong>"Servidores"</strong> en la parte inferior derecha de la ventana. Haga <strong>clic con el botón derecho</strong> del ratón en el área vacía y seleccione <strong>"Nuevo->Servidor"</strong>, como se muestra en esta captura de pantalla:
+                    </p>
+                    <div class="imgbox">
+                        <img class="center-fit" width="65%" src="../imgs/new-server-eclipse.png" alt="New server Eclipse.png">
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        En la ventana "Nuevo servidor" seleccione <strong>"WildFly 8"</strong> (de la categoría JBoss Community) como <strong>tipo de servidor</strong> y haga clic en <strong>"Siguiente"</strong>.
+                    </p>
+                    <div class="imgbox">
+                        <img class="center-fit" width="60%" src="../imgs/server-type-wildfly-8.png" alt="Server type Wildfly8.png">
+                    </div>
+                    <p>
+                        Establezca la entrada <strong>"Directorio de inicio"</strong> en el directorio de instalación de WildFly AS, por ejemplo, <code>C:\EAI\wildfly-8.2.0.Final</code>, y haga clic en <strong>"Finalizar"</strong>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        En la vista "Servidores" <strong>seleccione el servidor recién creado</strong> y haga clic en el botón verde de <strong>Iniciar</strong>.
+                    </p>
+                    <div class="imgbox">
+                        <img class="center-fit" width="60%" src="../imgs/start-server-button.png" alt="Start server button.png">
+                    </div>
+                    <p>
+                        Se abrirá una nueva vista de "Consola" que mostrará los registros de inicio del AS WildFly.
+                    </p>
+                    <p>Para mayor información consulte <a href="https://wwu-pi.github.io/tutorials/lectures/eai/010_tutorial_jboss_setup.html#:~:text=Use%20the%20script%20%3CWildFly%20directory,add%20a%20new%20management%20user." target="_blank">https://wwu-pi.github.io/tutorials/lectures/eai/010_tutorial_jboss_setup.html#:~:text=Use%20the%20script%20%3CWildFly%20directory,add%20a%20new%20management%20user.</a></p>
                 </li>
             </ol>
 
