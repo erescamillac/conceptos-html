@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/eec-styles.css">
+    <title>Servicios</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../sw-serv-des-menu.html">
+                        <img width="64" src="/assets/images/navigation/back_icon.png" alt="Regresar">
+                    </a>
+                </li>
+                <li>
+                    <a href="../../arquitecturas/arquitecturas-menu.html">Arquitecturas</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Servicios de WebLogic Server</h1>
+            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+
+            <p>Las siguientes secciones describen los servicios de WebLogic Server:</p>
+
+            <ul>
+                <li>WebLogic Server como servidor web</li>
+                <li>Servicio de seguridad de WebLogic Server</li>
+                <li>Clústeres de WebLogic Server</li>
+                <li>Gestión y supervisión de servidores</li>
+            </ul>
+
+            <h2 id="WL-as-Web-Server">WebLogic Server como servidor web</h2>
+
+            <p>WebLogic Server puede utilizarse como servidor web principal para aplicaciones web avanzadas. Una aplicación web J2EE es una colección de páginas HTML o XML, JavaServer Pages, servlets, clases Java, applets, imágenes, archivos multimedia y otros tipos de archivos.</p>
+
+            <h3>Cómo funciona WebLogic Server como servidor web</h3>
+
+            <p>Una aplicación web se ejecuta en el contenedor web de un servidor web. En un entorno de WebLogic Server, un servidor Web es una entidad lógica, desplegada en uno o más WebLogic Servers en un clúster.</p>
+
+            <div class="imgbox">
+                <img class="center-fit" width="70%" src="../imgs/oracle-weblogic.png" alt="Oracle Weblogic.png">
+            </div>
+
+            <p>Los archivos de una aplicación web se almacenan en una estructura de directorios que, opcionalmente, puede empaquetarse en un único archivo .war (Web ARchive) mediante la utilidad Java jar. Un conjunto de descriptores de despliegue XML define los componentes y los parámetros de ejecución de una aplicación, como la configuración de seguridad. Los descriptores de despliegue permiten cambiar los comportamientos en tiempo de ejecución sin modificar el contenido de los componentes de la aplicación web, y facilitan el despliegue de la misma aplicación en varios servidores web.</p>
+
+            <h3>Características del servidor web</h3>
+
+            <p>Cuando se utiliza como servidor web, WebLogic Server admite las siguientes funciones:</p>
+
+            <ul type="square">
+                <li>Alojamiento virtual</li>
+                <li>Soporte para configuraciones de servidores proxy</li>
+                <li>Equilibrio de la carga</li>
+                <li>Conmutación por error</li>
+            </ul>
+
+            <p>Esta sección describe cómo cada función es soportada por WebLogic Server.Esta sección describe cómo cada función es soportada por WebLogic Server.</p>
+
+            <h4>Alojamiento virtual</h4>
+
+            <p>WebLogic Server admite el alojamiento virtual, una disposición que permite que una única instancia de WebLogic Server o un clúster de WebLogic Server alojen varios sitios web. Cada servidor web lógico tiene su propio nombre de host, pero todos los servidores web se asignan en DNS a la misma dirección IP del clúster. Cuando un cliente envía una petición HTTP a la dirección del cluster, se selecciona un WebLogic Server para servir la petición. El nombre del servidor web se extrae de las cabeceras de la solicitud HTTP y se mantiene en los intercambios posteriores con el cliente, de modo que el nombre de host virtual permanece constante desde la perspectiva del cliente.</p>
+
+            <p>Se pueden desplegar varias aplicaciones web en un servidor WebLogic, y cada aplicación web se puede asignar a un host virtual.</p>
+
+            <h4>Uso de configuraciones de servidores proxy</h4>
+
+            <p>WebLogic Server puede integrarse con los servidores web existentes. Las peticiones pueden ser proxies desde un WebLogic Server a otro servidor web o, utilizando un plug-in nativo suministrado con WebLogic Server, desde otro servidor web a WebLogic Server. BEA suministra plug-ins para Apache Web Server, Sun One Web Server y Microsoft Internet Information Server.</p>
+
+            <p>El uso de servidores web proxy entre los clientes y un conjunto de WebLogic Servers independientes o un cluster de WebLogic Server permite realizar el balanceo de carga y la conmutación por error de las peticiones web. Para el cliente, parece que sólo hay un servidor web.</p>
+
+            <h4>Equilibrio de la carga</h4>
+
+            <p>Puede configurar varios WebLogic Servers detrás de un servidor proxy para acomodar grandes volúmenes de peticiones. El servidor proxy realiza un equilibrio de carga distribuyendo las peticiones entre los múltiples servidores del nivel que tiene detrás.</p>
+
+            <p>El servidor proxy puede ser un servidor web de WebLogic Server, o puede ser un servidor web de Apache, Netscape o Microsoft. WebLogic Server incluye plug-ins de código nativo para algunas plataformas que permiten a estos servidores web de terceros enviar solicitudes por proxy a WebLogic Server.</p>
+
+            <p>El servidor proxy se configura para redirigir ciertos tipos de peticiones a los servidores que están detrás de él. Por ejemplo, un arreglo común es configurar el servidor proxy para manejar las solicitudes de páginas HTML estáticas y redirigir las solicitudes de servlets y JavaServer Pages a un clúster de WebLogic Server detrás del proxy.</p>
+
+            <h4>Conmutación por error y replicación</h4>
+
+            <p>Cuando un cliente web inicia una sesión de servlet, el servidor proxy puede enviar las solicitudes posteriores que forman parte de la misma sesión a un WebLogic Server diferente. WebLogic Server proporciona replicación de sesiones para garantizar que el estado de la sesión de un cliente siga estando disponible.</p>
+
+            <p>Existen dos tipos de replicación de sesiones:</p>
+
+            <ul type="square">
+                <li>La <em>replicación de sesiones JDBC</em> se utiliza con un clúster de WebLogic Server o con un conjunto de WebLogic Servers independientes. No requiere la opción de clúster de WebLogic Server.</li>
+                <li>La <em>replicación de sesiones en memoria</em> requiere la opción de clustering de WebLogic Server.</li>
+            </ul>
+
+            <p>La replicación de sesiones JDBC escribe los datos de la sesión en una base de datos. Una vez iniciada la sesión, cualquier WebLogic Server que el servidor proxy seleccione puede continuar la sesión recuperando los datos de la sesión de la base de datos.</p>
+
+            <p>Cuando un clúster de WebLogic Server se despliega detrás de un servidor proxy, las sesiones de servlets pueden replicarse a través de la red a un WebLogic Server secundario seleccionado por el clúster, evitando así la necesidad de acceder a una base de datos. La replicación en memoria utiliza menos recursos y es mucho más rápida que la replicación de sesiones JDBC, por lo que es la mejor manera de proporcionar conmutación por error para los servlets en un clúster de WebLogic Server.</p>
+
+            <hr>
+            <h2>Servicio de seguridad de WebLogic Server</h2>
+
+            <p>La arquitectura de seguridad abierta y flexible de WebLogic Server ofrece ventajas a todos los niveles de usuarios e introduce un diseño de seguridad avanzado para los servidores de aplicaciones. Las empresas disponen ahora de una solución de seguridad para servidores de aplicaciones única que, junto con políticas y procedimientos de seguridad claros y bien documentados, puede garantizar la confidencialidad, integridad y disponibilidad del servidor y sus datos.</p>
+
+            <p>Las principales características del nuevo Servicio de Seguridad de WebLogic incluyen:</p>
+
+            <ul type="square">
+                <li>Un diseño integral y basado en normas.</li>
+                <li>Seguridad de extremo a extremo para aplicaciones alojadas en WebLogic Server, desde el mainframe hasta el navegador web.</li>
+                <li>Esquemas de seguridad heredados que se integran con la seguridad de WebLogic Server, lo que permite a las empresas aprovechar las inversiones existentes.</li>
+                <li>Herramientas de seguridad integradas en un sistema flexible y unificado para facilitar la gestión de la seguridad en toda la empresa.</li>
+                <li>Fácil adaptación de la seguridad de las aplicaciones a los requisitos de la empresa mediante la asignación de las normas empresariales a las políticas de seguridad.</li>
+                <li>Fácil actualización de las políticas de seguridad.</li>
+            </ul>
+
+            <p>Para obtener más información sobre el servicio de seguridad de WebLogic, consulte <a href="https://docs.oracle.com/cd/E13222_01/wls/docs81/secintro/index.html" target="_blank">Introducción a la seguridad de WebLogic.</a></p>
+
+            <hr>
+            <h2>Clústeres de WebLogic Server</h2>
+
+            <p>Un clúster de WebLogic Server es un grupo de instancias de WebLogic Server que trabajan juntas para proporcionar una plataforma de aplicaciones web potente y fiable. Un clúster aparece ante sus clientes como un único servidor, pero en realidad es un grupo de servidores que actúan como uno solo. Proporciona dos ventajas clave que no ofrece un solo servidor: escalabilidad y disponibilidad.</p>
+
+            <p> <a href="https://docs.oracle.com/cd/E13222_01/wls/docs81/cluster/index.html" target="_blank">Using WebLogic Server Clusters</a> proporciona información completa sobre la planificación y configuración de clusters de WebLogic Server.</p>
+
+            <h3>Ventajas del uso de clusters</h3>
+
+            <p>Los clusters de WebLogic Server aportan escalabilidad y alta disponibilidad a las aplicaciones J2EE de forma transparente para los desarrolladores de aplicaciones. La ventaja de la escalabilidad es que amplía la capacidad del nivel intermedio más allá de la de una sola instancia de WebLogic Server o de un solo ordenador. La única limitación en cuanto a la pertenencia a un clúster es que todas las instancias de WebLogic Server deben poder comunicarse por multidifusión IP. Se pueden añadir nuevos WebLogic Servers a un clúster de forma dinámica para aumentar la capacidad.</p>
+
+            <p>Un clúster de WebLogic Server también garantiza una alta disponibilidad al utilizar la redundancia de varios servidores para aislar a los clientes de los fallos. El mismo servicio puede prestarse en varios servidores de un clúster. Si un servidor falla, otro puede tomar el relevo. La posibilidad de que un servidor en funcionamiento tome el relevo de un servidor averiado aumenta la disponibilidad de la aplicación para los clientes.</p>
+
+            <h3>Arquitectura de clústeres</h3>
+
+            <p>Un cluster de WebLogic Server consiste en un número de instancias de WebLogic Server desplegadas en una red, coordinadas con una combinación de Servicio de Nombres de Dominio (DNS), replicación de árbol de nombres JNDI, replicación de datos de sesión y WebLogic RMI.</p>
+
+            <p>Los servidores proxy web entre los clientes web y el cluster de WebLogic Server coordinan los servicios de clustering para servlets y JavaServer Pages. Los servidores proxy web pueden ser otros WebLogic Servers, o servidores web de terceros de Netscape, Microsoft o Apache, utilizados con un plug-in suministrado con WebLogic Server.</p>
+
+            <p>Los clientes web se conectan con un cluster de WebLogic Server dirigiendo las peticiones a un servidor proxy. Los clientes basados en Java RMI se conectan con un clúster de WebLogic Server utilizando una dirección de clúster definida en la red.</p>
+
+            <p>El código del lado del servidor también se beneficia de los servicios de equilibrio de carga y conmutación por error que proporciona un clúster de WebLogic. En las aplicaciones J2EE, la mayor parte del código de la aplicación se ejecuta en el nivel intermedio y puede utilizar servicios distribuidos entre varios WebLogic Servers. Por ejemplo, un servlet que se ejecuta en el Servidor WebLogic A podría utilizar un enterprise bean en el Servidor WebLogic B y leer mensajes de una cola JMS en el Servidor WebLogic C.</p>
+
+            <h3>Cómo se define un clúster de WebLogic Server en una red</h3>
+
+            <p>WebLogic Server services are accessed through DNS, the standard naming service for resources on a network, including the Internet. DNS maps IP addresses, such as 170.0.20.1, to names, such as mycomputer.mydomain.com or www.bea.com. Each instance of WebLogic Server runs on the network at a unique IP address. A client connects to a WebLogic Server by encoding in a URL its name and the number of the port where it is listening for connections.</p>
+
+            <div class="imgbox">
+                <img class="center-fit" width="75%" src="../imgs/weblogic-cluster.png" alt="WebLogic cluster.png">
+            </div>
+
+            <p>Por ejemplo, se puede acceder a una instancia de WebLogic Server que se ejecuta en un ordenador llamado onyx, configurado para escuchar en el puerto 7701, con un navegador web utilizando la siguiente URL: http://onyx:7701. Para que esta conexión tenga éxito, el servidor de nombres de la red debe ser capaz de resolver el nombre onyx en el dominio local. Si el servidor de destino se encuentra en otro dominio de Internet, debe suministrarse el nombre de dominio completo, por ejemplo, http://onyx.bea.com:7701.</p>
+
+            <p>Una entrada DNS adicional asigna los nombres de todas las instancias de WebLogic Server que participan en un clúster a un único nombre de clúster. Los clientes se conectan al clúster utilizando el nombre del clúster o a través de un servidor proxy web que dirige las solicitudes al clúster. Cuando el DNS realiza una búsqueda en un nombre de clúster, devuelve una lista de todos los servidores que pertenecen al clúster. Un cliente suele seleccionar el primer servidor de la lista y, si no obtiene respuesta, lo intenta con el segundo servidor, recorriendo la lista hasta obtener una respuesta.</p>
+
+            <p>El DNS proporciona el servicio inicial de equilibrio de carga que distribuye las solicitudes entre los servidores del clúster. Cada DNS responde a una búsqueda del nombre del clúster, rotando la lista de servidores de uno en uno, de modo que finalmente cada servidor tiene un turno.</p>
+
+            <p>Un router inteligente, un servidor proxy, un cortafuegos u otro software que opere en la red puede anular el DNS y seleccionar el servidor inicial basándose en la carga de la máquina, el tráfico de la red u otros criterios dinámicos de equilibrio de carga.</p>
+
+            <p>La conexión inicial de WebLogic Server proporciona el servicio de nomenclatura para el cliente. Busca el servicio solicitado por el cliente y elige un servidor del clúster para gestionar la solicitud, utilizando un algoritmo de equilibrio de carga configurado en WebLogic Server.</p>
+
+            <h3>Cómo se comunican los servidores WebLogic en un clúster</h3>
+
+            <p>Los WebLogic Servers de un cluster se comunican entre sí utilizando la multidifusión IP para replicar ciertas clases de información a todos los servidores del cluster. Se configura una dirección de multidifusión común para cada instancia de servidor en el clúster. Cuando un servidor envía un mensaje a la dirección multicast del cluster, todos los servidores reciben el mensaje. Este proceso es mucho más eficiente que hacer que los servidores envíen mensajes punto a punto. Sin embargo, requiere que todos los servidores de un cluster estén en una red con soporte de multidifusión. La multidifusión no funciona en Internet, por lo que un clúster no puede atravesar Internet.</p>
+
+            <p>Para algunos servicios, el cluster selecciona servidores WebLogic primarios y secundarios. Si el WebLogic Server primario comienza a procesar una solicitud y luego deja de estar disponible, el servidor secundario puede asumir el procesamiento de la solicitud sin interrupción. El servidor primario replica el estado al servidor secundario mediante una conexión de servidor a servidor.</p>
+
+            <p>La mayoría de los servicios pueden desplegarse en cualquier número de WebLogic Servers en un cluster. A medida que se despliega cada servicio, el WebLogic Server utiliza la multidifusión IP para añadir el servicio a un árbol de nombres de todo el clúster. Cualquier servidor del clúster puede encontrar un WebLogic Server que proporcione un servicio determinado buscando el servicio en el árbol de nombres de todo el clúster. Cuando más de un servidor puede proporcionar un servicio, el clúster utiliza un algoritmo de equilibrio de carga configurable para elegir un servidor.</p>
+
+            <h3>Servicios agrupados</h3>
+
+            <p>La mayoría de los servicios de WebLogic Server pueden agruparse en clústeres; es decir, pueden desplegarse en un número ilimitado de servidores en el clúster. El clúster selecciona la instancia de WebLogic Server que proporcionará un servicio. Una vez que se ha seleccionado ese servidor y se han instanciado los objetos con estado en el servidor, el cliente se fija en ese WebLogic Server hasta que haya terminado con el servicio. Si un WebLogic Server que alberga un objeto anclado falla, el cliente debe detectar el fallo y crear otra instancia en otro servidor del clúster.</p>
+
+            <p>Para proporcionar una conmutación por error más resistente, un clúster de WebLogic Server evita fijar un objeto a un servidor a menos que sea absolutamente necesario. En algunos casos, el clúster replica el objeto con estado a un servidor de respaldo para permitir la conmutación por error del servicio.</p>
+
+            <p>Las aplicaciones web pueden agruparse en clústeres, como se describe en la sección <a href="#WL-as-Web-Server">WebLogic Server como servidor web</a>. Las sesiones de los servlets se replican en un servidor secundario, lo que permite que el clúster se recupere de un fallo de forma transparente.</p>
+
+            <p>Todos los Enterprise JavaBeans pueden agruparse en clústeres. Pueden desplegarse en un número ilimitado de servidores en un cluster de WebLogic Server. Sin embargo, no todas las instancias de EJB pueden agruparse. Una aplicación puede obtener la interfaz de inicio de un EJB de cualquier servidor en el que se haya desplegado el bean, y puede utilizar esa interfaz de inicio para crear instancias de bean. Si el servidor que proporciona la interfaz de inicio falla, se puede recuperar una interfaz de inicio de otro servidor sin interrumpir la aplicación.</p>
+
+            <p>Algunos tipos de instancias EJB, incluidos los beans de sesión sin estado y los beans de entidad de sólo lectura, siempre pueden agruparse. Los beans de sesión con estado pueden agruparse utilizando la replicación en memoria para proporcionar conmutación por error. Los beans de entidad de lectura-escritura siempre se fijan en el servidor donde se instancian. Si el servidor que aloja un haba de entidad de lectura-escritura falla, el haba de entidad se recuperará automáticamente si es seguro hacerlo. En caso contrario, la conmutación por error se produce en la siguiente transacción y la instancia del entity bean es recreada por el stub remoto en otro servidor del cluster.</p>
+
+            <p>Un metapool JDBC proporciona un clustering para los pools de conexión JDBC desplegados en múltiples servidores en un cluster de WebLogic Server. Cuando un cliente solicita una conexión al metapool, el clúster selecciona el servidor que proporcionará la conexión, lo que permite el equilibrio de la carga y la protección contra los fallos del servidor. Una vez que un cliente tiene una conexión, el estado mantenido por el controlador JDBC hace que sea necesario fijar el cliente al servidor WebLogic anfitrión.</p>
+
+            <p>Los objetos JMS pueden ser distribuidos entre los servidores de un cluster. Las fábricas de conexión (que los clientes utilizan para establecer una conexión con un destino) y los destinos pueden desplegarse en varios servidores de un clúster. Al distribuir los destinos y las fábricas de conexión en un clúster, los administradores pueden equilibrar manualmente la carga de los servicios JMS.</p>
+
+            <hr>
+            <h2>Gestión y supervisión de servidores</h2>
+
+            <p>La administración de WebLogic Server se lleva a cabo estableciendo atributos para los servidores de un dominio, utilizando la Consola de Administración o la interfaz de línea de comandos. La consola de administración es una aplicación de navegador web que permite configurar los servicios de WebLogic Server, gestionar la seguridad, desplegar aplicaciones y supervisar los servicios de forma dinámica.</p>
+
+            <p>Tanto la Consola de Administración como la interfaz de línea de comandos se conectan al Servidor de Administración.</p>
+
+            <h3>Servidor de administración</h3>
+
+            <p>El Servidor de Administración es el Servidor WebLogic utilizado para configurar y gestionar todos los WebLogic Servers de su dominio. Un dominio puede incluir varios clusters de WebLogic Server e instancias de WebLogic Server independientes. Si un dominio contiene sólo un WebLogic Server, entonces ese servidor es el Servidor de Administración. En un dominio con múltiples instancias de WebLogic Server, la primera instancia que se inicie debe ser el Servidor de Administración.</p>
+
+            <h3>Consola de administración</h3>
+
+            <p>La consola de administración de WebLogic Server se ejecuta en un navegador web. Muestra los componentes del dominio que administra, incluidos los clusters y los WebLogic Servers independientes, en un árbol gráfico en el panel izquierdo. El panel derecho muestra detalles sobre el objeto seleccionado en el panel izquierdo. La Figura 2-1 es una muestra de una sesión de la Consola de Administración.</p>
+
+            <div class="imgbox">
+                <img class="center-fit" width="75%" src="../imgs/admin-console-weblogic.gif" alt="Admin Console WebLogic.png">
+            </div>
+
+            <p>Para utilizar la Consola de Administración para configurar un servicio, seleccione un elemento en el panel izquierdo y, a continuación, elija la pestaña Configuración en el panel derecho. La Consola de Administración muestra los atributos configurables en el panel derecho. Puede utilizar la ayuda en línea para encontrar información detallada sobre los atributos mostrados.</p>
+
+            <p>El proceso habitual para configurar un servicio en la Consola de Administración consiste en configurar el servicio y, a continuación, seleccionar los destinos (WebLogic Servers) en los que se desea desplegar el servicio.</p>
+
+            <p>Cada servicio desplegado mantiene estadísticas en tiempo de ejecución, que puede ver en la pestaña de Monitorización en el panel derecho de la Consola de Administración.</p>
+
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
