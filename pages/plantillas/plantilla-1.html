@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejemplo de uso de Plantilla W3.CSS (por Erick Escamilla C. -2010067-)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+            body {font-family: "Open Sans"}
+        </style>
+    </head>
+    
+<body class="w3-light-grey">
+
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-hide-small">
+  <a href="/index.html" class="w3-bar-item w3-button"><img width="16" src="/assets/images/navigation/home_icon.png" alt="Home"></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+</div>
+  
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>PLANTILLA 1: ¿Qué es SSL, SSH y HTTPS?</b></h1>
+    <h6>Plantilla Original <a href="https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm" target="_blank"><span class="w3-tag">https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm</span></a></h6>
+    <h6>Modificada por: <span class="w3-tag">Erick Escamilla C.</span> </h6>
+  </header>
+
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide" id="home">
+    <!-- <img class="w3-image" src="w3images/jane.jpg" alt="Fashion Blog" width="1600" height="1060"> -->
+    <img class="w3-image" src="w3images/ssh-header-blog.png" alt="SSH Blog" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <h1 class="w3-text-white">Erick's</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>TECH WORLD</b></h1>
+      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUSCRIBIRME</button></h6>
+    </div>
+  </header>
+
+  <!-- Grid -->
+  <div class="w3-row w3-padding w3-border">
+
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+    
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>¿QUÉ ES SSL?</h3>
+          <h5>Secure Sockets Layer, <span class="w3-opacity">enero 24, 2022</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+          <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16">
+         
+            <p><strong>SSL</strong> (acrónimo de <strong>Secure Sockets Layer</strong>) es un tipo de seguridad digital que permite la comunicación cifrada entre un sitio web y un navegador web, haciendo que sea seguro transmitir información confidencial, como datos personales, de pagos o de inicio de sesión. Tener un certificado SSL  hace que sea más difícil para los delincuentes y hackers rastrear la conexión y robar los datos.</p>
+
+            <h3>¿Cómo funciona un certificado SSL?</h3>
+
+            <p>Ahora que sabes qué es un certificado SSL, veamos cómo funciona.</p>
+
+            <p>Los certificados SSL/TLS vinculan digitalmente una clave criptográfica a la información de identificación de una empresa. Esto les permite cifrar las transferencias de datos de tal manera que no puedan ser descifrados por terceros.</p>
+
+            <img src="w3images/como-funciona-ssl.png" alt="Cómo funciona SSL.png" style="width:100%" class="w3-padding-16">
+
+            <p>El protocolo TLS funciona al tener tanto una clave privada como una pública, así como claves de sesión para cada sesión segura única. Cuando un visitante escribe una dirección con seguridad HTTPS en su navegador web o navega a través de una página segura, el navegador y el servidor web se conectan.</p>
+
+            <p>Durante la conexión inicial, las claves pública y privada se utilizarán para crear una clave de sesión, que luego se utilizará para cifrar y descifrar los datos que se transfieren. Esta clave de sesión seguirá siendo válida por un tiempo limitado y solo se utilizará para esa sesión en particular.</p>
+
+            <p>Puedes saber si un sitio web está usando un certificado al mirar si tiene un ícono de candado o una barra verde en la parte superior de tu navegador. Deberías poder hacer clic en este ícono para ver la información sobre quién posee el certificado y para administrar tu configuración SSL.</p>
+
+            <h3>¿Qué es y para qué sirve un certificado SSL?</h3>
+
+            <p>SSL es necesario cuando se transfiere información confidencial como nombres de usuario y contraseñas o información de procesamiento de pagos.</p>
+
+            <p>El objetivo de SSL/TLS es asegurarse de que solo una persona (la persona u organización designada por el usuario) pueda acceder a los datos que se transfieren. Esto es particularmente importante cuando piensas entre cuántos dispositivos y servidores se transfiere la información antes de que llegue a su destino.</p>
+
+            <img src="w3images/certificado-ssl.png" alt="Certiificado SSL.png" style="width:100%" class="w3-padding-16">
+
+            <p>Existen tres usos principales que hacen que un certificado SSL/TLS sea imprescindible en tu sitio web:</p>
+
+            <ul>
+                <li>
+                    <strong>Cuando necesitas autenticación:</strong> cualquier servidor puede pretender ser tu servidor, secuestrando en el camino la información que las personas transmiten. SSL/TLS te permite probar la identidad de tu servidor para que la gente sepa que en verdad eres quien dices ser.
+                </li>
+                <li>
+                    <strong>Para generar confianza:</strong> si tienes un sitio de comercio electrónico o le pides a los usuarios datos que son importantes para ellos, debes generar la sensación de confianza. Usar un certificado es una forma visual de mostrarle a los visitantes que pueden confiar en ti y es mucho más efectivo que cualquier otra cosa que puedas decir sobre ti mismo.
+                </li>
+                <li>
+                    <strong>Cuando necesites cumplir con los estándares de la industria:</strong> en algunas industrias, como la financiera, se requiere mantener ciertos niveles básicos de seguridad. También hay lineamientos de la Industria de tarjetas de pago (PCI, por sus siglas en inglés) que debes cumplir si quieres aceptar información de tarjetas de crédito en tu sitio web. Y uno de esos requisitos es el uso de un certificado SSL/TLS.
+                </li>
+            </ul>
+
+            <p>Recuerda que SSL se puede usar en casi cualquier dispositivo, lo que también lo convierte en una opción de seguridad versátil en la era actual de múltiples dispositivos. Las ventajas de usar certificados SSL valen más que el tiempo y la inversión monetaria requerida para configurarlos, así que no tienes nada que perder.</p>
+
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+          <p class="w3-clear"></p>
+          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+            <hr>
+              <div class="w3-col l2 m3">
+                <img src="w3images/avatar_smoke.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                <p>¡Excelente contenido! Siguiendo.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- INI: Blog entry (2) -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>¿QUÉ ES SSH?</h3>
+          <h5>Secure Shell, <span class="w3-opacity">enero 25, 2022</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <!-- <img src="w3images/man_hat.jpg" alt="Men in Hats" style="width:100%" class="w3-padding-16"> -->
+          <img src="w3images/ssh-concept.jpg" alt="SSH Concept.png" style="width:100%" class="w3-padding-16">
+          
+          <p><strong>SSH</strong>, también conocido como <strong>Secure Shell</strong> o <strong>Secure Socket Shell</strong>, es un protocolo de red que ofrece a los usuarios, especialmente a los administradores de sistemas, una forma segura de acceder a un ordenador a través de una red no segura.</p>
+
+            <p>SSH también se refiere al conjunto de utilidades que implementan el <strong>protocolo SSH</strong>. Secure Shell proporciona una autenticación de contraseña fuerte y una autenticación de clave pública, así como comunicaciones de datos encriptadas entre dos ordenadores que se conectan a través de una red abierta, como Internet.</p>
+
+            <p>Además de proporcionar un <strong>fuerte cifrado</strong>, SSH es ampliamente utilizado por los administradores de red para gestionar sistemas y aplicaciones de forma remota, permitiéndoles iniciar sesión en otro ordenador a través de una red, ejecutar comandos y mover archivos de un ordenador a otro.</p>
+
+            <p>SSH se refiere tanto al protocolo de red criptográfico como al conjunto de utilidades que implementan dicho protocolo. SSH utiliza el modelo <strong>cliente-servidor</strong>, conectando una aplicación cliente de Secure Shell, que es el extremo donde se visualiza la sesión, con un servidor SSH, que es el extremo donde se ejecuta la sesión. Las implementaciones de SSH suelen incluir soporte para los protocolos de aplicación utilizados para la emulación de terminales o la transferencia de archivos.</p>
+
+            <p>SSH también puede utilizarse para crear túneles seguros para otros protocolos de aplicación, por ejemplo, para ejecutar de forma segura sesiones gráficas del sistema X Window de forma remota. Un servidor SSH, por defecto, escucha en el <strong>puerto 22</strong> del Protocolo de Control de Transmisión (TCP) estándar.</p>
+
+            <h3>¿Cómo funciona SSH?</h3>
+
+            <p><strong>Secure Shell</strong> se creó para sustituir a los programas inseguros de <strong>emulación de terminal</strong> o de <strong>inicio de sesión</strong>, como <em>Telnet</em>, rlogin (inicio de sesión remoto) y rsh (shell remoto). SSH permite las mismas funciones: iniciar y ejecutar sesiones de terminal en sistemas remotos. SSH también sustituye a los programas de transferencia de archivos, como File Transfer Protocol (FTP) y rcp (remote copy).</p>
+
+            <img src="w3images/ssh-process.png" alt="SSH Process.png" style="width:100%" class="w3-padding-16">
+
+            <p>El uso más básico de SSH es conectarse a un host remoto para una sesión de terminal. La forma de ese comando es la siguiente:</p>
+
+            <code>ssh UserName@SSHserver.example.com</code>
+
+            <p>Este comando hará que el cliente intente conectarse al servidor llamado server.example.com, utilizando el ID de usuario UserName. Si es la primera vez que se negocia una conexión entre el host local y el servidor, se le pedirá al usuario la huella digital de la clave pública del host remoto y se le pedirá que se conecte, a pesar de que no haya habido ninguna conexión previa:</p>
+
+            <code>The authenticity of host 'sample.ssh.com' cannot be established.
+                DSA key fingerprint is 01:23:45:67:89:ab:cd:ef:ff:fe:dc:ba:98:76:54:32:10.
+                Are you sure you want to continue connecting (yes/no)?</code>
+            
+            <p>Responder afirmativamente a la pregunta hará que la sesión continúe, y la clave del host se almacena en el archivo known_hosts del sistema local. Este es un archivo oculto, almacenado por defecto en un directorio oculto, llamado /.ssh/known_hosts, en el directorio principal del usuario. Una vez que la clave de host ha sido almacenada en el archivo known_hosts, el sistema cliente puede conectarse directamente a ese servidor de nuevo sin necesidad de ninguna aprobación; la clave de host autentifica la conexión.</p>
+
+
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo2')"><b>Respuestas  </b> <span class="w3-tag w3-white">2</span></button></p>
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          <div id="demo2" style="display:none">
+            <div class="w3-row">
+              <hr>
+              <div class="w3-col l2 m3">
+                <img src="w3images/girl_train.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Anastasia W. <span class="w3-opacity w3-medium">enero 25, 2022, 10:52 AM</span></h4>
+                <p>¡Amo tú página! ¡Simplemente el mejor contenido!</p><br>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="w3images/girl.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Julieta R. <span class="w3-opacity w3-medium">enero 25, 2022, 9:12 AM</span></h4>
+                <p>Me encanta la forma clara y sencilla de tus explicaciones.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIN: Blog entry (2) -->
+
+      <!-- INI: Blog entry (3) -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>¿Qué es el HTTPS?</h3>
+          <h5>HyperText Transfer Protocol Secure, <span class="w3-opacity">enero 25, 2022</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <!-- <img src="w3images/runway.jpg" alt="Runway" style="width:100%" class="w3-padding-16"> -->
+          <img src="w3images/what-is-https.webp" alt="What is HTTPS.png" style="width:100%" class="w3-padding-16">
+          
+          <p>El <strong>protocolo de transferencia de hipertexto seguro (HTTPS)</strong> es la versión segura de HTTP, que es el principal protocolo utilizado para enviar datos entre un navegador web y un sitio web. HTTPS está encriptado para aumentar la seguridad de la transferencia de datos. Esto es especialmente importante cuando los usuarios transmiten datos sensibles, como al iniciar sesión en una cuenta bancaria, un servicio de correo electrónico o un proveedor de seguros médicos.</p>
+
+          <p>Cualquier sitio web, especialmente los que requieren credenciales de inicio de sesión, debe utilizar HTTPS. En los navegadores modernos, como Chrome, los sitios web que no utilizan HTTPS están marcados de forma diferente a los que sí lo hacen. Busque un candado verde en la barra de URL para indicar que la página web es segura. Los navegadores web se toman en serio el HTTPS; <a href="https://www.cloudflare.com/learning/ssl/why-use-https/" target="_blank">Google Chrome y otros navegadores marcan todos los sitios web que no utilizan HTTPS como no seguros.</a></p>
+
+          <h3>¿Cómo funciona el HTTPS?</h3>
+
+          <p>HTTPS utiliza un protocolo de <a href="https://www.cloudflare.com/learning/ssl/what-is-encryption/" target="_blank">encriptación</a> para cifrar las comunicaciones. El protocolo se llama <a href="https://www.cloudflare.com/learning/ssl/transport-layer-security-tls/" target="_blank">Transport Layer Security (TLS)</a>, aunque antes se conocía como <a href="https://www.cloudflare.com/learning/ssl/what-is-ssl/" target="_blank">Secure Sockets Layer (SSL)</a>. Este protocolo asegura las comunicaciones utilizando lo que se conoce como una <a href="https://www.cloudflare.com/learning/ssl/how-does-public-key-encryption-work/" target="_blank">infraestructura de clave pública asimétrica</a>. Este tipo de sistema de seguridad utiliza dos claves diferentes para cifrar las comunicaciones entre dos partes:</p>
+
+          <ol>
+              <li>
+                <strong>La clave privada:</strong> esta clave está controlada por el propietario de un sitio web y se mantiene, como el lector puede haber especulado, privada. Esta clave vive en un servidor web y se utiliza para descifrar la información cifrada por la clave pública.
+              </li>
+              <li>
+                <strong>La clave pública:</strong> esta clave está disponible para todos los que quieran interactuar con el servidor de forma segura. La información encriptada por la clave pública sólo puede ser descifrada por la clave privada.
+              </li>
+          </ol>
+
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Respuestas  </b> <span class="w3-tag w3-white">3</span></button></p>
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          <div id="demo3" style="display:none">
+            <hr>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="w3images/girl_mountain.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Juana H. <span class="w3-opacity w3-medium">enero 25, 2022, 7:22 AM</span></h4>
+                <p>Gracias por la info, muy completa y clara.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="w3images/boy.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Pedro Q. <span class="w3-opacity w3-medium">enero 25, 2022, 10:32 AM</span></h4>
+                <p>¡Sigue así! excelente trabajo.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="w3images/girl_hood.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Alejandra C. <span class="w3-opacity w3-medium">enero 25, 2022, 9:12 AM</span></h4>
+                <p>¡No puedo esperar por la siguiente publicación!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIN: Blog Entry (3) -->
+
+      <!-- INI: Blog entry (4) -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>Configuración de la comunicación de Servidores de producción.</h3>
+          <h5>Arquitecturas de Producción, <span class="w3-opacity">enero 25, 2022</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <!-- <img src="w3images/runway.jpg" alt="Runway" style="width:100%" class="w3-padding-16"> -->
+          <h3>Cómo crear su primer servidor seguro y listo para la producción (en AWS).</h3>
+          <h5>por <span class="w3-opacity">Flavio H. Freitas</span></h5>
+          <!-- <img src="w3images/what-is-https.webp" alt="What is HTTPS.png" style="width:100%" class="w3-padding-16"> -->
+          <img src="w3images/aws-cloud-arch.png" alt="AWS Cloud Architecture.png" style="width:100%" class="w3-padding-16">
+
+          <!-- <p>https://www.digitalocean.com/community/tutorials/5-common-server-setups-for-your-web-application</p> -->
+          
+         <p>En este tutorial, presentaré algunas de las mejores prácticas para construir tu propio <strong>servidor seguro</strong>. Enumeraré los pasos que deberás seguir para tener un servidor completamente funcional que puedas utilizar en <strong>producción</strong> para tu aplicación.</p>
+
+          <p>Para más información consulte <a href="https://www.freecodecamp.org/news/how-to-create-your-first-safe-server-ready-for-production-f1cc60eec69a/" target="_blank">https://www.freecodecamp.org/news/how-to-create-your-first-safe-server-ready-for-production-f1cc60eec69a/</a></p>
+
+          <p>Tener un servidor seguro no se limita a seguir algunos pasos. Es una búsqueda constante de nuevos recursos y una mejora interminable. Pero este artículo puede ser un paso 0 en la construcción de su propia infraestructura.</p>
+
+          <p>Voy a utilizar <strong>Amazon EC2</strong> para ejecutar estas pruebas, pero también he utilizado Amazon LightSail, Digital Ocean, Vultr y algunos otros. En todos los casos, fueron lo mismo para configurar, así que puedes usar el proveedor que prefieras.</p>
+
+          <h3>Creación de claves SSH públicas y privadas</h3>
+
+          <p>Antes de empezar, vamos a crear un par de claves que algunos hosts piden durante la instalación del servidor. Este paso y el siguiente pueden omitirse si decides crear un par de claves mientras lanzas una instancia de máquina con Amazon.</p>
+
+          <p>Cree un par de claves SSH con la herramienta ssh-keygen.</p>
+
+          <code>$ ssh-keygen -t rsa -b 4096</code>
+
+          <p>Después de este paso, tendrás los siguientes archivos: <code>id_rsa</code> e <code>id_rsa.pub</code> (claves privadas y públicas). <strong>Nunca</strong> compartas tu <strong>clave privada</strong>.</p>
+
+          <p>Puede encontrar un documento más detallado sobre la creación de las claves <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">aquí</a>.</p>
+
+          <h3>Importar la clave pública en Amazon:</h3>
+          <p>Importaremos la clave pública que acabamos de crear en la plataforma de Amazon.</p>
+
+          <ol>
+            <li>Acceda a la <a href="https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fus-west-2.console.aws.amazon.com%2Fconsole%2Fhome%3Ffromtb%3Dtrue%26hashArgs%3D%2523%26isauthcode%3Dtrue%26state%3DhashArgsFromTB_us-west-2_171f3f21850572e7&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=E9tlb2XvU9ldkgi58MDMcc5L6LG0DF4GMIlhuLG4vuI&code_challenge_method=SHA-256" target="_blank">Consola de administración de Amazon</a></li>
+            <li>Haga clic en Servicios AWS > Computación > EC2</li>
+            <li>Haga clic en el menú de la izquierda Red y seguridad > Pares de claves</li>
+            <li>Haga clic en "Importar par de claves" y suba su clave pública (<code>id_rsa.pub</code>)</li>
+          </ol>
+
+          <h3>Cree su máquina</h3>
+          
+          <p>Voy a instalar una versión de <strong>Ubuntu</strong> en Amazon EC2. Puedes encontrar una configuración completa en este <a href="https://aws.amazon.com/es/getting-started/hands-on/launch-a-virtual-machine/" target="_blank">enlace</a>. Los pasos son los siguientes (pero sólo para simplificar, siga este <a href="https://aws.amazon.com/es/getting-started/hands-on/launch-a-virtual-machine/" target="_blank">enlace</a> para más explicación):</p>
+
+          <ol>
+            <li>Acceder a la <a href="https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fus-west-2.console.aws.amazon.com%2Fconsole%2Fhome%3Ffromtb%3Dtrue%26hashArgs%3D%2523%26isauthcode%3Dtrue%26state%3DhashArgsFromTB_us-west-2_e65afccb64eea422&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=8JKz1r6OO0WrmcixdNhDlt_DG2nRcuWN66A9hy26vPM&code_challenge_method=SHA-256" target="_blank"></a> Consola de administración de Amazon</li>
+            <li>Haga clic en Servicios AWS > Computación > EC2</li>
+            <li>Seleccione Iniciar instancia</li>
+            <li>Elija una de las imágenes. Yo elegí <code>Ubuntu Server 16.04 LTS (HVM)</code>, tipo de volumen SSD (pero elija según sus necesidades).</li>
+            <li>Elija la instancia (de nuevo, según sus necesidades). Haga clic en <strong>Revisar y lanzar</strong></li>
+            <li>Abre una nueva pestaña e importa la clave pública creada en Amazon.</li>
+            <li>Aquí se nos pide "Seleccionar un par de claves existente o crear un nuevo par de claves". Seleccione "Elegir un par de claves existente". Elija el par que subió en el paso anterior.</li>
+            <li>Haga clic en "Lanzar instancias".</li>
+            <li>Haga clic en el enlace de la instancia que acaba de crear.</li>
+          </ol>
+
+          <p>Atención: Algunos de los pasos de abajo podrían ser configurados en esta pantalla inicial de Amazon. Pero como quiero crear un tutorial genérico que pueda ser utilizado para otros hosts, elegí las configuraciones por defecto.</p>
+
+          <h3>Conéctese al nuevo servidor</h3>
+
+          <p>Accede a la máquina con ssh.</p>
+
+          <p>Escriba en su terminal:</p>
+
+          <code>$ ssh &#60;USER&#62;@&#60;IP-ADDRESS&#62; -p 22 -i &#60;PATH-TO-PRIVATE-KEY&#62;</code>
+
+          <ul>
+            <li>
+              &#60;USER&#62;: El usuario en el sistema Linux. Para Amazon usa ubuntu, para otros, root
+            </li>
+            <li>
+              &#60;Dirección IP&#62; : La dirección IP de la máquina que ha creado. Es el campo "DNS público (IPv4)" en la pestaña "Descripción" de su instancia.
+            </li>
+            <li>
+              &#60;PATH-TO-PRIVATE-KEY&#62; : La ruta completa a la clave privada que generó en el elemento anterior (por ejemplo, /Users/flavio/.ssh/id_rsa).
+            </li>
+            <li>
+              -i &#60;PATH-TO-PRIVATE-KEY&#62; : esta parte puede omitirse si ha añadido la clave a su agente SSH.
+            </li>
+          </ul>
+
+          <h3>Dar acceso a su nuevo usuario</h3>
+
+          <p>Crear una nueva cuenta de usuario llamada "wizard"</p>
+
+          <code>$ sudo adduser wizard</code>
+
+          <p>Dale a "wizard" el permiso de sudo. Abra el archivo</p>
+          <code>$ sudo nano /etc/sudoers.d/wizard</code>
+
+          <p>Y establezca el contenido:</p>
+          <code>wizard ALL=(ALL) NOPASSWD:ALL</code>
+
+          <p>Cree los siguientes directorios:</p>
+          <code>$ mkdir /home/wizard/.ssh# create authorized_keys file and copy your public key here$ nano /home/wizard/.ssh/authorized_keys$ chown wizard /home/wizard/.ssh$ chown wizard /home/wizard/.ssh/authorized_keys</code>
+
+          <p>Copie el contenido de la clave pública (PATH-TO-PUBLIC-KEY) y péguelo en la instancia remota en el archivo /home/wizard/.ssh/authorized_keys . Establezca los permisos:</p>
+
+          <code>$ chmod 700 /home/wizard/.ssh$ chmod 600 /home/wizard/.ssh/authorized_keys</code>
+
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo4')"><b>Respuestas  </b> <span class="w3-tag w3-white">2</span></button></p>
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          <div id="demo4" style="display:none">
+            <hr>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="w3images/girl_mountain.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Gilberta X. <span class="w3-opacity w3-medium">enero 26, 2022, 11:22 AM</span></h4>
+                <p>Excelente tuto (10/10).</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="w3images/boy.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Ricardo P. <span class="w3-opacity w3-medium">enero 26, 2022, 12:57 AM</span></h4>
+                <p>Viva ¡La Cotorrisa!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIN: Blog Entry (4) -->
+      
+
+    <!-- END BLOG ENTRIES -->
+    </div>
+
+    <!-- About/Information menu -->
+    <div class="w3-col l4">
+      <!-- About Card -->
+      <div class="w3-white w3-margin">
+        <img src="w3images/erick-profile.png" alt="Erick Profile.png" style="width:100%" class="w3-grayscale">
+        <div class="w3-container w3-black">
+          <h4>Erick Escamilla Charco</h4>
+          <p>Ingeniero en Sistemas Computacionales, apasionado por la tecnología. Deasrrollador Web Full-Stack por ocupación e inquisidor por convicción.</p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Posts -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Publicaciones populares</h4>
+        </div>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <img src="w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">UI/UX</span>
+            <br>
+            <span>Explore las diferencias entre User Interface y User eXperience.</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="w3images/bandmember.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Django: tutorial para principiantes</span>
+            <br>
+            <span>Descubra uno de los frameworks más populares para desarrollo Web en Python.</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Hacking ético con Kali Linux</span>
+            <br>
+            <span>Tome una breve introducción al uso de herramientas de audotoría informática con Kali.</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+            <span class="w3-large">Spring Boot</span>
+            <br>
+            <span>Descubra un de los frameworks más populares para desarrollo Back-end con Java EE.</span>
+          </li>
+        </ul>
+      </div>
+      <hr>
+
+      <!-- Advertising -->
+      <!--
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Advertise</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
+            <span class="w3-display-middle">Your AD Here</span>
+          </div>
+        </div>
+      </div>
+      <hr>
+      -->
+
+      <!-- Tags -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Tags</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>
+            <span class="w3-tag w3-black w3-margin-bottom">Desarrollo Web</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Front-end</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Back-end</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSH</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSL</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTP</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTPS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">AWS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Azure</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">GCP</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Load-balancing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Jboss EAP</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Java EE</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Spring Boot</span>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Inspiration -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Inspiración</h4>
+        </div>
+        <div class="w3-row-padding w3-white">
+          <div class="w3-col s6">
+            <p><img src="w3images/inspiracion-1.png" alt="Sala de servidores.png" style="width:100%"></p>
+            <p><img src="w3images/robot-wallp-v2.png" alt="Robot.png" style="width:100%"></p>
+          </div>
+          <div class="w3-col s6">
+            <p><img src="w3images/mr-robot-wallpaper.png" alt="Mr Robot Wallp.png" style="width:100%" class="w3-grayscale"></p>
+            <p><img src="w3images/hacking-wallp-v2.png" alt="Hacking Wallpaper.png" style="width:100%"></p>
+         </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Sígueme</h4>
+        </div>
+        <div class="w3-container w3-xlarge w3-padding">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-snapchat w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+      </div>
+      <hr>
+      
+      <!-- Subscribe -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Suscribirse</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>Ingrese su e-mail y reciba las últimas noticias.</p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Ingrese e-mail" style="width:100%"></p>
+          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Suscribir</button></p>
+        </div>
+      </div>
+
+    <!-- END About/Intro Menu -->
+    </div>
+
+  <!-- END GRID -->
+  </div>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Subscribe MODAL -->
+<div id="subscribe" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">SUSCRIBIR</h2>
+      <!-- <p>Join my mailing list to receive updates on the latest blog posts and other things.</p> -->
+      <p>Únase a la lista de correos de Erick's Tech World para recibir actualizaciones sobre las últimas publicaciones del blog y obtener beneficios adicionales.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Ingrese su e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Suscribirme</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>Regresar a la parte superior</a>
+  <p>Con ayuda de <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
+}
+</script>
+
+</body>
+</html>
