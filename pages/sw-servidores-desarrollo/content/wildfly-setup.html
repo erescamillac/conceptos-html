@@ -4,239 +4,484 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/eec-styles.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/erick-style1.css">
+    <link rel="stylesheet" href="/assets/css/erick-style2.css">
+
     <title>Instalación y configuración de WildFly y JBoss Tools (por Erick Escamilla C.)</title>
 </head>
 <body>
+
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="../sw-serv-des-menu.html">
-                        <img width="64" src="/assets/images/navigation/back_icon.png" alt="Regresar">
-                    </a>
-                </li>
-                <li>
-                    <a href="../../arquitecturas/arquitecturas-menu.html">Arquitecturas</a>
-                </li>
-            </ul>
-        </nav>
+        <!-- Navigation bar -->
+        <div class="w3-bar w3-black w3-hide-small">
+            <a href="../sw-serv-des-menu.html" class="w3-bar-item w3-button">
+                <img width="16" src="/assets/images/navigation/back_icon.png" alt="Back">
+            </a>
+            <a href="/index.html" class="w3-bar-item w3-button">
+                <img width="16" src="/assets/images/navigation/home_icon.png" alt="Home">
+            </a>
+            <a href="/pages/arquitecturas/arquitecturas-menu.html" class="w3-bar-item w3-button">Arquitecturas</a>
+            <a href="/pages/webapps/web-apps-1-menu.html" class="w3-bar-item w3-button">Aplicaciones Web 1</a>
+            <a href="/pages/calculadora-js/calculadora-eec.html" class="w3-bar-item w3-button">CALCULADORA JS</a>
+            <a href="/pages/sw-servidores-desarrollo/sw-serv-des-menu.html" class="w3-bar-item w3-button">Servidores de DESARROLLO (2022-ene-24)</a>
+            <a href="/pages/plantillas/plantilla-1.html" class="w3-bar-item w3-button">Plantilla 1 (SSL, SSH, HTTPS) -2022/ene/25-</a>
+            <a href="/pages/certificado/certificado.html" class="w3-bar-item w3-button w3-right">CERTIFICADO</a>
+        </div>
     </header>
+
     <main>
-        <section>
-            <h1>Instalación y configuración de WildFly y JBoss Tools</h1>
+        <!-- INI: Skeleton -->
+        <!-- INI: plantilla (skeleton) -->
+    <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
 
-            <h2>Contenido</h2>
-
-            <ol>
-                <li>
-                    <a href="#jdk-intall">Instalación del último JDK</a>
-                </li>
-                <li>
-                    <a href="#wildfly8-install">Instalación de WildFly 8</a>
-                </li>
-                <li>
-                    <a href="#eclipse-4-4-install">Instalación de Eclipse 4.4</a>
-                </li>
-                <li>
-                    <a href="#jboss-tools-4-2-install">Instalación de JBoss Tools 4.2</a>
-                </li>
-            </ol>
-
-            <h2 id="jdk-intall">Instalación del último JDK</h2>
-
-            <ol>
-                <li>
-                    <p>
-                        Asegúrese de que la última versión del kit de desarrollo de Java (JDK 7 Update 75 o posterior) está instalada en su ordenador. Si el JDK está correctamente instalado en su ordenador, puede ir al paso 4 de esta sección; de lo contrario, continúe con el siguiente paso.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Vaya a <a href="https://www.oracle.com/java/technologies/downloads/">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a> y siga las instrucciones del sitio web de Oracle para descargar la última versión del JDK (Java SE 7 Update 75 o posterior) para el sistema operativo de su ordenador.
-                    </p>
-                    <div class="imgbox">
-                        <img class="center-fit" width="70%" src="../imgs/jdk-download.png" alt="JDK download.png">
-                    </div>
-                </li>
-                <li>
-                    <p>
-                        Instale el JDK en un directorio de su ordenador, por ejemplo, C:\Java\jdk7_75.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Cree una variable de entorno llamada JAVA_HOME que apunte al directorio de instalación del JDK, por ejemplo C:\Java\jdk7_75.
-                    </p>
-                    <div class="imgbox">
-                        <img class="center-fit" width="60%" src="../imgs/variables_entorno.png" alt="Variable entorno.png">
-                    </div>
-                </li>
-            </ol>
-
-            <h2 id="wildfly8-install">Instalación de WildFly 8</h2>
-
-            <ol>
-                <li>
-                    <p>
-                        Obtenga la última versión estable del servidor de aplicaciones WildFly (8.2.0.Final) de <a href="https://www.wildfly.org/downloads/" target="_blank">http://wildfly.org/downloads/</a> <code> (wildfly-8.2.0.Final.zip)</code>.
-                    </p>
-                    <div class="imgbox">
-                        <img class="center-fit" width="60%" src="../imgs/wildfly-download.png" alt="Wildfly download.png">
-                    </div>
-                </li>
-                <li>
-                    <p>
-                        <strong>Extraiga</strong> el <strong>archivo zip</strong> en un directorio de su ordenador, por ejemplo, <code>C:\EAI</code>. La ruta <strong>no debe contener espacios</strong>. Se creará un nuevo directorio, por ejemplo <code>C:\EAI\wildfly-8.2.0.Final</code>, que contiene los archivos de WildFly.
-                    </p>
-                    <div class="imgbox">
-                        <img class="center-fit" width="65%" src="../imgs/unzip-file.png" alt="Unzip file.png">
-                    </div>
-                </li>
-                <li>
-                    <p>
-                        Utilice el script <code>&#60;Directorio WildFly&#62;\bin\standalone.bat</code> para iniciar el servidor WildFly y comprobar la instalación. Tras el arranque, debería poder acceder al servidor web en <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Abra el enlace <strong>Consola de administración</strong> y siga las instrucciones para añadir un <em>nuevo usuario de gestión</em>.
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-48 w3-white">
+      <h1 class="w3-xxxlarge"><b>Configuración del Servidor de Aplicaciones Wildfly</b></h1>
+      <h6>Plantilla Original <a href="https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm" target="_blank"><span class="w3-tag">https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm</span></a></h6>
+      <h6>Modificada por: <span class="w3-tag">Erick Escamilla C.</span> </h6>
+    </header>
+  
+    <!-- Image header -->
+    <header class="w3-display-container w3-wide" id="home">
+      <!-- <img class="w3-image" src="w3images/jane.jpg" alt="Fashion Blog" width="1600" height="1060"> -->
+      <img class="w3-image" src="/pages/plantillas/w3images/ssh-header-blog.png" alt="SSH Blog" width="1600" height="1060">
+      <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Erick's</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>TECH WORLD</b></h1>
+        <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUSCRIBIRME</button></h6>
+      </div>
+    </header>
+  
+    <!-- Grid -->
+    <div class="w3-row w3-padding w3-border">
+  
+      <!-- Blog entries -->
+      <div class="w3-col l8 s12">
+      
+        <!-- Blog entry (1) -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+          <div class="w3-center">
+            <h3>Configuración del Servidor de Aplicaciones</h3>
+            <h5>Wildfly <span class="w3-opacity">feberero 08, 2022</span></h5>
+          </div>
+  
+          <div class="w3-justify">
+            <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+            <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+            
+            <!-- INI: Content -->
+            <section>
+                <h3 class="main-header">Instalación y configuración de WildFly y JBoss Tools</h3>
+    
+                <h4>Contenido</h4>
+    
+                <ol>
+                    <li>
+                        <a href="#jdk-intall">Instalación del último JDK</a>
+                    </li>
+                    <li>
+                        <a href="#wildfly8-install">Instalación de WildFly 8</a>
+                    </li>
+                    <li>
+                        <a href="#eclipse-4-4-install">Instalación de Eclipse 4.4</a>
+                    </li>
+                    <li>
+                        <a href="#jboss-tools-4-2-install">Instalación de JBoss Tools 4.2</a>
+                    </li>
+                </ol>
+    
+                <h2 id="jdk-intall">Instalación del último JDK</h2>
+    
+                <ol>
+                    <li>
+                        <p>
+                            Asegúrese de que la última versión del kit de desarrollo de Java (JDK 7 Update 75 o posterior) está instalada en su ordenador. Si el JDK está correctamente instalado en su ordenador, puede ir al paso 4 de esta sección; de lo contrario, continúe con el siguiente paso.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Vaya a <a href="https://www.oracle.com/java/technologies/downloads/">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a> y siga las instrucciones del sitio web de Oracle para descargar la última versión del JDK (Java SE 7 Update 75 o posterior) para el sistema operativo de su ordenador.
+                        </p>
                         <div class="imgbox">
-                            <img class="center-fit" width="60%" src="../imgs/management-console-wfly.png" alt="Management console Wildfly.png">
+                            <img class="center-fit" width="70%" src="../imgs/jdk-download.png" alt="JDK download.png">
                         </div>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Después de crear un usuario, vuelva a visitar la <strong>Consola de Administración</strong>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Vaya a <a href="http://localhost:9990/console/App.html#deployments" target="_blank">Manage Deployments</a> y haga clic en <strong>Add Content</strong> para subir <a href="https://wwu-pi.github.io/tutorials/lectures/eai/hsqldb.jar">hsqldb.jar</a>. Asegúrese de que el archivo desplegado está <strong>habilitado</strong>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Vaya a <strong>Configuración</strong> -> <strong>Conector</strong> -> <a href="http://localhost:9990/console/App.html#datasources" target="_blank">Fuentes de datos</a> y haga clic en <strong>Añadir</strong> . Utilice la siguiente información para crear un <em>origen de datos (datasource)</em>:
-                    </p>
-                    <ul type="circle">
-                        <li>Nombre: <strong>DefaultDS</strong></li>
-                        <li>Nombre JNDI: <strong>java:/DefaultDS</strong></li>
-                        <li>Elija <strong>hsqldb.jar</strong> como controlador</li>
-                        <li>URL de conexión: <strong>jdbc:hsqldb:${jboss.server.data.dir}${/}hypersonic${/}localDB;shutdown=true</strong></li>
-                        <li>nombre de usuario: <strong>sa</strong></li>
-                    </ul>
-                </li>
-                <li>
-                    <p><strong>Habilite</strong> el nuevo <strong>origen de datos</strong>. También puede utilizar la <em>JBoss-CLI</em> para desplegar el controlador <em>HSQLDB</em> y añadir la fuente de datos: <code>./jboss-cli.sh -c "deploy ~/Downloads/hsqldb.jar,data-source add --driver-name=hsqldb.jar --use-ccm=false --jta=false --user-name=sa --name=DefaultDS --jndi-name=java:/DefaultDS --connection-url=jdbc:hsqldb:\$\{jboss.server.data.dir\}\$\{/\}hypersonic\$\{/\}localDB;shutdown=true"</code></p>
-                </li>
-                <li>
-                    <p>
-                        Para detener el servidor, pulse CTRL-C en la ventana de la consola que se abrió durante el paso 3.
-                    </p>
-                </li>
-            </ol>
+                    </li>
+                    <li>
+                        <p>
+                            Instale el JDK en un directorio de su ordenador, por ejemplo, C:\Java\jdk7_75.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Cree una variable de entorno llamada JAVA_HOME que apunte al directorio de instalación del JDK, por ejemplo C:\Java\jdk7_75.
+                        </p>
+                        <div class="imgbox">
+                            <img class="center-fit" width="60%" src="../imgs/variables_entorno.png" alt="Variable entorno.png">
+                        </div>
+                    </li>
+                </ol>
+    
+                <h2 id="wildfly8-install">Instalación de WildFly 8</h2>
+    
+                <ol>
+                    <li>
+                        <p>
+                            Obtenga la última versión estable del servidor de aplicaciones WildFly (8.2.0.Final) de <a href="https://www.wildfly.org/downloads/" target="_blank">http://wildfly.org/downloads/</a> <code> (wildfly-8.2.0.Final.zip)</code>.
+                        </p>
+                        <div class="imgbox">
+                            <img class="center-fit" width="60%" src="../imgs/wildfly-download.png" alt="Wildfly download.png">
+                        </div>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Extraiga</strong> el <strong>archivo zip</strong> en un directorio de su ordenador, por ejemplo, <code>C:\EAI</code>. La ruta <strong>no debe contener espacios</strong>. Se creará un nuevo directorio, por ejemplo <code>C:\EAI\wildfly-8.2.0.Final</code>, que contiene los archivos de WildFly.
+                        </p>
+                        <div class="imgbox">
+                            <img class="center-fit" width="65%" src="../imgs/unzip-file.png" alt="Unzip file.png">
+                        </div>
+                    </li>
+                    <li>
+                        <p>
+                            Utilice el script <code>&#60;Directorio WildFly&#62;\bin\standalone.bat</code> para iniciar el servidor WildFly y comprobar la instalación. Tras el arranque, debería poder acceder al servidor web en <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Abra el enlace <strong>Consola de administración</strong> y siga las instrucciones para añadir un <em>nuevo usuario de gestión</em>.
+                            <div class="imgbox">
+                                <img class="center-fit" width="60%" src="../imgs/management-console-wfly.png" alt="Management console Wildfly.png">
+                            </div>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Después de crear un usuario, vuelva a visitar la <strong>Consola de Administración</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Vaya a <a href="http://localhost:9990/console/App.html#deployments" target="_blank">Manage Deployments</a> y haga clic en <strong>Add Content</strong> para subir <a href="https://wwu-pi.github.io/tutorials/lectures/eai/hsqldb.jar">hsqldb.jar</a>. Asegúrese de que el archivo desplegado está <strong>habilitado</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Vaya a <strong>Configuración</strong> -> <strong>Conector</strong> -> <a href="http://localhost:9990/console/App.html#datasources" target="_blank">Fuentes de datos</a> y haga clic en <strong>Añadir</strong> . Utilice la siguiente información para crear un <em>origen de datos (datasource)</em>:
+                        </p>
+                        <ul type="circle">
+                            <li>Nombre: <strong>DefaultDS</strong></li>
+                            <li>Nombre JNDI: <strong>java:/DefaultDS</strong></li>
+                            <li>Elija <strong>hsqldb.jar</strong> como controlador</li>
+                            <li>URL de conexión: <strong>jdbc:hsqldb:${jboss.server.data.dir}${/}hypersonic${/}localDB;shutdown=true</strong></li>
+                            <li>nombre de usuario: <strong>sa</strong></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><strong>Habilite</strong> el nuevo <strong>origen de datos</strong>. También puede utilizar la <em>JBoss-CLI</em> para desplegar el controlador <em>HSQLDB</em> y añadir la fuente de datos: <code>./jboss-cli.sh -c "deploy ~/Downloads/hsqldb.jar,data-source add --driver-name=hsqldb.jar --use-ccm=false --jta=false --user-name=sa --name=DefaultDS --jndi-name=java:/DefaultDS --connection-url=jdbc:hsqldb:\$\{jboss.server.data.dir\}\$\{/\}hypersonic\$\{/\}localDB;shutdown=true"</code></p>
+                    </li>
+                    <li>
+                        <p>
+                            Para detener el servidor, pulse CTRL-C en la ventana de la consola que se abrió durante el paso 3.
+                        </p>
+                    </li>
+                </ol>
+    
+                <h2 id="eclipse-4-4-install">Instalación de Eclipse 4.4</h2>
+    
+                <ol>
+                    <li>
+                        <p><strong>Descargue</strong> el <strong>IDE Eclipse para desarrolladores de Java EE</strong> para su sistema operativo (versión 4.4.2, Luna SR2) desde <a href="https://www.eclipse.org/downloads/packages/release/luna/sr2/eclipse-ide-java-ee-developers" target="_blank">http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunasr2</a>.</p>
+                        <div class="imgbox">
+                            <img class="center-fit" width="70%" src="../imgs/eclipse-download-page.png" alt="Eclipse Downoad Page.png">
+                        </div>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Extrae</strong> el archivo descargado, por ejemplo, <code>eclipse-jee-luna-SR2-win32-x86_64.zip</code>, a un directorio de tu ordenador, por ejemplo, <code>C:\EAI</code>. Esto creará un subdirectorio, como <code>C:\EAI\eclipse</code>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Inicie Eclipse</strong>. El ejecutable <strong>eclipse.exe</strong> se encuentra en el directorio de instalación. Espere a que aparezca la ventana "Workspace Launcher" y seleccione un <strong>directorio de espacio de trabajo</strong>, por ejemplo <code>C:\EAI\projects</code>. Esta ruta <strong>tampoco debe contener espacios</strong>. El directorio del espacio de trabajo es donde se almacenarán todos sus proyectos. Puede marcar la casilla <em>"Usar esto como predeterminado y no volver a preguntar"</em> para evitar que este diálogo aparezca en el siguiente inicio. Haga clic en <strong>"Aceptar"</strong> para cerrar el diálogo y llegar a la ventana de la mesa de trabajo.
+                        </p>
+                    </li>
+                </ol>
+    
+                <h2 id="jboss-tools-4-2-install">Instalación de JBoss Tools 4.2 para Eclipse</h2>
+    
+                <ol>
+                    <li>
+                        <p>
+                            Seleccione <strong>"Ayuda->Eclipse Marketplace..."</strong> en la barra de menú de Eclipse. Elija "Eclipse Marketplace" si se le pide un catálogo de mercado.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Busque "JBoss Tools" e instale <strong>JBoss Tools (Luna)</strong>, versión 4.2.x.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Espere a que termine el "Cálculo de requisitos..." y asegúrese de que todas las características están marcadas, luego <strong>confirme</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Acepte los acuerdos de licencia</strong> y haga clic en <strong>"Finalizar"</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Cuando se complete la descarga, aparecerá una advertencia de seguridad sobre "Contenido no firmado". <strong>Acepte con "OK"</strong> para comenzar con la instalación.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Cuando se le pida que lo haga, <strong>"Reinicie ahora"</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Después de <strong>cerrar</strong> la ventana <strong>"Welcome"</strong>, verá la perspectiva "Java EE". La perspectiva seleccionada se indica en la esquina superior derecha, como se muestra en la siguiente figura:
+                        </p>
+                        <div class="imgbox">
+                            <img class="center-fit" width="60%" src="../imgs/java-ee-perspective.png" alt="Java EE perspective.png">
+                        </div>
+                        <p>
+                            Si el botón Java EE no está visible, puede cambiar a la perspectiva Java EE a través de "Ventana->Abrir Perspectiva->Otra..." . En el cuadro de diálogo "Abrir perspectiva" haga doble clic en la entrada Java EE.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Active</strong> la pestaña de vista <strong>"Servidores"</strong> en la parte inferior derecha de la ventana. Haga <strong>clic con el botón derecho</strong> del ratón en el área vacía y seleccione <strong>"Nuevo->Servidor"</strong>, como se muestra en esta captura de pantalla:
+                        </p>
+                        <div class="imgbox">
+                            <img class="center-fit" width="65%" src="../imgs/new-server-eclipse.png" alt="New server Eclipse.png">
+                        </div>
+                    </li>
+                    <li>
+                        <p>
+                            En la ventana "Nuevo servidor" seleccione <strong>"WildFly 8"</strong> (de la categoría JBoss Community) como <strong>tipo de servidor</strong> y haga clic en <strong>"Siguiente"</strong>.
+                        </p>
+                        <div class="imgbox">
+                            <img class="center-fit" width="60%" src="../imgs/server-type-wildfly-8.png" alt="Server type Wildfly8.png">
+                        </div>
+                        <p>
+                            Establezca la entrada <strong>"Directorio de inicio"</strong> en el directorio de instalación de WildFly AS, por ejemplo, <code>C:\EAI\wildfly-8.2.0.Final</code>, y haga clic en <strong>"Finalizar"</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            En la vista "Servidores" <strong>seleccione el servidor recién creado</strong> y haga clic en el botón verde de <strong>Iniciar</strong>.
+                        </p>
+                        <div class="imgbox">
+                            <img class="center-fit" width="60%" src="../imgs/start-server-button.png" alt="Start server button.png">
+                        </div>
+                        <p>
+                            Se abrirá una nueva vista de "Consola" que mostrará los registros de inicio del AS WildFly.
+                        </p>
+                        <p>Para mayor información consulte <a href="https://wwu-pi.github.io/tutorials/lectures/eai/010_tutorial_jboss_setup.html#:~:text=Use%20the%20script%20%3CWildFly%20directory,add%20a%20new%20management%20user." target="_blank">https://wwu-pi.github.io/tutorials/lectures/eai/010_tutorial_jboss_setup.html#:~:text=Use%20the%20script%20%3CWildFly%20directory,add%20a%20new%20management%20user.</a></p>
+                    </li>
+                </ol>
+    
+            </section>
+            <!-- FIN: Content -->
+            
+            <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+            <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+            <p class="w3-clear"></p>
+            <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+              <hr>
+                <div class="w3-col l2 m3">
+                  <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                </div>
+                <div class="w3-col l10 m9">
+                  <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                  <p>¡Excelente contenido! Siguiendo.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- fin de Blog Entry (1) -->
+        <hr>
+      <!-- END BLOG ENTRIES -->
+      </div>
+  
+      <!-- About/Information menu -->
+      <div class="w3-col l4">
+        <!-- About Card -->
+        <div class="w3-white w3-margin">
+          <img src="/pages/plantillas/w3images/erick-profile.png" alt="Erick Profile.png" style="width:100%" class="w3-grayscale">
+          <div class="w3-container w3-black">
+            <h4>Erick Escamilla Charco</h4>
+            <p>Ingeniero en Sistemas Computacionales, apasionado por la tecnología. Deasrrollador Web Full-Stack por ocupación e inquisidor por convicción.</p>
+          </div>
+        </div>
+        <hr>
+  
+        <!-- Posts -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Publicaciones populares</h4>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-white">
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">UI/UX</span>
+              <br>
+              <span>Explore las diferencias entre User Interface y User eXperience.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/bandmember.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Django: tutorial para principiantes</span>
+              <br>
+              <span>Descubra uno de los frameworks más populares para desarrollo Web en Python.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Hacking ético con Kali Linux</span>
+              <br>
+              <span>Tome una breve introducción al uso de herramientas de audotoría informática con Kali.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+              <span class="w3-large">Spring Boot</span>
+              <br>
+              <span>Descubra un de los frameworks más populares para desarrollo Back-end con Java EE.</span>
+            </li>
+          </ul>
+        </div>
+        <hr>
+  
+        <!-- Tags -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Tags</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p>
+              <span class="w3-tag w3-black w3-margin-bottom">Desarrollo Web</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Front-end</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Back-end</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSH</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSL</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTP</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTPS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">AWS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Azure</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">GCP</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Load-balancing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Jboss EAP</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Java EE</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Spring Boot</span>
+            </p>
+          </div>
+        </div>
+        <hr>
+  
+        <!-- Inspiration -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Inspiración</h4>
+          </div>
+          <div class="w3-row-padding w3-white">
+            <div class="w3-col s6">
+              <p><img src="/pages/plantillas/w3images/inspiracion-1.png" alt="Sala de servidores.png" style="width:100%"></p>
+              <p><img src="/pages/plantillas/w3images/robot-wallp-v2.png" alt="Robot.png" style="width:100%"></p>
+            </div>
+            <div class="w3-col s6">
+              <p><img src="/pages/plantillas/w3images/mr-robot-wallpaper.png" alt="Mr Robot Wallp.png" style="width:100%" class="w3-grayscale"></p>
+              <p><img src="/pages/plantillas/w3images/hacking-wallp-v2.png" alt="Hacking Wallpaper.png" style="width:100%"></p>
+           </div>
+          </div>
+        </div>
+        <hr>
+  
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Sígueme</h4>
+          </div>
+          <div class="w3-container w3-xlarge w3-padding">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+          </div>
+        </div>
+        <hr>
+        
+        <!-- Subscribe -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Suscribirse</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p>Ingrese su e-mail y reciba las últimas noticias.</p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Ingrese e-mail" style="width:100%"></p>
+            <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Suscribir</button></p>
+          </div>
+        </div>
+  
+      <!-- END About/Intro Menu -->
+      </div>
+  
+    <!-- END GRID -->
+    </div>
+  
+  <!-- END w3-content -->
+  </div>
+  
+  <!-- Subscribe MODAL -->
+  <div id="subscribe" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content" style="padding:32px">
+      <div class="w3-container w3-white">
+        <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+        <h2 class="w3-wide">SUSCRIBIR</h2>
+        <!-- <p>Join my mailing list to receive updates on the latest blog posts and other things.</p> -->
+        <p>Únase a la lista de correos de Erick's Tech World para recibir actualizaciones sobre las últimas publicaciones del blog y obtener beneficios adicionales.</p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Ingrese su e-mail"></p>
+        <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Suscribirme</button>
+      </div>
+    </div>
+  </div>
 
-            <h2 id="eclipse-4-4-install">Instalación de Eclipse 4.4</h2>
-
-            <ol>
-                <li>
-                    <p><strong>Descargue</strong> el <strong>IDE Eclipse para desarrolladores de Java EE</strong> para su sistema operativo (versión 4.4.2, Luna SR2) desde <a href="https://www.eclipse.org/downloads/packages/release/luna/sr2/eclipse-ide-java-ee-developers" target="_blank">http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunasr2</a>.</p>
-                    <div class="imgbox">
-                        <img class="center-fit" width="70%" src="../imgs/eclipse-download-page.png" alt="Eclipse Downoad Page.png">
-                    </div>
-                </li>
-                <li>
-                    <p>
-                        <strong>Extrae</strong> el archivo descargado, por ejemplo, <code>eclipse-jee-luna-SR2-win32-x86_64.zip</code>, a un directorio de tu ordenador, por ejemplo, <code>C:\EAI</code>. Esto creará un subdirectorio, como <code>C:\EAI\eclipse</code>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <strong>Inicie Eclipse</strong>. El ejecutable <strong>eclipse.exe</strong> se encuentra en el directorio de instalación. Espere a que aparezca la ventana "Workspace Launcher" y seleccione un <strong>directorio de espacio de trabajo</strong>, por ejemplo <code>C:\EAI\projects</code>. Esta ruta <strong>tampoco debe contener espacios</strong>. El directorio del espacio de trabajo es donde se almacenarán todos sus proyectos. Puede marcar la casilla <em>"Usar esto como predeterminado y no volver a preguntar"</em> para evitar que este diálogo aparezca en el siguiente inicio. Haga clic en <strong>"Aceptar"</strong> para cerrar el diálogo y llegar a la ventana de la mesa de trabajo.
-                    </p>
-                </li>
-            </ol>
-
-            <h2 id="jboss-tools-4-2-install">Instalación de JBoss Tools 4.2 para Eclipse</h2>
-
-            <ol>
-                <li>
-                    <p>
-                        Seleccione <strong>"Ayuda->Eclipse Marketplace..."</strong> en la barra de menú de Eclipse. Elija "Eclipse Marketplace" si se le pide un catálogo de mercado.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Busque "JBoss Tools" e instale <strong>JBoss Tools (Luna)</strong>, versión 4.2.x.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Espere a que termine el "Cálculo de requisitos..." y asegúrese de que todas las características están marcadas, luego <strong>confirme</strong>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <strong>Acepte los acuerdos de licencia</strong> y haga clic en <strong>"Finalizar"</strong>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Cuando se complete la descarga, aparecerá una advertencia de seguridad sobre "Contenido no firmado". <strong>Acepte con "OK"</strong> para comenzar con la instalación.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Cuando se le pida que lo haga, <strong>"Reinicie ahora"</strong>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Después de <strong>cerrar</strong> la ventana <strong>"Welcome"</strong>, verá la perspectiva "Java EE". La perspectiva seleccionada se indica en la esquina superior derecha, como se muestra en la siguiente figura:
-                    </p>
-                    <div class="imgbox">
-                        <img class="center-fit" width="60%" src="../imgs/java-ee-perspective.png" alt="Java EE perspective.png">
-                    </div>
-                    <p>
-                        Si el botón Java EE no está visible, puede cambiar a la perspectiva Java EE a través de "Ventana->Abrir Perspectiva->Otra..." . En el cuadro de diálogo "Abrir perspectiva" haga doble clic en la entrada Java EE.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <strong>Active</strong> la pestaña de vista <strong>"Servidores"</strong> en la parte inferior derecha de la ventana. Haga <strong>clic con el botón derecho</strong> del ratón en el área vacía y seleccione <strong>"Nuevo->Servidor"</strong>, como se muestra en esta captura de pantalla:
-                    </p>
-                    <div class="imgbox">
-                        <img class="center-fit" width="65%" src="../imgs/new-server-eclipse.png" alt="New server Eclipse.png">
-                    </div>
-                </li>
-                <li>
-                    <p>
-                        En la ventana "Nuevo servidor" seleccione <strong>"WildFly 8"</strong> (de la categoría JBoss Community) como <strong>tipo de servidor</strong> y haga clic en <strong>"Siguiente"</strong>.
-                    </p>
-                    <div class="imgbox">
-                        <img class="center-fit" width="60%" src="../imgs/server-type-wildfly-8.png" alt="Server type Wildfly8.png">
-                    </div>
-                    <p>
-                        Establezca la entrada <strong>"Directorio de inicio"</strong> en el directorio de instalación de WildFly AS, por ejemplo, <code>C:\EAI\wildfly-8.2.0.Final</code>, y haga clic en <strong>"Finalizar"</strong>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        En la vista "Servidores" <strong>seleccione el servidor recién creado</strong> y haga clic en el botón verde de <strong>Iniciar</strong>.
-                    </p>
-                    <div class="imgbox">
-                        <img class="center-fit" width="60%" src="../imgs/start-server-button.png" alt="Start server button.png">
-                    </div>
-                    <p>
-                        Se abrirá una nueva vista de "Consola" que mostrará los registros de inicio del AS WildFly.
-                    </p>
-                    <p>Para mayor información consulte <a href="https://wwu-pi.github.io/tutorials/lectures/eai/010_tutorial_jboss_setup.html#:~:text=Use%20the%20script%20%3CWildFly%20directory,add%20a%20new%20management%20user." target="_blank">https://wwu-pi.github.io/tutorials/lectures/eai/010_tutorial_jboss_setup.html#:~:text=Use%20the%20script%20%3CWildFly%20directory,add%20a%20new%20management%20user.</a></p>
-                </li>
-            </ol>
-
-        </section>
-    </main>
-    <footer></footer>
+  <!-- cierre del main-->
+   <!-- FIN: contenido principal de la página [MAIN] -->
+</main>
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-dark-grey" style="padding:32px">
+    <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>Regresar a la parte superior</a>
+    <p>Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.</p>
+    <p>Hosting:</p>
+    <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    <p>Con ayuda de <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+  
+  <script>
+  // Toggle between hiding and showing blog replies/comments
+  document.getElementById("myBtn").click();
+  function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  function likeFunction(x) {
+    x.style.fontWeight = "bold";
+    x.innerHTML = "✓ Liked";
+  }
+  </script>
+  
+    <!-- FIN: plantilla (skeleton) -->
+        <!-- FIN: Skeleton -->
+        
 </body>
 </html>

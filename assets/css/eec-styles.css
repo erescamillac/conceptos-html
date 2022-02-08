@@ -10,9 +10,12 @@ CSS -Requisitos MÍNIMOS SOLICITADOS- ::
 */
 
 
+/*
 *{
     color: white;
 }
+*/
+
 
 
 /*
@@ -20,8 +23,10 @@ Creado por Erick Escamilla Charco
 (1) Fondo -[background-image]-
 */
 body{
-    background-color: darkslateblue;
+    background-color: rgb(122, 114, 158);
+    /*
     background-image: url(/assets/backgrounds/arkham-wallp-png.png);
+    */
 }
 
 /* (2) Títulos -[<h1>, h2, h3, ...]- */
@@ -109,6 +114,7 @@ tfoot{
 /*
     (5) Texto y párrafo -fuente, tamaño color-
 */
+/*
 p{
     font-size: 1rem;
     color: rgb(221, 223, 109);
@@ -116,6 +122,8 @@ p{
     text-align: justify;
     text-justify: inter-word;
 }
+*/
+
 
 ul, li{
     font-size: 1.2rem;

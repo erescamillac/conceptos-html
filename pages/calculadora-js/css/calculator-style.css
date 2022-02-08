@@ -7,11 +7,12 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background-color: rgb(28, 14, 104);
+    background-color: rgb(122, 111, 184);
 }
 
 #container{
-    width: 1000px;
+    /* width: 1000px; */
+    width: "95%";
     /* height: 550px; */
     /*TODO: agregar +120 px [height] para espacio de Radio buttons (sen, cos, tan) */
     /* +300 px */
@@ -111,8 +112,8 @@ label{
 }
 
 .operator, .number, .empty {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     /* margin: 15px; */
     margin: 10px;
     float: left;

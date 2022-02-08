@@ -2,15 +2,6 @@
 <!-- INI: instyle -->
 <style>
    
-        /* INI: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana */
-
-        /*
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        */
-
         .imgbox {
             display: grid;
             height: 100%;
@@ -29,6 +20,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/eec-styles.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/erick-style1.css">
+    <link rel="stylesheet" href="/assets/css/erick-style2.css">
+
     <title>P&aacute;gina Web (Concepto) - by Erick Escamilla C. (2010067)</title>
 </head>
 
@@ -36,75 +40,294 @@
 
     <header>
         <!-- logo, menú de navegación, redes sociales... -->
-        <nav>
-            <ul>
-                <li>
-                    <a href="/index.html">
-                        <img width=64 src="/assets/images/navigation/home_icon.png" alt="Home logo" />
-                    </a>
-                </li>
-                
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/arquitecturas/arquitecturas-menu.html">Arquitecturas</a></li>
-            </ul>
-        </nav>
+        <!-- Navigation bar with social media icons -->
+        <div class="w3-bar w3-black w3-hide-small">
+            <a href="/index.html" class="w3-bar-item w3-button"><img width="16" src="/assets/images/navigation/back_icon.png" alt="Home"></a>
+            <a href="/index.html" class="w3-bar-item w3-button">Conceptos</a>
+            <a href="/pages/arquitecturas/arquitecturas-menu.html" class="w3-bar-item w3-button">Arquitecturas</a>
+            <a href="/pages/webapps/web-apps-1-menu.html" class="w3-bar-item w3-button">Aplicaciones Web 1</a>
+            <a href="/pages/calculadora-js/calculadora-eec.html" class="w3-bar-item w3-button">CALCULADORA JS</a>
+            <a href="/pages/sw-servidores-desarrollo/sw-serv-des-menu.html" class="w3-bar-item w3-button">Servidores de DESARROLLO (2022-ene-24)</a>
+            <a href="/pages/plantillas/plantilla-1.html" class="w3-bar-item w3-button">Plantilla 1 (SSL, SSH, HTTPS) -2022/ene/25-</a>
+            <a href="/pages/certificado/certificado.html" class="w3-bar-item w3-button w3-right">CERTIFICADO</a>
+        </div>
     </header>  
 
     <main>
-        <section>
-            <h1 id="web-pages-concept">P&aacute;ginas Web</h1>
-            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+        <!-- INI: Skeleton -->
+        <!-- INI: plantilla (skeleton) -->
+    <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
 
-            <p>Documento que se puede visualizar en un navegador web como Firefox, Google Chrome, Opera, Microsoft Internet Explorer o Edge, o Safari de Apple. También suelen llamarse simplemente "páginas".</p>
-
-            <!-- pagina_web.png -->
-
-            <p>Una página web es un documento, normalmente escrito en HTML, que se visualiza en un navegador de Internet. Se puede acceder a una página web introduciendo una dirección URL en la barra de direcciones del navegador. Una página web puede contener texto, gráficos e hipervínculos a otras páginas web y archivos.</p>
-
-            <div class="imgbox">
-                <img class="center-fit" src="/assets/images/pagina_web.png" alt="">
-            </div>
-
-            <p>Una página web se utiliza a menudo para proporcionar información a los espectadores, incluyendo imágenes o vídeos para ayudar a ilustrar temas importantes. Una página web también puede utilizarse como método para vender productos o servicios a los espectadores. Un sitio web se compone de varias páginas, como nuestro sitio web Computer Hope.</p>
-
-            <p>Cuando usted hace clic en un enlace proporcionado por un motor de búsqueda, está accediendo a una página web. Internet consta de millones de páginas web, y cada día se añaden más.</p>
-
-            <h2>¿Cuáles son los elementos de una página web?</h2>
-
-            <p>Cada página web es diferente. Sin embargo, la mayoría de las páginas contienen algunos o todos los elementos que figuran en esta página web. A continuación se ofrece un resumen de los principales elementos de una página web.</p>
-
-            <!-- elementos_pagina_web.jpg -->
-            <div class="imgbox">
-                <img class="center-fit" src="/assets/images/elementos_pagina_web.jpg" alt="">
-            </div>
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-48 w3-white">
+      <h1 class="w3-xxxlarge"><b>Página Web</b></h1>
+      <h6>Plantilla Original <a href="https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm" target="_blank"><span class="w3-tag">https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm</span></a></h6>
+      <h6>Modificada por: <span class="w3-tag">Erick Escamilla C.</span> </h6>
+    </header>
+  
+    <!-- Image header -->
+    <header class="w3-display-container w3-wide" id="home">
+      <!-- <img class="w3-image" src="w3images/jane.jpg" alt="Fashion Blog" width="1600" height="1060"> -->
+      <img class="w3-image" src="/pages/plantillas/w3images/ssh-header-blog.png" alt="SSH Blog" width="1600" height="1060">
+      <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Erick's</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>TECH WORLD</b></h1>
+        <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUSCRIBIRME</button></h6>
+      </div>
+    </header>
+  
+    <!-- Grid -->
+    <div class="w3-row w3-padding w3-border">
+  
+      <!-- Blog entries -->
+      <div class="w3-col l8 s12">
+      
+        <!-- Blog entry (1) -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+          <div class="w3-center">
+            <h3>Página Web</h3>
+            <h5>Página Web <span class="w3-opacity">feberero 08, 2022</span></h5>
+          </div>
+  
+          <div class="w3-justify">
+            <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+            <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
             
+            <!-- INI: Content -->
+            <section>
+                <h3 id="web-pages-concept" class="main-header">P&aacute;ginas Web</h3>
+                <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+    
+                <p>Documento que se puede visualizar en un navegador web como Firefox, Google Chrome, Opera, Microsoft Internet Explorer o Edge, o Safari de Apple. También suelen llamarse simplemente "páginas".</p>
+    
+                <!-- pagina_web.png -->
+    
+                <p>Una página web es un documento, normalmente escrito en HTML, que se visualiza en un navegador de Internet. Se puede acceder a una página web introduciendo una dirección URL en la barra de direcciones del navegador. Una página web puede contener texto, gráficos e hipervínculos a otras páginas web y archivos.</p>
+    
+                <div class="imgbox">
+                    <img class="center-fit" src="/assets/images/pagina_web.png" alt="">
+                </div>
+    
+                <p>Una página web se utiliza a menudo para proporcionar información a los espectadores, incluyendo imágenes o vídeos para ayudar a ilustrar temas importantes. Una página web también puede utilizarse como método para vender productos o servicios a los espectadores. Un sitio web se compone de varias páginas, como nuestro sitio web Computer Hope.</p>
+    
+                <p>Cuando usted hace clic en un enlace proporcionado por un motor de búsqueda, está accediendo a una página web. Internet consta de millones de páginas web, y cada día se añaden más.</p>
+    
+                <h3 class="main-header">¿Cuáles son los elementos de una página web?</h3>
+    
+                <p>Cada página web es diferente. Sin embargo, la mayoría de las páginas contienen algunos o todos los elementos que figuran en esta página web. A continuación se ofrece un resumen de los principales elementos de una página web.</p>
+    
+                <!-- elementos_pagina_web.jpg -->
+                <div class="imgbox">
+                    <img class="center-fit" src="/assets/images/elementos_pagina_web.jpg" alt="">
+                </div>
+                
+    
+            <ol>
+                <li>El nombre del sitio web, el blog, el logotipo o el nombre de la empresa suelen aparecer en la esquina superior izquierda de cada página web. El logotipo también puede incluir un eslogan o una breve declaración sobre el sitio para dar a los visitantes una comprensión instantánea del mismo. Además, esta sección de la página web suele ser un enlace que puede remitir a la página de inicio.</li>
+                <li>La búsqueda permite al visitante buscar en un sitio web información relacionada y debe estar disponible en todas las páginas.</li>
+                <li>La barra de navegación, o menú de una página web, suele encontrarse en la parte superior o izquierda de cada página web. Debe incluir enlaces a cada una de las secciones principales del sitio web.</li>
+                <li>Los banners publicitarios pueden mostrarse en diferentes lugares de una página web y ayudan a sufragar los gastos de funcionamiento de un sitio web y una empresa. Los banners publicitarios suelen encontrarse en la parte superior, izquierda, derecha o inferior de una página y también pueden incluirse en el contenido.</li>
+                <li>Los enlaces para compartir en redes sociales permiten a los visitantes compartir su sitio con otros compañeros de trabajo, amigos y familiares en las redes sociales.</li>
+                <li>Las migas de pan ayudan al usuario a saber en qué parte del sitio web se encuentra. También proporcionan una forma de que el usuario vuelva a otras secciones principales del sitio web o las explore.</li>
+                <li>El título debe incluirse en la parte superior de cada página web y debe crearse utilizando la etiqueta HTML &#60;h1&#62;.</li>
+                <li>El párrafo de apertura es uno de los más importantes de la página web y debe ayudar a atraer al visitante a la lectura de la página web. Una forma de atraer a los visitantes es incluir una imagen principal cerca del párrafo inicial.</li>
+                <li>Cada página web debe estar dividida en otros títulos que permitan al visitante hojear y encontrar fácilmente lo más interesante de la página. Al crear una página web, esto se puede hacer utilizando las etiquetas HTML &#60;h2&#62; a &#60;h6&#62;.</li>
+                <li>Disponer de un método que permita al visitante dar su opinión es también un requisito para la mayoría de las páginas web. Ofrecer al visitante enlaces o botones para que haga clic en su opinión es un buen paso para saber si una página web es útil o no.</li>
+                <li>En la mayoría de las páginas web, la información y las herramientas adicionales, como un botón para imprimir la página, también pueden ser útiles para los usuarios.</li>
+                <li>El pie de página debe incluir cualquier otra información importante de la empresa o del sitio web y debe incluirse en todas las páginas web para ayudar al visitante a seguir utilizando el sitio.</li>
+                <li>Los derechos de autor y cualquier aviso legal o de privacidad también deberían figurar en todas las páginas web. Esto no sólo puede enlazar con la información legal pertinente, sino que es una indicación para la mayoría de los visitantes de que han llegado al final de la página web.</li>
+                <li>Por último, un botón o enlace de "vuelta al principio" en la parte inferior de la página ayuda al visitante a volver a los enlaces del menú u otras herramientas.</li>
+            </ol>
+            </section>
+            <!-- FIN: Content -->
+            
+            <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+            <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+            <p class="w3-clear"></p>
+            <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+              <hr>
+                <div class="w3-col l2 m3">
+                  <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                </div>
+                <div class="w3-col l10 m9">
+                  <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                  <p>¡Excelente contenido! Siguiendo.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- fin de Blog Entry (1) -->
+        <hr>
+      <!-- END BLOG ENTRIES -->
+      </div>
+  
+      <!-- About/Information menu -->
+      <div class="w3-col l4">
+        <!-- About Card -->
+        <div class="w3-white w3-margin">
+          <img src="/pages/plantillas/w3images/erick-profile.png" alt="Erick Profile.png" style="width:100%" class="w3-grayscale">
+          <div class="w3-container w3-black">
+            <h4>Erick Escamilla Charco</h4>
+            <p>Ingeniero en Sistemas Computacionales, apasionado por la tecnología. Deasrrollador Web Full-Stack por ocupación e inquisidor por convicción.</p>
+          </div>
+        </div>
+        <hr>
+  
+        <!-- Posts -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Publicaciones populares</h4>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-white">
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">UI/UX</span>
+              <br>
+              <span>Explore las diferencias entre User Interface y User eXperience.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/bandmember.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Django: tutorial para principiantes</span>
+              <br>
+              <span>Descubra uno de los frameworks más populares para desarrollo Web en Python.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Hacking ético con Kali Linux</span>
+              <br>
+              <span>Tome una breve introducción al uso de herramientas de audotoría informática con Kali.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+              <span class="w3-large">Spring Boot</span>
+              <br>
+              <span>Descubra un de los frameworks más populares para desarrollo Back-end con Java EE.</span>
+            </li>
+          </ul>
+        </div>
+        <hr>
+  
+        <!-- Tags -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Tags</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p>
+              <span class="w3-tag w3-black w3-margin-bottom">Desarrollo Web</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Front-end</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Back-end</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSH</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSL</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTP</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTPS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">AWS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Azure</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">GCP</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Load-balancing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Jboss EAP</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Java EE</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Spring Boot</span>
+            </p>
+          </div>
+        </div>
+        <hr>
+  
+        <!-- Inspiration -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Inspiración</h4>
+          </div>
+          <div class="w3-row-padding w3-white">
+            <div class="w3-col s6">
+              <p><img src="/pages/plantillas/w3images/inspiracion-1.png" alt="Sala de servidores.png" style="width:100%"></p>
+              <p><img src="/pages/plantillas/w3images/robot-wallp-v2.png" alt="Robot.png" style="width:100%"></p>
+            </div>
+            <div class="w3-col s6">
+              <p><img src="/pages/plantillas/w3images/mr-robot-wallpaper.png" alt="Mr Robot Wallp.png" style="width:100%" class="w3-grayscale"></p>
+              <p><img src="/pages/plantillas/w3images/hacking-wallp-v2.png" alt="Hacking Wallpaper.png" style="width:100%"></p>
+           </div>
+          </div>
+        </div>
+        <hr>
+  
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Sígueme</h4>
+          </div>
+          <div class="w3-container w3-xlarge w3-padding">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+          </div>
+        </div>
+        <hr>
+        
+        <!-- Subscribe -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Suscribirse</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p>Ingrese su e-mail y reciba las últimas noticias.</p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Ingrese e-mail" style="width:100%"></p>
+            <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Suscribir</button></p>
+          </div>
+        </div>
+  
+      <!-- END About/Intro Menu -->
+      </div>
+  
+    <!-- END GRID -->
+    </div>
+  
+  <!-- END w3-content -->
+  </div>
+  
+  <!-- Subscribe MODAL -->
+  <div id="subscribe" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content" style="padding:32px">
+      <div class="w3-container w3-white">
+        <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+        <h2 class="w3-wide">SUSCRIBIR</h2>
+        <!-- <p>Join my mailing list to receive updates on the latest blog posts and other things.</p> -->
+        <p>Únase a la lista de correos de Erick's Tech World para recibir actualizaciones sobre las últimas publicaciones del blog y obtener beneficios adicionales.</p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Ingrese su e-mail"></p>
+        <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Suscribirme</button>
+      </div>
+    </div>
+  </div>
 
-        <ol>
-            <li>El nombre del sitio web, el blog, el logotipo o el nombre de la empresa suelen aparecer en la esquina superior izquierda de cada página web. El logotipo también puede incluir un eslogan o una breve declaración sobre el sitio para dar a los visitantes una comprensión instantánea del mismo. Además, esta sección de la página web suele ser un enlace que puede remitir a la página de inicio.</li>
-            <li>La búsqueda permite al visitante buscar en un sitio web información relacionada y debe estar disponible en todas las páginas.</li>
-            <li>La barra de navegación, o menú de una página web, suele encontrarse en la parte superior o izquierda de cada página web. Debe incluir enlaces a cada una de las secciones principales del sitio web.</li>
-            <li>Los banners publicitarios pueden mostrarse en diferentes lugares de una página web y ayudan a sufragar los gastos de funcionamiento de un sitio web y una empresa. Los banners publicitarios suelen encontrarse en la parte superior, izquierda, derecha o inferior de una página y también pueden incluirse en el contenido.</li>
-            <li>Los enlaces para compartir en redes sociales permiten a los visitantes compartir su sitio con otros compañeros de trabajo, amigos y familiares en las redes sociales.</li>
-            <li>Las migas de pan ayudan al usuario a saber en qué parte del sitio web se encuentra. También proporcionan una forma de que el usuario vuelva a otras secciones principales del sitio web o las explore.</li>
-            <li>El título debe incluirse en la parte superior de cada página web y debe crearse utilizando la etiqueta HTML &#60;h1&#62;.</li>
-            <li>El párrafo de apertura es uno de los más importantes de la página web y debe ayudar a atraer al visitante a la lectura de la página web. Una forma de atraer a los visitantes es incluir una imagen principal cerca del párrafo inicial.</li>
-            <li>Cada página web debe estar dividida en otros títulos que permitan al visitante hojear y encontrar fácilmente lo más interesante de la página. Al crear una página web, esto se puede hacer utilizando las etiquetas HTML &#60;h2&#62; a &#60;h6&#62;.</li>
-            <li>Disponer de un método que permita al visitante dar su opinión es también un requisito para la mayoría de las páginas web. Ofrecer al visitante enlaces o botones para que haga clic en su opinión es un buen paso para saber si una página web es útil o no.</li>
-            <li>En la mayoría de las páginas web, la información y las herramientas adicionales, como un botón para imprimir la página, también pueden ser útiles para los usuarios.</li>
-            <li>El pie de página debe incluir cualquier otra información importante de la empresa o del sitio web y debe incluirse en todas las páginas web para ayudar al visitante a seguir utilizando el sitio.</li>
-            <li>Los derechos de autor y cualquier aviso legal o de privacidad también deberían figurar en todas las páginas web. Esto no sólo puede enlazar con la información legal pertinente, sino que es una indicación para la mayoría de los visitantes de que han llegado al final de la página web.</li>
-            <li>Por último, un botón o enlace de "vuelta al principio" en la parte inferior de la página ayuda al visitante a volver a los enlaces del menú u otras herramientas.</li>
-        </ol>
-        </section>
-    </main>
-
-    <footer>
-        <!-- **Posible uso de: [<iframe>] -->
-        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
-        <p>Hosting:</p>
-        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
-    </footer>
-
+  <!-- cierre del main-->
+   <!-- FIN: contenido principal de la página [MAIN] -->
+</main>
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-dark-grey" style="padding:32px">
+    <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>Regresar a la parte superior</a>
+    <p>Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.</p>
+    <p>Hosting:</p>
+    <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    <p>Con ayuda de <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+  
+  <script>
+  // Toggle between hiding and showing blog replies/comments
+  document.getElementById("myBtn").click();
+  function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  function likeFunction(x) {
+    x.style.fontWeight = "bold";
+    x.innerHTML = "✓ Liked";
+  }
+  </script>
+  
+    <!-- FIN: plantilla (skeleton) -->
+        <!-- FIN: Skeleton -->
+        
 </body>
 
 </html>

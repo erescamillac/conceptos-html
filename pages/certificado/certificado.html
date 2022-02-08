@@ -1,33 +1,9 @@
-<!-- Establece el tipo de estandar del documento (HTML5)-->
 <!DOCTYPE html>
-
-<!-- INI: inline style -->
-<style>
-  
-        
-        .imgbox {
-            display: grid;
-            height: 100%;
-        }
-        .center-fit {
-            max-width: 100%;
-            max-height: 100vh;
-            margin: auto;
-        }
-        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
-
-</style>
-<!-- FIN : inline style -->
-
-<!-- Inicio del documento HTML -->
-<!-- El atributo [lang="es"] establece que el contenido del documento HTML se encuentra en Espaniol-->
 <html lang="es">
-<!-- La etiqueta HEAD contiene un conjunto de metadatos acerca del documento -->
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Titulo (texto) mostrado en la pestania del navegador Web -->
-    <link rel="stylesheet" href="/assets/css/eec-styles.css">
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
@@ -41,29 +17,26 @@
     <link rel="stylesheet" href="/assets/css/erick-style1.css">
     <link rel="stylesheet" href="/assets/css/erick-style2.css">
 
-    <title>Modelo cliente-servidor (por Erick Escamilla C. -2010067-)</title>
+    <title>Certificado: Desarrollador de aplicaciones en la nube</title>
+
 </head>
 
-<!-- Representa el contenido visible de la pagina Web -->
-<body>
-    <!-- <header> </header> <main> </main> <footer> </footer> -->
+<body class="w3-light-grey">
     <header>
         <!-- Navigation bar with social media icons -->
         <div class="w3-bar w3-black w3-hide-small">
-            <a href="/index.html" class="w3-bar-item w3-button"><img width="16" src="/assets/images/navigation/back_icon.png" alt="Home"></a>
-            <a href="/index.html" class="w3-bar-item w3-button">Conceptos</a>
+            <a href="/index.html" class="w3-bar-item w3-button"><img width="16" src="/assets/images/navigation/home_icon.png" alt="Home"></a>
+            <a href="#conceptos-header" class="w3-bar-item w3-button">Conceptos</a>
             <a href="/pages/arquitecturas/arquitecturas-menu.html" class="w3-bar-item w3-button">Arquitecturas</a>
             <a href="/pages/webapps/web-apps-1-menu.html" class="w3-bar-item w3-button">Aplicaciones Web 1</a>
             <a href="/pages/calculadora-js/calculadora-eec.html" class="w3-bar-item w3-button">CALCULADORA JS</a>
             <a href="/pages/sw-servidores-desarrollo/sw-serv-des-menu.html" class="w3-bar-item w3-button">Servidores de DESARROLLO (2022-ene-24)</a>
             <a href="/pages/plantillas/plantilla-1.html" class="w3-bar-item w3-button">Plantilla 1 (SSL, SSH, HTTPS) -2022/ene/25-</a>
-            <a href="/pages/certificado/certificado.html" class="w3-bar-item w3-button w3-right">CERTIFICADO</a>
-        </div>   
+            <a href="#" class="w3-bar-item w3-button w3-right">CERTIFICADO</a>
+        </div>    
     </header>
-
-    <!-- Sección principal de la página -->
     <main>
-        <!-- INI: Plantilla (Skeleton) -->
+        <!-- INI: plantilla (skeleton) -->
         <!-- INI: plantilla (skeleton) -->
     <!-- w3-content defines a container for fixed size centered content, 
 and is wrapped around the whole page content, except for the footer in this example -->
@@ -71,7 +44,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
     <!-- Header -->
     <header class="w3-container w3-center w3-padding-48 w3-white">
-      <h1 class="w3-xxxlarge"><b>Modelo cliente-servidor</b></h1>
+      <h1 class="w3-xxxlarge"><b>Certificado: Desarrollador de aplicaciones en la nube.</b></h1>
       <h6>Plantilla Original <a href="https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm" target="_blank"><span class="w3-tag">https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm</span></a></h6>
       <h6>Modificada por: <span class="w3-tag">Erick Escamilla C.</span> </h6>
     </header>
@@ -96,43 +69,30 @@ and is wrapped around the whole page content, except for the footer in this exam
         <!-- Blog entry (1) -->
         <div class="w3-container w3-white w3-margin w3-padding-large">
           <div class="w3-center">
-            <h3>Modelo cliente-servidor</h3>
-            <h5>Peticiones y servicios, <span class="w3-opacity">feberero 08, 2022</span></h5>
+            <h3>Certificado: Desarrollador de aplicaciones en la nube</h3>
+            <h5>Certificado, <span class="w3-opacity">feberero 08, 2022</span></h5>
           </div>
   
           <div class="w3-justify">
             <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
             <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
             
-            <!-- INI: CONTENT -->
+            <!-- INI: Blog-entry CONTENT -->
             <section>
-                <h3 id="modelo-c-s-header" class="main-header">Modelo cliente-servidor</h3>
-                
-                <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
-                
+                <h3 class="main-header">Certificado: Desarrollador de aplicaciones en la nube</h3>
+                <p class="olive-paragraph">por <strong>Erick Escamilla C.</strong></p>
     
-                <p>El modelo <em>cliente-servidor</em>  es una estructura de aplicación distribuida que divide las tareas o la carga de trabajo entre los proveedores de un recurso o servicio, llamados <strong>servidores</strong>, y los solicitantes del servicio, llamados clientes. En la arquitectura cliente-servidor, cuando el ordenador cliente envía una solicitud de datos al servidor a través de Internet, el servidor acepta el proceso solicitado y entrega los paquetes de datos solicitados al cliente. Los clientes no comparten ninguno de sus recursos. Ejemplos del modelo cliente-servidor son el correo electrónico, la World Wide Web, etc.</p>
-    
-                <h3 id="funcionamiento-c-s" class="main-header">¿Cómo funciona el modelo cliente-servidor?</h3>
-                <p>En este artículo vamos a sumergirnos en el modelo Cliente-Servidor y echar un vistazo a cómo funciona Internet a través de los navegadores web. Este artículo nos ayudará a tener una base sólida de la WEB y nos ayudará a trabajar con las tecnologías WEB con facilidad.</p>
-    
-                <ul>
-                    <li><p> <strong>Cliente:</strong> cuando hablamos de la palabra cliente, significa hablar de una persona o una organización que utiliza un servicio concreto. Del mismo modo, en el mundo digital, un cliente es un ordenador (host) capaz de recibir información o utilizar un servicio concreto de los proveedores de servicios (servidores).</p>
-                    </li>
-                    <li> <p> <strong>Servidores:</strong> del mismo modo, cuando hablamos de la palabra Servidores, significa una persona o medio que sirve algo. En el mundo digital, un servidor es un ordenador remoto que proporciona información (datos) o acceso a determinados servicios.</p></li>
-                </ul>
-    
-                <!-- CENTRAR imagen con [inline-style] -->
-                <div class="imgbox">
-                    <img class="center-fit" src="/assets/images/cliente_servidor_img.png" alt="">
+                <div width="75%" class="imgbox">
+                    <img width="100%" class="center-fit" src="imgs/certificado-eec-1.png" alt="Certificado1.png">
                 </div>
     
-                <p>Así que, básicamente, el cliente solicita algo y el servidor lo sirve siempre que el recurso (o servicio) requerido esté disponible.</p>
-    
-                <!-- target="_blank" :: abrir enlace en una NUEVA PESTAÑA del navegador -->
-                <p>Para obtener más información acerca del Modelo cliente-servidor consulte: <a href="https://www.ibm.com/docs/en/cics-ts/6.1_beta?topic=programs-clientserver-model" target="_blank">The client/server model</a>  </p>
+                <p>
+                    VERIFICACIÓN DE CONSTANCIA: 
+                    <a href="https://capacitateparaelempleo.org/verifica/q4230q0b3/" target="_blank">https://capacitateparaelempleo.org/verifica/q4230q0b3/</a>
+                </p>
+               
             </section>
-            <!-- FIN: CONTENT -->
+            <!-- FIN: Blog-entry CONTENT -->
             
             <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
             <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
@@ -317,8 +277,7 @@ and is wrapped around the whole page content, except for the footer in this exam
   </script>
   
     <!-- FIN: plantilla (skeleton) -->
-        <!-- FIN: Plantilla (Skeleton) -->
-</body>
+        <!-- FIN: plantilla (skeleton) -->
 
+</body>
 </html>
-<!-- FIN del documento HTML -->

@@ -4,158 +4,397 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/eec-styles.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/erick-style1.css">
+    <link rel="stylesheet" href="/assets/css/erick-style2.css">
+
     <title>Bases de datos Web, ejemplos (Creado por Erick Escamilla C. -2010067-).</title>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="../web-apps-1-menu.html">
-                        <img width="64" src="/assets/images/navigation/back_icon.png" alt="Regresar">
-                    </a>
-                </li>
-                <li>
-                    <a href="/index.html">Home</a>
-                </li>
-            </ul>
-        </nav>
+        <!-- Navigation bar -->
+        <div class="w3-bar w3-black w3-hide-small">
+            <a href="../web-apps-1-menu.html" class="w3-bar-item w3-button">
+                <img width="16" src="/assets/images/navigation/back_icon.png" alt="Back">
+            </a>
+            <a href="/index.html" class="w3-bar-item w3-button">
+                <img width="16" src="/assets/images/navigation/home_icon.png" alt="Home">
+            </a>
+            <a href="/pages/arquitecturas/arquitecturas-menu.html" class="w3-bar-item w3-button">Arquitecturas</a>
+            <a href="/pages/webapps/web-apps-1-menu.html" class="w3-bar-item w3-button">Aplicaciones Web 1</a>
+            <a href="/pages/calculadora-js/calculadora-eec.html" class="w3-bar-item w3-button">CALCULADORA JS</a>
+            <a href="/pages/sw-servidores-desarrollo/sw-serv-des-menu.html" class="w3-bar-item w3-button">Servidores de DESARROLLO (2022-ene-24)</a>
+            <a href="/pages/plantillas/plantilla-1.html" class="w3-bar-item w3-button">Plantilla 1 (SSL, SSH, HTTPS) -2022/ene/25-</a>
+            <a href="/pages/certificado/certificado.html" class="w3-bar-item w3-button w3-right">CERTIFICADO</a>
+        </div>   
     </header>
     <main>
-        <section>
-            <h1>Bases de datos Web, ejemplos</h1>
-            <p>Creado por <strong>Erick Escamilla C.</strong></p>
+        <!-- INI: Skeleton -->
+        <!-- INI: plantilla (skeleton) -->
+    <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
 
-            <h2>Definición de base de datos web</h2>
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-48 w3-white">
+      <h1 class="w3-xxxlarge"><b>Bases de datos Web</b></h1>
+      <h6>Plantilla Original <a href="https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm" target="_blank"><span class="w3-tag">https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm</span></a></h6>
+      <h6>Modificada por: <span class="w3-tag">Erick Escamilla C.</span> </h6>
+    </header>
+  
+    <!-- Image header -->
+    <header class="w3-display-container w3-wide" id="home">
+      <!-- <img class="w3-image" src="w3images/jane.jpg" alt="Fashion Blog" width="1600" height="1060"> -->
+      <img class="w3-image" src="/pages/plantillas/w3images/ssh-header-blog.png" alt="SSH Blog" width="1600" height="1060">
+      <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Erick's</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>TECH WORLD</b></h1>
+        <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUSCRIBIRME</button></h6>
+      </div>
+    </header>
+  
+    <!-- Grid -->
+    <div class="w3-row w3-padding w3-border">
+  
+      <!-- Blog entries -->
+      <div class="w3-col l8 s12">
+      
+        <!-- Blog entry (1) -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+          <div class="w3-center">
+            <h3>Bases de datos Web</h3>
+            <h5>Bases de datos Web <span class="w3-opacity">feberero 08, 2022</span></h5>
+          </div>
+  
+          <div class="w3-justify">
+            <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+            <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
             
-            <p>Una base de datos web es esencialmente una base de datos a la que se puede acceder desde una red local o Internet, en lugar de una que tiene sus datos almacenados en un escritorio o en su almacenamiento adjunto. Utilizadas tanto para uso profesional como personal, se alojan en sitios web y son productos de software como servicio (SaaS), lo que significa que el acceso se realiza a través de un navegador web.</p>
-
-            <p>Uno de los tipos de bases de datos web con los que puede estar más familiarizado es la base de datos relacional. Las bases de datos relacionales permiten almacenar datos en grupos (conocidos como tablas), gracias a su capacidad para enlazar registros. Utiliza índices y claves, que se añaden a los datos, para localizar los campos de información almacenados en la base de datos, lo que le permite recuperar información rápidamente.</p>
-
-            <p>Para hacernos una idea, pensemos en cuando compramos en Internet y queremos echar un vistazo a un producto concreto. Si escribe palabras clave como "vestido negro", todos los vestidos negros almacenados en el sitio web aparecerán en el mismo navegador en el que está buscando, porque la información "negro" y "vestido" están almacenados en sus entradas de la base de datos.</p>
-
-            <p>Algunas de las ventajas de utilizar una base de datos web son:</p>
-
-            <ol>
-                <li>
-                    Las aplicaciones de bases de datos web pueden ser gratuitas o requerir un pago, normalmente a través de suscripciones mensuales. Por ello, se paga por la cantidad que se utiliza. Por tanto, tanto si su empresa se reduce como si se amplía, sus necesidades pueden acomodarse a la cantidad de espacio del servidor. Además, no tiene que desembolsar el coste de la instalación de todo un programa de software.
-                </li>
-                <li>
-                    La información es accesible desde casi cualquier dispositivo. Tener las cosas almacenadas en una nube significa que no está atado a un ordenador. Siempre y cuando se le conceda acceso, técnicamente puede acceder a los datos desde casi cualquier dispositivo compatible.
-                </li>
-                <li>
-                    Los programas de bases de datos web suelen contar con su propio equipo de asistencia técnica para que el personal de su departamento de informática pueda centrarse en otros asuntos urgentes de la empresa.
-                </li>
-                <li>
-                    Es cómodo: las bases de datos web permiten a los usuarios actualizar la información, por lo que lo único que hay que hacer es crear sencillos formularios web.
-                </li>
-            </ol>
-
-            <h2>Ejemplos de bases de datos en la Nube</h2>
-
-            <h3>Microsoft Azure SQL Database</h3>
-
-            <p>Como parte de la familia Azure SQL, Azure SQL Database es un servicio de base de datos relacional inteligente, escalable y creado para la nube. Optimice el rendimiento y la durabilidad con características automatizadas basadas en IA que siempre están actualizadas. Céntrese en la creación de nuevas aplicaciones sin preocuparse por el tamaño de almacenamiento o la administración de recursos con opciones de proceso sin servidor y almacenamiento a hiperescala que escalan automáticamente los recursos a petición.</p>
-
-            <img width="10%" src="../imgs/totalmente-admin.svg" alt="Total Admin.png">
-
-            <p>La base de datos SQLtotalmente administrada automatiza las actualizaciones, el aprovisionamiento y las copias de seguridad para que pueda centrarse en el desarrollo de aplicaciones</p>
-
-            <img width="10%" src="../imgs/serverless-logo.svg" alt="Serverless.png">
-            <p>El proceso flexible y con capacidad de respuesta sin servidor y el almacenamiento Hiperescala se adaptan rápidamente a sus requisitos cambiantes</p>
-
-            <img width="10%" src="../imgs/capas-proteccion-logo.svg" alt="Capas-proteccion.png">
-            <p>Las capas de protección, los controles integrados y la detección inteligente de amenazas ayudan a proteger los datos</p>
-
-            <img width="10%" src="../imgs/ai-integrada.svg" alt="AI-integrada.png">
-            <p>IA incorporada y alta disponibilidad incorporada mantienen el máximo rendimiento y durabilidad con un acuerdo de nivel de servicio (SLA) de hasta el 99,995 por ciento</p>
-
-            <h4>Totalmente administrado y siempre en la versión más reciente de SQL</h4>
-
-            <p>Elimine la complejidad de configurar y administrar la alta disponibilidad, la optimización, las copias de seguridad y otras tareas de base de datos con una base de datos SQL totalmente administrada.</p>
-
-            <div class="imgbox">
-                <img width="70%" class="center-fit" src="../imgs/totalmente-admin2.png" alt="Totalmente Admin2.png">
+            <!-- INI: Content -->
+            <section>
+                <h3 class="main-header">Bases de datos Web, ejemplos</h3>
+                <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+    
+                <h3 class="main-header">Definición de base de datos web</h3>
+                
+                <p>Una base de datos web es esencialmente una base de datos a la que se puede acceder desde una red local o Internet, en lugar de una que tiene sus datos almacenados en un escritorio o en su almacenamiento adjunto. Utilizadas tanto para uso profesional como personal, se alojan en sitios web y son productos de software como servicio (SaaS), lo que significa que el acceso se realiza a través de un navegador web.</p>
+    
+                <p>Uno de los tipos de bases de datos web con los que puede estar más familiarizado es la base de datos relacional. Las bases de datos relacionales permiten almacenar datos en grupos (conocidos como tablas), gracias a su capacidad para enlazar registros. Utiliza índices y claves, que se añaden a los datos, para localizar los campos de información almacenados en la base de datos, lo que le permite recuperar información rápidamente.</p>
+    
+                <p>Para hacernos una idea, pensemos en cuando compramos en Internet y queremos echar un vistazo a un producto concreto. Si escribe palabras clave como "vestido negro", todos los vestidos negros almacenados en el sitio web aparecerán en el mismo navegador en el que está buscando, porque la información "negro" y "vestido" están almacenados en sus entradas de la base de datos.</p>
+    
+                <p>Algunas de las ventajas de utilizar una base de datos web son:</p>
+    
+                <ol>
+                    <li>
+                        Las aplicaciones de bases de datos web pueden ser gratuitas o requerir un pago, normalmente a través de suscripciones mensuales. Por ello, se paga por la cantidad que se utiliza. Por tanto, tanto si su empresa se reduce como si se amplía, sus necesidades pueden acomodarse a la cantidad de espacio del servidor. Además, no tiene que desembolsar el coste de la instalación de todo un programa de software.
+                    </li>
+                    <li>
+                        La información es accesible desde casi cualquier dispositivo. Tener las cosas almacenadas en una nube significa que no está atado a un ordenador. Siempre y cuando se le conceda acceso, técnicamente puede acceder a los datos desde casi cualquier dispositivo compatible.
+                    </li>
+                    <li>
+                        Los programas de bases de datos web suelen contar con su propio equipo de asistencia técnica para que el personal de su departamento de informática pueda centrarse en otros asuntos urgentes de la empresa.
+                    </li>
+                    <li>
+                        Es cómodo: las bases de datos web permiten a los usuarios actualizar la información, por lo que lo único que hay que hacer es crear sencillos formularios web.
+                    </li>
+                </ol>
+    
+                <h2>Ejemplos de bases de datos en la Nube</h2>
+    
+                <h3>Microsoft Azure SQL Database</h3>
+    
+                <p>Como parte de la familia Azure SQL, Azure SQL Database es un servicio de base de datos relacional inteligente, escalable y creado para la nube. Optimice el rendimiento y la durabilidad con características automatizadas basadas en IA que siempre están actualizadas. Céntrese en la creación de nuevas aplicaciones sin preocuparse por el tamaño de almacenamiento o la administración de recursos con opciones de proceso sin servidor y almacenamiento a hiperescala que escalan automáticamente los recursos a petición.</p>
+    
+                <img width="10%" src="../imgs/totalmente-admin.svg" alt="Total Admin.png">
+    
+                <p>La base de datos SQLtotalmente administrada automatiza las actualizaciones, el aprovisionamiento y las copias de seguridad para que pueda centrarse en el desarrollo de aplicaciones</p>
+    
+                <img width="10%" src="../imgs/serverless-logo.svg" alt="Serverless.png">
+                <p>El proceso flexible y con capacidad de respuesta sin servidor y el almacenamiento Hiperescala se adaptan rápidamente a sus requisitos cambiantes</p>
+    
+                <img width="10%" src="../imgs/capas-proteccion-logo.svg" alt="Capas-proteccion.png">
+                <p>Las capas de protección, los controles integrados y la detección inteligente de amenazas ayudan a proteger los datos</p>
+    
+                <img width="10%" src="../imgs/ai-integrada.svg" alt="AI-integrada.png">
+                <p>IA incorporada y alta disponibilidad incorporada mantienen el máximo rendimiento y durabilidad con un acuerdo de nivel de servicio (SLA) de hasta el 99,995 por ciento</p>
+    
+                <h4>Totalmente administrado y siempre en la versión más reciente de SQL</h4>
+    
+                <p>Elimine la complejidad de configurar y administrar la alta disponibilidad, la optimización, las copias de seguridad y otras tareas de base de datos con una base de datos SQL totalmente administrada.</p>
+    
+                <div class="imgbox">
+                    <img width="70%" class="center-fit" src="../imgs/totalmente-admin2.png" alt="Totalmente Admin2.png">
+                </div>
+    
+                <p>Acelere el desarrollo de aplicaciones en la única nube con SQL perenne, con las últimas capacidades de SQL Server . Nunca más se preocupe por las actualizaciones, las mejoras o la finalización del soporte técnico.</p>
+    
+    
+                <h3>Amazon Relational Database Service</h3>
+    
+                <p>Amazon Relational Database Service (Amazon RDS) permite configurar, operar y escalar una base de datos relacional en la nube sin complicaciones. Proporciona capacidad rentable y redimensionable mientras que automatiza las tareas administrativas que llevan mucho tiempo, como el aprovisionamiento de hardware, la configuración de bases de datos, la aplicación de parches y la creación de copias de seguridad. Lo libera de estas tareas para que pueda concentrarse en sus aplicaciones y darles el rendimiento rápido, la alta disponibilidad, la seguridad y la compatibilidad que necesitan.</p>
+    
+                <p>Amazon RDS está disponible para varios tipos de instancias de base de datos (optimizadas para memoria, rendimiento u operaciones de E/S) y le ofrece seis motores de bases de datos conocidos entre los que elegir, incluidos Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database y SQL Server. Puede utilizar AWS Database Migration Service para migrar o replicar sus bases de datos existentes en Amazon RDS con facilidad.</p>
+    
+                <h4>Motores de bases de datos de Amazon RDS</h4>
+    
+                <div class="imgbox">
+                    <img width="20%" class="center-fit" src="../imgs/amazon-aurora.png" alt="Amazon-aurora.png">
+                </div>
+    
+                <div class="imgbox">
+                    <img width="20%" class="center-fit" src="../imgs/postgre-sql.png" alt="Posgre-sql.png">
+                </div>
+    
+                <div class="imgbox">
+                    <img width="20%" class="center-fit" src="../imgs/mysql-logo.png" alt="MySQL.png">
+                </div>
+    
+                <div class="imgbox">
+                    <img width="20%" class="center-fit" src="../imgs/maria-db.png" alt="MySQL.png">
+                </div>
+    
+                <div class="imgbox">
+                    <img width="20%" class="center-fit" src="../imgs/oracle-db.png" alt="MySQL.png">
+                </div>
+    
+                <div class="imgbox">
+                    <img width="20%" class="center-fit" src="../imgs/ms-sql-server.png" alt="MySQL.png">
+                </div>
+    
+                <h3>Oracle Autonomous Database</h3>
+    
+                <p>Reduzca los costos operativos hasta en un 90 % con una base de datos convergente multimodelos y con una automatización basada en el aprendizaje automático para la administración del ciclo de vida completo.1 Oracle Autonomous Database se ejecuta de forma nativa en Oracle Cloud Infrastructure y ofrece servicios en la nube optimizados para las cargas de trabajo, para el procesamiento de transacciones y para el almacenamiento de datos.</p>
+    
+                <h4>¿Qué es una base de datos autónoma?</h4>
+    
+                <h5>Definición de base de datos autónoma</h5>
+    
+                <p>Una base de datos autónoma es una base de datos en la nube que utiliza el aprendizaje autónomo para automatizar el ajuste de la base de datos, la seguridad, las copias de seguridad, las actualizaciones y otras tareas de gestión de rutina que tradicionalmente realizan los administradores de bases de datos (DBA). A diferencia de una base de datos convencional, una base de datos autónoma realiza todas estas tareas y más sin intervención humana.</p>
+    
+                <h5>¿Por qué usar una base de datos autónoma?</h5>
+    
+                <p>Las bases de datos almacenan información comercial fundamental y son esenciales para el funcionamiento eficiente de las organizaciones modernas. Los DBA a menudo están sobrecargados con las tareas manuales de administrar y mantener bases de datos, que requieren mucho tiempo. Las demandas de las cargas de trabajo actuales pueden conducir a errores de DBA, que pueden tener un impacto catastrófico en el tiempo de actividad, el rendimiento y la seguridad.</p>
+    
+                <p>Por ejemplo, no aplicar un parche o actualización de seguridad puede crear vulnerabilidades. No aplicar la actualización correctamente puede debilitar o eliminar por completo las protecciones de seguridad. Si la base de datos no es segura, la empresa puede estar en riesgo de filtraciones de datos que pueden tener serias repercusiones financieras y afectar de forma negativa a la reputación de la empresa.</p>
+    
+                <p>Las aplicaciones empresariales agregan registros nuevos a las bases de datos existentes o usan información de bases de datos para crear informes, analizar tendencias o detectar anomalías. Esto puede provocar que las bases de datos crezcan hasta contar con muchos terabytes de tamaño y se vuelvan altamente complejas, lo que dificultará la administración, seguridad y ajuste por parte de los DBA. Las bases de datos que se ejecutan de forma lenta o que no están disponibles debido al tiempo de inactividad pueden afectar negativamente la productividad de los empleados y frustrar a los clientes.</p>
+    
+                <p>La cantidad y la velocidad de los datos disponibles para la empresa se está acelerando. Esto aumenta la necesidad de una gestión de bases de datos eficiente y segura que mejore la seguridad de los datos, reduzca el tiempo de inactividad, mejore el rendimiento y no sea vulnerable a errores humanos. Una base de datos autónoma puede lograr estos objetivos.</p>
+    
+                <h6>Tipos de datos almacenados en bases de datos</h6>
+    
+                <p>La información almacenada en un sistema de gestión de bases de datos puede ser altamente estructurada (como registros contables o información del cliente) o no estructurada (como imágenes digitales u hojas de cálculo). Los clientes y empleados pueden acceder directamente a los datos o bien acceder a ellos de manera indirecta a través de otras aplicaciones móviles, sitios web o softwares empresariales. Además, muchos tipos de software—tales como la inteligencia empresarial, la gestión de relaciones con el cliente y las aplicaciones de la cadena de suministro—usan información almacenada en bases de datos.</p>
+    
+                <h5>Componentes de una base de datos autónoma</h5>
+    
+                <p>Una base de datos autónoma consta de dos elementos clave que se alinean con los tipos de carga de trabajo.</p>
+    
+                <ul>
+                    <li>
+                        Un almacén de datos realiza numerosas funciones relacionadas con las actividades de inteligencia empresarial y utiliza datos que se prepararon con anterioridad para el análisis. El entorno del almacén de datos también gestiona todas las operaciones del ciclo de vida de la base de datos, puede realizar análisis de consultas en millones de filas, es escalable a las necesidades del negocio y puede implementarse en cuestión de segundos.
+                    </li>
+                    <li>
+                        El procesamiento de transacciones permite realizar procesos transaccionales basados en el tiempo, como análisis en tiempo real, personalización y detección de fraudes. El procesamiento de transacciones generalmente involucra un número muy pequeño de registros, se basa en operaciones predefinidas y permite la implementación y desarrollo de aplicaciones simples.
+                    </li>
+                </ul>
+    
+            </section>
+            <!-- FIN: Content -->
+            
+            <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+            <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+            <p class="w3-clear"></p>
+            <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+              <hr>
+                <div class="w3-col l2 m3">
+                  <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                </div>
+                <div class="w3-col l10 m9">
+                  <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                  <p>¡Excelente contenido! Siguiendo.</p>
+                </div>
             </div>
-
-            <p>Acelere el desarrollo de aplicaciones en la única nube con SQL perenne, con las últimas capacidades de SQL Server . Nunca más se preocupe por las actualizaciones, las mejoras o la finalización del soporte técnico.</p>
-
-
-            <h3>Amazon Relational Database Service</h3>
-
-            <p>Amazon Relational Database Service (Amazon RDS) permite configurar, operar y escalar una base de datos relacional en la nube sin complicaciones. Proporciona capacidad rentable y redimensionable mientras que automatiza las tareas administrativas que llevan mucho tiempo, como el aprovisionamiento de hardware, la configuración de bases de datos, la aplicación de parches y la creación de copias de seguridad. Lo libera de estas tareas para que pueda concentrarse en sus aplicaciones y darles el rendimiento rápido, la alta disponibilidad, la seguridad y la compatibilidad que necesitan.</p>
-
-            <p>Amazon RDS está disponible para varios tipos de instancias de base de datos (optimizadas para memoria, rendimiento u operaciones de E/S) y le ofrece seis motores de bases de datos conocidos entre los que elegir, incluidos Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database y SQL Server. Puede utilizar AWS Database Migration Service para migrar o replicar sus bases de datos existentes en Amazon RDS con facilidad.</p>
-
-            <h4>Motores de bases de datos de Amazon RDS</h4>
-
-            <div class="imgbox">
-                <img width="20%" class="center-fit" src="../imgs/amazon-aurora.png" alt="Amazon-aurora.png">
+          </div>
+        </div>
+        <!-- fin de Blog Entry (1) -->
+        <hr>
+      <!-- END BLOG ENTRIES -->
+      </div>
+  
+      <!-- About/Information menu -->
+      <div class="w3-col l4">
+        <!-- About Card -->
+        <div class="w3-white w3-margin">
+          <img src="/pages/plantillas/w3images/erick-profile.png" alt="Erick Profile.png" style="width:100%" class="w3-grayscale">
+          <div class="w3-container w3-black">
+            <h4>Erick Escamilla Charco</h4>
+            <p>Ingeniero en Sistemas Computacionales, apasionado por la tecnología. Deasrrollador Web Full-Stack por ocupación e inquisidor por convicción.</p>
+          </div>
+        </div>
+        <hr>
+  
+        <!-- Posts -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Publicaciones populares</h4>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-white">
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">UI/UX</span>
+              <br>
+              <span>Explore las diferencias entre User Interface y User eXperience.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/bandmember.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Django: tutorial para principiantes</span>
+              <br>
+              <span>Descubra uno de los frameworks más populares para desarrollo Web en Python.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Hacking ético con Kali Linux</span>
+              <br>
+              <span>Tome una breve introducción al uso de herramientas de audotoría informática con Kali.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+              <span class="w3-large">Spring Boot</span>
+              <br>
+              <span>Descubra un de los frameworks más populares para desarrollo Back-end con Java EE.</span>
+            </li>
+          </ul>
+        </div>
+        <hr>
+  
+        <!-- Tags -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Tags</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p>
+              <span class="w3-tag w3-black w3-margin-bottom">Desarrollo Web</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Front-end</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Back-end</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSH</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSL</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTP</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTPS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">AWS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Azure</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">GCP</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Load-balancing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Jboss EAP</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Java EE</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Spring Boot</span>
+            </p>
+          </div>
+        </div>
+        <hr>
+  
+        <!-- Inspiration -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Inspiración</h4>
+          </div>
+          <div class="w3-row-padding w3-white">
+            <div class="w3-col s6">
+              <p><img src="/pages/plantillas/w3images/inspiracion-1.png" alt="Sala de servidores.png" style="width:100%"></p>
+              <p><img src="/pages/plantillas/w3images/robot-wallp-v2.png" alt="Robot.png" style="width:100%"></p>
             </div>
+            <div class="w3-col s6">
+              <p><img src="/pages/plantillas/w3images/mr-robot-wallpaper.png" alt="Mr Robot Wallp.png" style="width:100%" class="w3-grayscale"></p>
+              <p><img src="/pages/plantillas/w3images/hacking-wallp-v2.png" alt="Hacking Wallpaper.png" style="width:100%"></p>
+           </div>
+          </div>
+        </div>
+        <hr>
+  
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Sígueme</h4>
+          </div>
+          <div class="w3-container w3-xlarge w3-padding">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+          </div>
+        </div>
+        <hr>
+        
+        <!-- Subscribe -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Suscribirse</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p>Ingrese su e-mail y reciba las últimas noticias.</p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Ingrese e-mail" style="width:100%"></p>
+            <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Suscribir</button></p>
+          </div>
+        </div>
+  
+      <!-- END About/Intro Menu -->
+      </div>
+  
+    <!-- END GRID -->
+    </div>
+  
+  <!-- END w3-content -->
+  </div>
+  
+  <!-- Subscribe MODAL -->
+  <div id="subscribe" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content" style="padding:32px">
+      <div class="w3-container w3-white">
+        <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+        <h2 class="w3-wide">SUSCRIBIR</h2>
+        <!-- <p>Join my mailing list to receive updates on the latest blog posts and other things.</p> -->
+        <p>Únase a la lista de correos de Erick's Tech World para recibir actualizaciones sobre las últimas publicaciones del blog y obtener beneficios adicionales.</p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Ingrese su e-mail"></p>
+        <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Suscribirme</button>
+      </div>
+    </div>
+  </div>
 
-            <div class="imgbox">
-                <img width="20%" class="center-fit" src="../imgs/postgre-sql.png" alt="Posgre-sql.png">
-            </div>
-
-            <div class="imgbox">
-                <img width="20%" class="center-fit" src="../imgs/mysql-logo.png" alt="MySQL.png">
-            </div>
-
-            <div class="imgbox">
-                <img width="20%" class="center-fit" src="../imgs/maria-db.png" alt="MySQL.png">
-            </div>
-
-            <div class="imgbox">
-                <img width="20%" class="center-fit" src="../imgs/oracle-db.png" alt="MySQL.png">
-            </div>
-
-            <div class="imgbox">
-                <img width="20%" class="center-fit" src="../imgs/ms-sql-server.png" alt="MySQL.png">
-            </div>
-
-            <h3>Oracle Autonomous Database</h3>
-
-            <p>Reduzca los costos operativos hasta en un 90 % con una base de datos convergente multimodelos y con una automatización basada en el aprendizaje automático para la administración del ciclo de vida completo.1 Oracle Autonomous Database se ejecuta de forma nativa en Oracle Cloud Infrastructure y ofrece servicios en la nube optimizados para las cargas de trabajo, para el procesamiento de transacciones y para el almacenamiento de datos.</p>
-
-            <h4>¿Qué es una base de datos autónoma?</h4>
-
-            <h5>Definición de base de datos autónoma</h5>
-
-            <p>Una base de datos autónoma es una base de datos en la nube que utiliza el aprendizaje autónomo para automatizar el ajuste de la base de datos, la seguridad, las copias de seguridad, las actualizaciones y otras tareas de gestión de rutina que tradicionalmente realizan los administradores de bases de datos (DBA). A diferencia de una base de datos convencional, una base de datos autónoma realiza todas estas tareas y más sin intervención humana.</p>
-
-            <h5>¿Por qué usar una base de datos autónoma?</h5>
-
-            <p>Las bases de datos almacenan información comercial fundamental y son esenciales para el funcionamiento eficiente de las organizaciones modernas. Los DBA a menudo están sobrecargados con las tareas manuales de administrar y mantener bases de datos, que requieren mucho tiempo. Las demandas de las cargas de trabajo actuales pueden conducir a errores de DBA, que pueden tener un impacto catastrófico en el tiempo de actividad, el rendimiento y la seguridad.</p>
-
-            <p>Por ejemplo, no aplicar un parche o actualización de seguridad puede crear vulnerabilidades. No aplicar la actualización correctamente puede debilitar o eliminar por completo las protecciones de seguridad. Si la base de datos no es segura, la empresa puede estar en riesgo de filtraciones de datos que pueden tener serias repercusiones financieras y afectar de forma negativa a la reputación de la empresa.</p>
-
-            <p>Las aplicaciones empresariales agregan registros nuevos a las bases de datos existentes o usan información de bases de datos para crear informes, analizar tendencias o detectar anomalías. Esto puede provocar que las bases de datos crezcan hasta contar con muchos terabytes de tamaño y se vuelvan altamente complejas, lo que dificultará la administración, seguridad y ajuste por parte de los DBA. Las bases de datos que se ejecutan de forma lenta o que no están disponibles debido al tiempo de inactividad pueden afectar negativamente la productividad de los empleados y frustrar a los clientes.</p>
-
-            <p>La cantidad y la velocidad de los datos disponibles para la empresa se está acelerando. Esto aumenta la necesidad de una gestión de bases de datos eficiente y segura que mejore la seguridad de los datos, reduzca el tiempo de inactividad, mejore el rendimiento y no sea vulnerable a errores humanos. Una base de datos autónoma puede lograr estos objetivos.</p>
-
-            <h6>Tipos de datos almacenados en bases de datos</h6>
-
-            <p>La información almacenada en un sistema de gestión de bases de datos puede ser altamente estructurada (como registros contables o información del cliente) o no estructurada (como imágenes digitales u hojas de cálculo). Los clientes y empleados pueden acceder directamente a los datos o bien acceder a ellos de manera indirecta a través de otras aplicaciones móviles, sitios web o softwares empresariales. Además, muchos tipos de software—tales como la inteligencia empresarial, la gestión de relaciones con el cliente y las aplicaciones de la cadena de suministro—usan información almacenada en bases de datos.</p>
-
-            <h5>Componentes de una base de datos autónoma</h5>
-
-            <p>Una base de datos autónoma consta de dos elementos clave que se alinean con los tipos de carga de trabajo.</p>
-
-            <ul>
-                <li>
-                    Un almacén de datos realiza numerosas funciones relacionadas con las actividades de inteligencia empresarial y utiliza datos que se prepararon con anterioridad para el análisis. El entorno del almacén de datos también gestiona todas las operaciones del ciclo de vida de la base de datos, puede realizar análisis de consultas en millones de filas, es escalable a las necesidades del negocio y puede implementarse en cuestión de segundos.
-                </li>
-                <li>
-                    El procesamiento de transacciones permite realizar procesos transaccionales basados en el tiempo, como análisis en tiempo real, personalización y detección de fraudes. El procesamiento de transacciones generalmente involucra un número muy pequeño de registros, se basa en operaciones predefinidas y permite la implementación y desarrollo de aplicaciones simples.
-                </li>
-            </ul>
-
-        </section>
-    </main>
-    <footer>
-        Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.
-        <p>Hosting:</p>
-        <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
-    </footer>
+  <!-- cierre del main-->
+   <!-- FIN: contenido principal de la página [MAIN] -->
+</main>
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-dark-grey" style="padding:32px">
+    <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>Regresar a la parte superior</a>
+    <p>Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.</p>
+    <p>Hosting:</p>
+    <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    <p>Con ayuda de <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+  
+  <script>
+  // Toggle between hiding and showing blog replies/comments
+  document.getElementById("myBtn").click();
+  function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  function likeFunction(x) {
+    x.style.fontWeight = "bold";
+    x.innerHTML = "✓ Liked";
+  }
+  </script>
+  
+    <!-- FIN: plantilla (skeleton) -->
+        <!-- FIN: Skeleton -->
+        
 </body>
 </html>
