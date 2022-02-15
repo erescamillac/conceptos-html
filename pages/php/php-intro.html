@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<!-- INI: inlinestyle -->
+<style>
+        
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: inlinestyle -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/eec-styles.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/erick-style1.css">
+    <link rel="stylesheet" href="/assets/css/erick-style2.css"> 
+
+    <title>PHP (por Erick Escamilla C. -2010067-).</title>
+</head>
+<body>
+    <header>
+        <div class="w3-bar w3-black w3-hide-small">
+            <a href="/pages/menus/menu-segundo-par.html" class="w3-bar-item w3-button">
+                <img width="16" src="/assets/images/navigation/back_icon.png" alt="Regresar">
+            </a>
+            <a href="/index.html" class="w3-bar-item w3-button">
+                <img width="16" src="/assets/images/navigation/home_icon.png" alt="Home">
+            </a>
+            <!--
+            <a href="/pages/arquitecturas/arquitecturas-menu.html" class="w3-bar-item w3-button">Arquitecturas</a>
+            <a href="/pages/webapps/web-apps-1-menu.html" class="w3-bar-item w3-button">Aplicaciones Web 1</a>
+            <a href="/pages/calculadora-js/calculadora-eec.html" class="w3-bar-item w3-button">CALCULADORA JS</a>
+            <a href="/pages/sw-servidores-desarrollo/sw-serv-des-menu.html" class="w3-bar-item w3-button">Servidores de DESARROLLO (2022-ene-24)</a>
+            <a href="/pages/plantillas/plantilla-1.html" class="w3-bar-item w3-button">Plantilla 1 (SSL, SSH, HTTPS) -2022/ene/25-</a>
+            -->
+            <a href="/pages/certificado/certificado.html" class="w3-bar-item w3-button">CERTIFICADO</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- INI: Skeleton -->
+        <!-- INI: plantilla (skeleton) -->
+    <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-48 w3-white">
+      <h1 class="w3-xxxlarge"><b>PHP (Hypertext Preprocessor)</b></h1>
+      <h6>Plantilla Original <a href="https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm" target="_blank"><span class="w3-tag">https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm</span></a></h6>
+      <h6>Modificada por: <span class="w3-tag">Erick Escamilla C.</span> </h6>
+    </header>
+  
+    <!-- Image header -->
+    <header class="w3-display-container w3-wide" id="home">
+      <!-- <img class="w3-image" src="w3images/jane.jpg" alt="Fashion Blog" width="1600" height="1060"> -->
+      <img class="w3-image" src="/pages/plantillas/w3images/ssh-header-blog.png" alt="SSH Blog" width="1600" height="1060">
+      <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Erick's</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>TECH WORLD</b></h1>
+        <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUSCRIBIRME</button></h6>
+      </div>
+    </header>
+  
+    <!-- Grid -->
+    <div class="w3-row w3-padding w3-border">
+  
+      <!-- Blog entries -->
+      <div class="w3-col l8 s12">
+      
+        <!-- Blog entry (1) -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+          <div class="w3-center">
+            <h3>¿Qué es PHP?</h3>
+            <h5>Hypertext Preprocessor <span class="w3-opacity">feberero 15, 2022</span></h5>
+          </div>
+  
+          <div class="w3-justify">
+            <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+            <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+            
+            <!-- INI: Content -->
+            <section>
+                <h3 class="main-header">¿Qué es PHP?</h3>
+                <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+    
+                <p>
+                    <strong>PHP</strong> es un <em>lenguaje de scripting del lado del servidor</em> de código abierto que muchos desarrolladores utilizan para el <strong>desarrollo web</strong>. También es un lenguaje de propósito general que se puede utilizar para hacer un montón de proyectos, incluyendo interfaces gráficas de usuario (GUI).
+                </p>
+    
+                <div class="imgbox">
+                    <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
+                </div>
+                
+               <p>
+                PHP (acrónimo recursivo de PHP: Hypertext Preprocessor) es un lenguaje de código abierto muy popular especialmente adecuado para el desarrollo web y que puede ser incrustado en HTML.
+               </p>
+
+               <p>
+                Bien, pero ¿qué significa realmente? Un ejemplo nos aclarará las cosas:
+               </p>
+
+               <p><strong>Ejemplo #1 Un ejemplo introductorio</strong></p>
+
+               <code>
+                   <pre>
+                    &#60;!DOCTYPE html&#62;
+                    &#60;html&#62;
+                    &#60;head&#62;
+                        &#60;title&#62;Ejemplo&#60;/title&#62;
+                    &#60;/head&#62;
+                    &#60;body&#62;
+                    
+                    &#60;?php
+                        echo "¡Hola, soy un script de PHP!";
+                    ?&#62;
+                    
+                    &#60;/body&#62;
+                    &#60;/html&#62;
+                    </pre>
+               </code>
+    
+               <p>
+                En lugar de usar muchos comandos para mostrar HTML (como en C o en Perl), las páginas de PHP contienen HTML con código incrustado que hace "algo" (en este caso, mostrar "¡Hola, soy un script de PHP!). El código de PHP está encerrado entre las etiquetas especiales de comienzo y final &#60;?php y ?&#62; que permiten entrar y salir del "modo PHP".
+               </p>
+
+            </section>
+            <!-- FIN: Content -->
+            
+            <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+            <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+            <p class="w3-clear"></p>
+            <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+              <hr>
+                <div class="w3-col l2 m3">
+                  <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                </div>
+                <div class="w3-col l10 m9">
+                  <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                  <p>¡Excelente contenido! Siguiendo.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- fin de Blog Entry (1) -->
+        <hr>
+
+        <!-- Blog entry (2) -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+            <div class="w3-center">
+              <h3>Ventajas y Desventajas</h3>
+              <h5>PHP <span class="w3-opacity">feberero 15, 2022</span></h5>
+            </div>
+    
+            <div class="w3-justify">
+              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+              
+              <!-- INI: Content -->
+              <section>
+                  <h3 class="main-header">Ventajas y Desventajas</h3>
+                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+
+                  <h4>Ventajas de PHP</h4>
+      
+                  <p>
+                    Algunas de las ventajas más importantes de PHP son los siguientes puntos. Vamos a revisarlos.
+                  </p>
+      
+                  <!-- 
+                  <div class="imgbox">
+                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
+                  </div>
+                  -->
+                  <ol>
+                      <li>
+                        <p>
+                            <strong>Código abierto y gratuito:</strong> Una de las ventajas más importantes de PHP es que es accesible para todos. La gente puede descargarlo de un código abierto y obtenerlo gratuitamente. Uno puede descargarlo en cualquier lugar y utilizarlo fácilmente para el desarrollo de aplicaciones web.
+                        </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Independencia de la plataforma:</strong> Otro factor importante es que, dado que las aplicaciones basadas en PHP pueden ejecutarse en cualquier sistema operativo como UNIX, Windows, Linux, etc., la gente puede utilizarlo sin preocuparse de la plataforma en la que se puede utilizar.
+                          </p>
+                       
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Carga fácil:</strong> Uno puede cargar las aplicaciones basadas en PHP fácilmente y conectarlas a una base de datos. La gente lo utiliza principalmente ya que tiene una velocidad de carga rápida, incluso si es a través de una conexión a Internet lenta y la velocidad de otros lenguajes de programación.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Fácil de usar:</strong> Tiene una curva de aprendizaje menor y se puede aprender rápidamente. El lenguaje es sencillo de usar, y si uno sabe de programación en C, puede ponerse al día con el lenguaje PHP rápidamente para el desarrollo de aplicaciones.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Estable:</strong> A diferencia de otros lenguajes de scripting, PHP es muy estable a lo largo de los años y puede proporcionarle a uno asistencia y apoyo continuo. Pueden obtener ayuda sobre varias versiones también.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>No se requiere un código largo:</strong> Como mencionamos anteriormente, es un lenguaje simple que la gente puede utilizar para varios propósitos. Tiene tal cualidad que uno puede utilizarlo sin tener que escribir códigos largos y estructuras sofisticadas para cualquier evento de aplicación web.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Flexible:</strong> Es altamente flexible, y la gente puede utilizarlo fácilmente para combinar su función con varios otros lenguajes de programación. Pueden utilizar los paquetes de software como la tecnología más eficaz para cada función.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Mayor oportunidad de trabajo:</strong> Dado que PHP es muy popular, muchos desarrolladores y comunidades de desarrollo han evolucionado que tienen conocimiento de este lenguaje. Las personas que conocen este sencillo lenguaje pueden convertirse en potenciales candidatos para puestos de trabajo.
+                          </p>
+                        
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Conexión a la base de datos:</strong> Tiene una conexión de base de datos incorporada que ayuda a conectar las bases de datos y reducir el problema y el tiempo para desarrollar aplicaciones web o sitios basados en el contenido por completo.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Soporte de librerías:</strong> PHP tiene un fuerte apoyo de la biblioteca mediante el cual uno puede utilizar los diversos módulos de funciones para la representación de datos.
+                          </p>
+                      </li>
+                  </ol>
+                  
+                  <h4>Desventajas de PHP</h4>
+
+                  <p>Aunque PHP es un fantástico lenguaje de programación, tiene algunas desventajas. Veámoslas estratégicamente.</p>
+
+                  <ol>
+                      <li>
+                          <p>
+                            <strong>Problemas de seguridad:</strong> Como PHP es de código abierto, no es seguro. El archivo de texto ASCII está fácilmente disponible, y cualquiera puede buscarlo.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>No es adecuado para el desarrollo de aplicaciones web gigantes:</strong> Si uno quiere desarrollar una aplicación web gigante basada en contenido, no es posible hacerlo con la ayuda de PHP. Tendrían que utilizar otros lenguajes de programación.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Débil:</strong> PHP es débil y a veces puede causar errores. Puede hacer que los usuarios dispongan de datos y conocimientos incorrectos.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Aprendizaje extra:</strong> Es necesario conocer el framework PHP para utilizar las funcionalidades incorporadas en PHP. Si uno no lo conoce, se verá obligado a escribir códigos adicionales.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>No permite cambios o modificaciones:</strong> No es posible modificar o cambiar el comportamiento del núcleo de las aplicaciones online ya que PHP no lo permite.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Marco de trabajo deficiente:</strong> Los frameworks de PHP no tienen un comportamiento equivalente en comparación con otros lenguajes de este tipo. Por lo tanto, su rendimiento y características pueden sufrir.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Bajo rendimiento:</strong> PHP no puede soportar el uso de muchas características a la vez. El uso de más funciones del marco de trabajo de PHP o de las herramientas puede dar lugar a un rendimiento pobre durante el desarrollo de aplicaciones en línea.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Presencia de lenguajes de programación más sencillos:</strong> Aunque PHP es un potente lenguaje de programación, hay muchos otros lenguajes apoyados por una gran comunidad y documentación de referencia que son más fáciles de manejar para las aplicaciones web.
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                            <strong>Manejo de errores:</strong> Muchos han visto que las funciones de PHP son propensas a manejar errores debido a la falta de herramientas de depuración y advertencias de error.
+                          </p>
+                      </li>
+                  </ol>
+
+                  <table>
+                    <caption>Tabla comparativa de las ventajas y desventajas de PHP</caption>
+                    <thead>
+                        <tr>
+                           <th>Ventajas</th>
+                           <th>Desventajas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Código abierto y gratuito</td>
+                            <td>No es seguro de usar y manejar ya que tiene un código abierto accesible a todos</td>
+                        </tr>
+                        <tr>
+                            <td>Puede funcionar en varios sistemas operativos</td>
+                            <td>No para ejecutar aplicaciones gigantescas</td>
+                        </tr>
+                        <tr>
+                            <td>La carga de las aplicaciones es sencilla, ya que se puede cargar a través de una Internet lenta</td>
+                            <td>Es débil y provoca la introducción de datos incorrectos</td>
+                        </tr>
+                        <tr>
+                            <td>Fácil de aprender y utilizar</td>
+                            <td>Hay que aprender las funcionalidades integradas para evitar escribir un exceso de códigos</td>
+                        </tr>
+                        <tr>
+                            <td>Buen apoyo y asistencia</td>
+                            <td>El uso de muchas funciones puede causar un bajo rendimiento</td>
+                        </tr>
+                        <tr>
+                            <td>Ayuda a gestionar fácilmente los códigos</td>
+                            <td>No permite modificar las solicitudes en línea</td>
+                        </tr>
+                        <tr>
+                            <td>Potente soporte para bibliotecas</td>
+                            <td>No es equivalente en rendimiento a otros</td>
+                        </tr>
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>
+  
+              </section>
+              <!-- FIN: Content -->
+              
+              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo2')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+              <p class="w3-clear"></p>
+              <div class="w3-row w3-margin-bottom" id="demo2" style="display:none">
+                <hr>
+                  <div class="w3-col l2 m3">
+                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                  </div>
+                  <div class="w3-col l10 m9">
+                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                    <p>¡Excelente contenido! Siguiendo.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- fin de Blog Entry (2) -->
+          <hr>
+          
+          <!-- Blog entry (3) -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+            <div class="w3-center">
+              <h3>Otros lenguajes para desarrollo web de BD en Internet</h3>
+              <h5>Alternativas a PHP <span class="w3-opacity">feberero 15, 2022</span></h5>
+            </div>
+    
+            <div class="w3-justify">
+              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+              
+              <!-- INI: Content -->
+              <section>
+                  <h3 class="main-header">Otros lenguajes para desarrollo web de BD en Internet</h3>
+                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+
+                  <p>
+                    PHP ha sido uno de los lenguajes de programación más antiguos y más utilizados para el desarrollo del lado del servidor, y está impulsando más de 42 millones de sitios hoy en día en la web en todo el mundo, de acuerdo con SimilarTech. PHP ha crecido mucho y ha madurado en el transcurso de 25 años, y la última versión importante, PHP7 trajo consigo muchas mejoras en el rendimiento, aumentando la velocidad hasta el 100% de la de PHP 5 y reduciendo el uso de memoria. También se dice que PHP Composer es uno de los mejores gestores de paquetes de terceros hoy en día, y el lenguaje posee ahora un puñado de potentes frameworks, incluyendo Laravel, Symfony, Zend y CodeIgniter. Pero las tecnologías siempre están cambiando, y algunas incluso han derrocado el reinado de PHP y han abierto las puertas a nuevas oportunidades por venir. Para aquellos que nunca se sintieron cómodos con PHP o que quieren hacerse con las nuevas tecnologías, aquí hay 10 alternativas para PHP que puedes utilizar para el desarrollo del lado del servidor:
+                  </p>
+      
+                  <h4>Las mejores alternativas a PHP</h4>
+
+                  <!-- 
+                  <div class="imgbox">
+                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
+                  </div>
+                  -->
+                  <ol>
+                      <li>
+                          <strong>Javascript</strong>
+                          <p>
+                            Node.js es actualmente la tecnología más caliente en el desarrollo web; es un entorno de ejecución para Javascript en el lado del servidor, en pocas palabras, permite utilizar Javascript para el desarrollo del lado del servidor. Ahora bien, esto no sería suficiente para hacerla tan popular como lo es, el verdadero estado del arte de esta tecnología es el hecho de que ejecuta código asíncrono en el servidor. Esto aumenta el rendimiento del servidor, haciéndolo más rápido y capaz de manejar más peticiones/conexiones.
+                          </p>
+                          <p>
+                            La comunidad de node está creciendo muy rápido, y el gestor de paquetes de node (NPM) cuenta con la mayor cantidad de paquetes, con más de 650.000 paquetes disponibles para que puedas construir tus aplicaciones.
+                          </p>
+                      </li>
+                      <li>
+                          <strong>Java (EE)</strong>
+                          <p>
+                            Java es el favorito de todos los tiempos para muchos desarrolladores, y ha reinado en la escena del desarrollo de software durante bastante tiempo. Java es bastante rápido por naturaleza, y dado que está fuertemente tipado, proporciona una mejor experiencia de desarrollo escribiendo código con menos errores. Muchos marcos de trabajo utilizan Java para el desarrollo del lado del servidor, como Spring y JEE.
+                          </p>
+                      </li>
+                      <li>
+                          <strong>Python</strong>
+                          <p>
+                            Lo creas o no, Python se utiliza ahora más que PHP en el desarrollo del lado del servidor, y por buenas razones también. El framework Django es actualmente muy famoso entre los principiantes y los profesionales. Python es un lenguaje bastante fácil, quizás el más fácil de esta lista, y Django está repleto de funcionalidades, siendo un framework con pilas incluidas que aporta mucha potencia a la mano del desarrollador. Además, muchas organizaciones prefieren utilizar Django, ya que aprovecha la seguridad y la escalabilidad. Sin olvidar a Flask, por supuesto, uno de los frameworks de Python más queridos, ya que es mínimo, fácil de coger y extremadamente flexible.
+                          </p>
+                      </li>
+                      <li>
+                          <strong>Ruby</strong>
+                          <p>
+                            Ruby es un potente lenguaje dinámico, que es extremadamente fácil de usar para los principiantes y se centra en la simplicidad y la productividad. Existe un debate continuo sobre si es más fácil que Python o no, pero digamos que son aproximadamente del mismo nivel. Rails, un marco de desarrollo web MVC de Ruby, llevó el lenguaje a nuevas cotas y se convirtió en el marco de referencia para muchos desarrolladores, ya que se centra en la creación rápida de prototipos y en el patrón de convención sobre configuración. Rails no es el único framework de Ruby que existe, están Sinatra, Cuba, Hanami y algunos otros.
+                          </p>
+                      </li>
+                      <li>
+                          <strong>C#</strong>
+                          <p>
+                            Los productos de Microsoft para el desarrollo web puede que no sean la opción más adecuada para muchos desarrolladores y tampoco son los más populares. Sin embargo, son una opción fuerte en términos de características y rendimiento. ASP.Net Core es la siguiente generación de su marco web ASP.Net más famoso. ASP.Net impulsa más de 17 millones de páginas en la web y es utilizado por Microsoft y Xfinity, entre otros. Si estás familiarizado con Java o C++, C# te resultará bastante intuitivo, y si ya estás familiarizado con C#, ASP.Net es definitivamente una opción para ti.
+                          </p>
+                      </li>
+                      <li>
+                          <strong>Go</strong>
+                          <p>
+                            Go es un rico lenguaje de programación compilado construido por Google, y se dice que es incluso más sencillo que Python. Es un lenguaje de programación concurrente y dado que también es compilado, esto contribuye a que sea un lenguaje rápido para el desarrollo web. El equipo que creó el lenguaje también hizo un increíble IDE que es un factor muy importante en el proceso de desarrollo.
+                          </p>
+                      </li>
+                      <li>
+                          <strong>Erlang</strong>
+                          <p>
+                            Erlang es una de las opciones más potentes de esta lista. Es un lenguaje de programación funcional concurrente que fue diseñado específicamente para manejar la cantidad masiva de tráfico en las aplicaciones en tiempo real. La fiabilidad y la disponibilidad en Erlang son de gran importancia, hasta el punto de que la adición de nuevas características podría hacerse sin problemas mientras la aplicación está manejando la cantidad masiva de transacciones. Aunque puede que no sea la mejor opción para la generación de HTML, sin duda es ideal para construir una API REST en su backend.
+                          </p>
+                      </li>
+                      <li>
+                          <strong>Elixir</strong>
+                          <p>
+                            Elixir es un lenguaje de programación funcional dinámico que utiliza la máquina virtual Erlang. Fue diseñado para la concurrencia, la escalabilidad y la simplicidad e inventado por un miembro del núcleo de Rails. Elixir posee un rico marco de trabajo llamado Phoenix, pero es relativamente joven en comparación con otros lenguajes y, por lo tanto, es posible que tengas que escribir cosas desde cero. Elixir y Phoenix también cuentan con flexibilidad y escalabilidad, los creadores también dijeron que fueron capaces de servir a 2 millones de usuarios simultáneamente, lo que abre la puerta a nuevas posibilidades que podrían no existir en otros frameworks.
+                          </p>
+                      </li>
+                      <li>
+                          <strong>C++</strong>
+                          <p>
+                            Puede que te sorprenda, pero no hay nada que C++ no pueda hacer, y eso incluye el desarrollo web. En realidad, hay numerosos frameworks web entre los que puedes elegir, y en términos de rendimiento y velocidad, podrían ser incluso más rápidos que los típicos frameworks. Sin embargo, ten en cuenta que el despliegue puede ser un poco problemático, pero ciertamente será divertido experimentar con ellos. Los frameworks más famosos son WT, su página oficial está hecha usando el framework y Crow, que es la versión de C++ de Flask, un mini framework web.
+                          </p>
+                      </li>
+                      <li>
+                          <strong>Rust</strong>
+                          <p>
+                            Ya que Rust es un lenguaje popular y muy querido, debemos mencionar que se pueden desarrollar aplicaciones web usando Rust. Aunque el lenguaje no es lo suficientemente maduro como para reemplazar frameworks como Rails, Django y Laravel, tiene las características básicas y en cuanto a servicio de API con una arquitectura del lado del cliente, podría hacer el trabajo. Dado que RUST es un lenguaje seguro, la mayoría de los peligros en el desarrollo web podrían ser eliminados sólo con el uso del lenguaje.
+                          </p>
+                      </li>
+                  </ol>
+                  
+              </section>
+              <!-- FIN: Content -->
+              
+              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+              <p class="w3-clear"></p>
+              <div class="w3-row w3-margin-bottom" id="demo3" style="display:none">
+                <hr>
+                  <div class="w3-col l2 m3">
+                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                  </div>
+                  <div class="w3-col l10 m9">
+                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                    <p>¡Excelente contenido! Siguiendo.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- fin de Blog Entry (3) -->
+          <hr>
+
+          <!-- Blog entry (4) -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+            <div class="w3-center">
+              <h3>Breve historia de php</h3>
+              <h5>PHP <span class="w3-opacity">feberero 15, 2022</span></h5>
+            </div>
+    
+            <div class="w3-justify">
+              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+              
+              <!-- INI: Content -->
+              <section>
+                  <h3 class="main-header">Breve historia de php</h3>
+                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+      
+                 <p>
+                    PHP fue concebido en algún momento del otoño de 1994 por <strong>Rasmus Lerdorf</strong>. Las primeras versiones no publicadas se utilizaron en su página de inicio para llevar la cuenta de quién miraba su currículum en línea. La primera versión utilizada por otros estuvo disponible en algún momento a principios de 1995 y fue conocida como Personal Home Page Tools. Consistía en un motor de análisis sintáctico muy simplista que sólo entendía unas pocas macros especiales y una serie de utilidades de uso común en las páginas de inicio de entonces. Un libro de visitas, un contador y algunas otras cosas. El parser fue reescrito a mediados de 1995 y llamado PHP/FI Versión 2. El FI vino de otro paquete que Rasmus había escrito y que interpretaba datos de formularios html. Él combinó los scripts de las herramientas de la Página Personal con el Intérprete de Formularios y agregó soporte mSQL y así nació PHP/FI. PHP/FI creció a un ritmo asombroso y la gente comenzó a contribuir con el código.
+                 </p>
+      
+                  <!-- 
+                  <div class="imgbox">
+                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
+                  </div>
+                  -->
+                  <div class="imgbox">
+                      <img class="center-fit" src="imgs/rasmus_lerdorf.jpg" alt="Img Rasmus Lerdorf.jpg">
+                  </div>
+
+                  <p>
+                    Es difícil ofrecer estadísticas sólidas, pero se estima que a finales de 1996 PHP/FI se utilizaba en al menos 15.000 sitios web de todo el mundo. A mediados de 1997 este número había crecido a más de 50.000. A mediados de 1997 también se produjo un cambio en el desarrollo de PHP. Pasó de ser el proyecto favorito de Rasmus, al que habían contribuido un puñado de personas, a ser un esfuerzo de equipo mucho más organizado. El parser fue reescrito desde cero por Zeev Suraski y Andi Gutmans y este nuevo parser formó la base de la versión 3 de PHP. Mucho del código de utilidad de PHP/FI fue portado a PHP3 y mucho fue reescrito completamente.
+                  </p>
+
+                  <p>
+                    Hoy en día (a finales de 1999), PHP/FI o PHP3 viene con un número de productos comerciales como el servidor web StrongHold de C2 y RedHat Linux. Una estimación conservadora basada en una extrapolación de las cifras proporcionadas por NetCraft (véase también Netcraft Web Server Survey) sería que PHP se utiliza en más de 1.000.000 de sitios en todo el mundo. Para ponerlo en perspectiva, eso es más sitios que los que ejecutan el servidor insignia de Netscape Enterprise en Internet.
+                  </p>
+
+                  <p>
+                    Además, en el momento de escribir este artículo, se está trabajando en la próxima generación de PHP, que utilizará el potente motor de scripting Zend para ofrecer un mayor rendimiento, y también soportará la ejecución en servidores web distintos de Apache como módulo de servidor nativo.
+                  </p>
+                  
+              </section>
+              <!-- FIN: Content -->
+              
+              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo4')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+              <p class="w3-clear"></p>
+              <div class="w3-row w3-margin-bottom" id="demo4" style="display:none">
+                <hr>
+                  <div class="w3-col l2 m3">
+                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                  </div>
+                  <div class="w3-col l10 m9">
+                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                    <p>¡Excelente contenido! Siguiendo.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- fin de Blog Entry (4) -->
+          <hr>
+
+          <!-- Blog entry (5) -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+            <div class="w3-center">
+              <h3>Diferencia entre SQL y MySQL</h3>
+              <h5>SQL vs. MySQL <span class="w3-opacity">feberero 15, 2022</span></h5>
+            </div>
+    
+            <div class="w3-justify">
+              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+              
+              <!-- INI: Content -->
+              <section>
+                  <h3 class="main-header">Diferencia entre SQL y MySQL</h3>
+                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+
+                 <h4>¿Qué es SQL?</h4>
+
+                 <p>
+                    SQL es un lenguaje que se usa para operar su base de datos. SQL es el lenguaje básico utilizado para todas las bases de datos. Hay cambios de sintaxis menores entre diferentes bases de datos, pero la sintaxis SQL básica sigue siendo en gran medida la misma. SQL es una abreviatura de Structured Query Language. De acuerdo con ANSI (American National Standards Institute), SQL es el lenguaje estándar para operar un sistema de administración de bases de datos relacionales.
+                 </p>
+
+                 <p>
+                    SQL se usa para acceder, actualizar y manipular datos en una base de datos. Su diseño permite la gestión de datos en un RDBMS, como MYSQL. El lenguaje SQL también se usa para controlar el acceso a datos y para la creación y modificación de esquemas de Base de datos.
+                 </p>
+
+                 <h4>¿Qué es MYSQL?</h4>
+
+                 <p>
+                    Desarrollado a mediados de los años 90, MySQL fue una de las primeros gestores de bases de datos de código abierto disponibles en el mercado. Hoy en día existen muchas alternativas variantes de MySQL. Sin embargo, las diferencias entre las variantes no son significativas ya que usan la misma sintaxis, y la funcionalidad básica también permanece igual.
+                 </p>
+
+                 <p>
+                    MySQL es un RDBMS que permite mantener organizados los datos que existen en una base de datos. MySQL se pronuncia como «My S-Q-L», pero también se llama «My Sequel.». Lleva el nombre de la hija del cofundador Michael Widenius. MySQL proporciona un acceso multiusuario a las bases de datos. Este sistema RDBMS se usa con la combinación de PHP y Apache Web Server, además de una distribución de Linux. MySQL usa el lenguaje SQL para consultar la base de datos.
+                 </p>
+
+                 <p>
+                    Ahora veamos la diferencia entre SQL y MySQL
+                 </p>
+
+                 <div class="imgbox">
+                    <img class="center-fit" src="imgs/sql_vs_mysql.png" alt="Img SQL vs MySQL.png">
+                 </div>
+                  <!-- 
+                  <div class="imgbox">
+                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
+                  </div>
+                  -->
+
+                  <table>
+                    <caption>Diferencia entre SQL y MySQL</caption>
+                    <thead>
+                        <tr>
+                           <th>Parámetro</th>
+                           <th>SQL</th>
+                           <th>MySQL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                           <td>Definición</td>
+                           <td>
+                            SQL es un lenguaje de consulta estructurado. Es útil para administrar bases de datos relacionales.
+                           </td>
+                           <td>
+                            MySQL es un RDBMS para almacenar, recuperar, modificar y administrar una base de datos utilizando SQL.
+                           </td>
+                        </tr>
+                        <tr>
+                            <td>Complejidad</td>
+                            <td>
+                                Necesita aprender el lenguaje SQL para usarlo efectivamente.
+                            </td>
+                            <td>
+                                Está disponible a través de la descarga y la instalación.
+                            </td>
+                         </tr>
+                         <tr>
+                            <td>
+                                Tipo
+                            </td>
+                            <td>
+                                SQL es un lenguaje de consulta.
+                            </td>
+                            <td>
+                                MySQL es un software de base de datos. Usó el lenguaje «SQL» para consultar la base de datos.
+                            </td>
+                         </tr>
+                         <tr>
+                            <td>
+                                Soporte para conector
+                            </td>
+                            <td>
+                                SQL no proporciona conectores.
+                            </td>
+                            <td>
+                                MySQL ofrece una herramienta integrada llamada ‘MySQL workbench’ para diseñar y desarrollar bases de datos.
+                            </td>
+                         </tr>
+                         <tr>
+                            <td>
+                                Propósito
+                            </td>
+                            <td>
+                                Para consultar y operar el sistema de base de datos.
+                            </td>
+                            <td>
+                                Permite el manejo, almacenamiento, modificación y eliminación de datos en formato tabular.
+                            </td>
+                         </tr>
+                         <tr>
+                            <td>
+                                Uso
+                            </td>
+                            <td>
+                                El código SQL y los comandos se usan en varios sistemas DBMS y RDMS, incluido MYSQL.
+                            </td>
+                            <td>
+                                MYSQL se usa como una base de datos RDBMS.
+                            </td>
+                         </tr>
+                         <tr>
+                             <td>
+                                Actualizaciones
+                             </td>
+                             <td>
+                                El lenguaje es fijo y el comando sigue siendo el mismo.
+                             </td>
+                             <td>
+                                Recibe las actualizaciones frecuentes
+                             </td>
+                         </tr>                        
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>
+                  
+              </section>
+              <!-- FIN: Content -->
+              
+              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo5')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+              <p class="w3-clear"></p>
+              <div class="w3-row w3-margin-bottom" id="demo5" style="display:none">
+                <hr>
+                  <div class="w3-col l2 m3">
+                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                  </div>
+                  <div class="w3-col l10 m9">
+                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                    <p>¡Excelente contenido! Siguiendo.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- fin de Blog Entry (5) -->
+          <hr>
+      <!-- END BLOG ENTRIES -->
+      </div>
+  
+      <!-- About/Information menu -->
+      <div class="w3-col l4">
+        <!-- About Card -->
+        <div class="w3-white w3-margin">
+          <img src="/pages/plantillas/w3images/erick-profile.png" alt="Erick Profile.png" style="width:100%" class="w3-grayscale">
+          <div class="w3-container w3-black">
+            <h4>Erick Escamilla Charco</h4>
+            <p>Ingeniero en Sistemas Computacionales, apasionado por la tecnología. Deasrrollador Web Full-Stack por ocupación e inquisidor por convicción.</p>
+          </div>
+        </div>
+        <hr>
+  
+        <!-- Posts -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Publicaciones populares</h4>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-white">
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">UI/UX</span>
+              <br>
+              <span>Explore las diferencias entre User Interface y User eXperience.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/bandmember.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Django: tutorial para principiantes</span>
+              <br>
+              <span>Descubra uno de los frameworks más populares para desarrollo Web en Python.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Hacking ético con Kali Linux</span>
+              <br>
+              <span>Tome una breve introducción al uso de herramientas de audotoría informática con Kali.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+              <span class="w3-large">Spring Boot</span>
+              <br>
+              <span>Descubra un de los frameworks más populares para desarrollo Back-end con Java EE.</span>
+            </li>
+          </ul>
+        </div>
+        <hr>
+  
+        <!-- Tags -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Tags</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p>
+              <span class="w3-tag w3-black w3-margin-bottom">Desarrollo Web</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Front-end</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Back-end</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSH</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSL</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTP</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTPS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">AWS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Azure</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">GCP</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Load-balancing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Jboss EAP</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Java EE</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Spring Boot</span>
+            </p>
+          </div>
+        </div>
+        <hr>
+  
+        <!-- Inspiration -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Inspiración</h4>
+          </div>
+          <div class="w3-row-padding w3-white">
+            <div class="w3-col s6">
+              <p><img src="/pages/plantillas/w3images/inspiracion-1.png" alt="Sala de servidores.png" style="width:100%"></p>
+              <p><img src="/pages/plantillas/w3images/robot-wallp-v2.png" alt="Robot.png" style="width:100%"></p>
+            </div>
+            <div class="w3-col s6">
+              <p><img src="/pages/plantillas/w3images/mr-robot-wallpaper.png" alt="Mr Robot Wallp.png" style="width:100%" class="w3-grayscale"></p>
+              <p><img src="/pages/plantillas/w3images/hacking-wallp-v2.png" alt="Hacking Wallpaper.png" style="width:100%"></p>
+           </div>
+          </div>
+        </div>
+        <hr>
+  
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Sígueme</h4>
+          </div>
+          <div class="w3-container w3-xlarge w3-padding">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+          </div>
+        </div>
+        <hr>
+        
+        <!-- Subscribe -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Suscribirse</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p>Ingrese su e-mail y reciba las últimas noticias.</p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Ingrese e-mail" style="width:100%"></p>
+            <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Suscribir</button></p>
+          </div>
+        </div>
+  
+      <!-- END About/Intro Menu -->
+      </div>
+  
+    <!-- END GRID -->
+    </div>
+  
+  <!-- END w3-content -->
+  </div>
+  
+  <!-- Subscribe MODAL -->
+  <div id="subscribe" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content" style="padding:32px">
+      <div class="w3-container w3-white">
+        <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+        <h2 class="w3-wide">SUSCRIBIR</h2>
+        <!-- <p>Join my mailing list to receive updates on the latest blog posts and other things.</p> -->
+        <p>Únase a la lista de correos de Erick's Tech World para recibir actualizaciones sobre las últimas publicaciones del blog y obtener beneficios adicionales.</p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Ingrese su e-mail"></p>
+        <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Suscribirme</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- cierre del main-->
+   <!-- FIN: contenido principal de la página [MAIN] -->
+</main>
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-dark-grey" style="padding:32px">
+    <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>Regresar a la parte superior</a>
+    <p>Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.</p>
+    <p>Hosting:</p>
+    <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    <p>Con ayuda de <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+  
+  <script>
+  // Toggle between hiding and showing blog replies/comments
+  document.getElementById("myBtn").click();
+  function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  function likeFunction(x) {
+    x.style.fontWeight = "bold";
+    x.innerHTML = "✓ Liked";
+  }
+  </script>
+  
+    <!-- FIN: plantilla (skeleton) -->
+        <!-- FIN: Skeleton -->
+</body>
+</html>
