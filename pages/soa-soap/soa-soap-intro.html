@@ -89,8 +89,8 @@ and is wrapped around the whole page content, except for the footer in this exam
         <!-- Blog entry (1) -->
         <div class="w3-container w3-white w3-margin w3-padding-large">
           <div class="w3-center">
-            <h3>¿Qué es SOA?</h3>
-            <h5>Apache hecho simple <span class="w3-opacity">feberero 17, 2022</span></h5>
+            <h3>¿Qué es la arquitectura orientada a los servicios (SOA)?</h3>
+            <h5>SOA <span class="w3-opacity">mar 01, 2022</span></h5>
           </div>
   
           <div class="w3-justify">
@@ -99,32 +99,86 @@ and is wrapped around the whole page content, except for the footer in this exam
             
             <!-- INI: Content -->
             <section>
-                <h3 class="main-header">¿Qué es XAMPP?</h3>
+                <h3 class="main-header">¿Qué es la arquitectura orientada a los servicios (SOA)?</h3>
                 <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
     
                 <p>
-                    XAMPP es el <strong>entorno</strong> más popular de <strong>desarrollo</strong> con PHP.
+                  La <strong>arquitectura orientada a los servicios (SOA)</strong> es un tipo de diseño de software que permite reutilizar sus elementos gracias a las interfaces de servicios que se comunican a través de una red con un lenguaje común.
                 </p>
     
                 <div class="imgbox">
-                    <img class="center-fit" src="imgs/xampp_logo.jpg" alt="Img logo de XAMPP.jpg">
+                    <img class="center-fit" src="imgs/service-oriented-architecture.png" alt="Img SOA.jpg">
                 </div>
                 
                <p>
-                XAMPP es una distribución de Apache completamente gratuita y fácil de instalar que contiene MariaDB, PHP y Perl. El paquete de instalación de XAMPP ha sido diseñado para ser increíblemente fácil de instalar y usar.
+                Un servicio es una <em>unidad autónoma de una o más <strong>funciones</strong> del software</em>  diseñada para realizar una tarea específica, como recuperar cierta información o ejecutar una operación. Contiene las integraciones de datos y código que se necesitan para llevar a cabo una función empresarial completa y diferenciada. Se puede acceder a él de forma remota e interactuar con él o actualizarlo de manera independiente.
                </p>
 
                <p>
-                XAMPP es uno de los servidores web multiplataforma más utilizados, que ayuda a los desarrolladores a crear y probar sus programas en un servidor web local. Fue desarrollado por la organización Apache Friends, y su código fuente nativo puede ser revisado o modificado por el público. Está compuesto por el servidor HTTP Apache, MariaDB y el intérprete de diferentes lenguajes de programación como PHP y Perl. Está disponible en 11 idiomas y es compatible con diferentes plataformas como el paquete IA-32 de Windows y el paquete x64 de macOS y Linux.
+                En otras palabras, la SOA integra los elementos del software que se implementan y se mantienen por separado, y permite que se comuniquen entre sí y trabajen en conjunto para formar aplicaciones de software en distintos sistemas.
                </p>
     
+            
+               <h3 class="main-header">¿Cómo funciona la arquitectura orientada a los servicios?</h3>
+
                <p>
-                XAMPP es una abreviatura en la que la X significa "Cross-Platform" (plataforma cruzada), la A significa "Apache", la M significa "MYSQL" y la Ps significan "PHP" y "Perl", respectivamente. Es un paquete de soluciones web de código abierto que incluye la distribución de Apache para muchos servidores y ejecutables de línea de comandos junto con módulos como el servidor Apache, MariaDB, PHP y Perl.
+                Antes de que se empezara a utilizar la SOA a fines de los noventa, era muy difícil conectar una <em>aplicación</em>  con los servicios alojados en otro sistema, y se necesitaba una <em>integración profunda</em> de punto a punto (conectividad, enrutamiento, traducción de los modelos de datos, etc.). Luego, los desarrolladores debían repetir el proceso para cada proyecto nuevo. Este modelo se conocía como "monolítico", ya que el código para toda la aplicación formaba parte de una sola implementación. Si algo no funcionaba correctamente, debía darla de baja por completo hasta que se solucionaran los problemas y luego volver a implementarla como una versión nueva.
                </p>
 
                <p>
-                XAMPP ayuda a un host o servidor local a probar su sitio web y sus clientes a través de ordenadores y portátiles antes de lanzarlo al servidor principal. Es una plataforma que proporciona un entorno adecuado para probar y verificar el funcionamiento de proyectos basados en Apache, Perl, base de datos MySQL y PHP a través del sistema del propio host. Entre estas tecnologías, Perl es un lenguaje de programación utilizado para el desarrollo web, PHP es un lenguaje de scripting backend, y MariaDB es la base de datos más utilizada desarrollada por MySQL.
+                Dado que la SOA expone los servicios utilizando protocolos estándar de red para enviar solicitudes o acceder a los datos (p. ej., <em><strong>SOAP</strong></em>, JSON, ActiveMQ o Apache Thrift), no es necesario que los desarrolladores realicen las integraciones desde cero. De hecho, pueden utilizar los patrones llamados buses de servicios empresariales (ESB) para integrar un elemento centralizado y los sistemas de backend, y ponerlos a disposición de todos como interfaces de servicios. Asimismo, pueden reutilizar las funciones actuales en vez de volver a crearlas.
                </p>
+
+               <p>
+                En este tipo de arquitectura, los servicios se comunican por medio de un sistema "sin conexión directa". Se trata de un método para interconectar los elementos en un sistema o una red, de modo que puedan transmitir información o coordinar un proceso empresarial, mientras se reduce la dependencia entre ellos. En consecuencia, esto da origen a una nueva aplicación.
+               </p>
+
+               <h4>Ventajas frente al enfoque monolítico</h4>
+
+               <ul>
+                 <li>
+                  <strong>Comercialización más rápida y mayor flexibilidad:</strong> la posibilidad de reutilizar los servicios agiliza y simplifica el proceso de ensamblaje de las aplicaciones. Los desarrolladores no tienen que empezar siempre desde cero, tal como sucede con las aplicaciones monolíticas.
+                 </li>
+                 <li>
+                  <strong>Uso de la infraestructura heredada en los mercados nuevos:</strong> la SOA permite que los desarrolladores tomen las funciones de una plataforma o un entorno y las ajusten e implementen en otros nuevos.
+                 </li>
+                 <li>
+                   <strong>Reducción de los costos gracias a una mayor agilidad y un desarrollo más eficiente</strong>
+                 </li>
+                 <li>
+                  <strong>Mantenimiento sencillo:</strong> dado que todos los servicios son autónomos e independientes, se puede modificar y actualizar cada uno cuando sea necesario, sin afectar al resto.
+                 </li>
+                 <li>
+                  <strong>Escalabilidad:</strong> la SOA posibilita la ejecución de los servicios en varios lenguajes de programación, servicios y plataformas, lo cual aumenta la escalabilidad de forma considerable. Además, utiliza un protocolo de comunicación estandarizado con el que las empresas pueden disminuir la interacción entre los clientes y los servicios, lo cual permite ajustar las aplicaciones con menos presiones e inconvenientes.
+                 </li>
+                 <li>
+                  <strong>Mayor confiabilidad:</strong> la SOA genera aplicaciones más confiables, ya que es más fácil depurar servicios pequeños que un código de gran volumen.
+                 </li>
+                 <li>
+                  <strong>Gran disponibilidad:</strong> las instalaciones de la SOA están disponibles para todos.
+                 </li>
+               </ul>
+
+               <h4>Funciones de la SOA</h4>
+
+               <p>
+                Los elementos esenciales de la arquitectura orientada a los servicios consisten en tres funciones.
+               </p>
+
+               <ol>
+                 <li>
+                   <strong>Proveedor de servicios</strong>
+                   <p>Se encarga de crear servicios web, ofrecerlos a un registro de servicios disponibles y gestionar sus condiciones de uso.</p>
+                 </li>
+                 <li>
+                   <strong>Agente o registro de servicios</strong>
+                   <p>Se encarga de brindar información acerca del servicio a quien lo solicite, y puede ser público o privado.</p>
+                 </li>
+                 <li>
+                   <strong>Usuario del servicio o persona que lo solicita</strong>
+                   <p>Buscará un servicio en el registro o por medio del agente, y se conectará con el proveedor para recibirlo.</p>
+                 </li>
+               </ol>
 
             </section>
             <!-- FIN: Content -->
@@ -150,8 +204,8 @@ and is wrapped around the whole page content, except for the footer in this exam
         <!-- Blog entry (2) -->
         <div class="w3-container w3-white w3-margin w3-padding-large">
             <div class="w3-center">
-              <h3>¿Para qué se usa?</h3>
-              <h5>XAMPP <span class="w3-opacity">feberero 18, 2022</span></h5>
+              <h3>SOAP: protocolo simple de acceso a objetos</h3>
+              <h5>SOAP <span class="w3-opacity">mar 01, 2022</span></h5>
             </div>
     
             <div class="w3-justify">
@@ -160,29 +214,53 @@ and is wrapped around the whole page content, except for the footer in this exam
               
               <!-- INI: Content -->
               <section>
-                  <h3 class="main-header">¿Para qué se usa (XAMPP)?</h3>
+                  <h3 class="main-header">SOAP: protocolo simple de acceso a objetos</h3>
                   <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
       
-                  <p>
-                    El objetivo de <strong>XAMPP</strong>  es crear una distribución fácil de instalar para desarrolladores que se están iniciando en el mundo de Apache. XAMPP viene configurado por defecto con todas los opciones activadas. XAMPP es gratuito tanto para usos comerciales como no comerciales.
-                  </p>
+                 <p>
+                  <strong>SOAP</strong> es un <em><strong>protocolo estándar</strong></em> que se creó originalmente para posibilitar la comunicación entre las aplicaciones que se diseñaban con diferentes lenguajes y en distintas plataformas. Como es un protocolo, impone reglas integradas que aumentan la complejidad y la sobrecarga, lo cual puede retrasar el tiempo que tardan las páginas en cargarse. Sin embargo, estos estándares también ofrecen normas integradas que pueden ser ideales para el sector empresarial. Los estándares de cumplimiento integrados incluyen la seguridad, la atomicidad, la uniformidad, el aislamiento y la durabilidad (ACID), que forman un conjunto de propiedades que garantizan operaciones confiables de las bases de datos.
+                 </p>
       
-                  <!-- 
+                  
                   <div class="imgbox">
-                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
+                      <img class="center-fit" src="imgs/soap-api.jpg" alt="Img SOAP API.png">
                   </div>
-                  -->
-
+                  
                   <p>
-                    Descripción completa del servidor web Apache. Apache HTTP Server es un software de servidor web gratuito y de código abierto para plataformas Unix con el cual se ejecutan el 46% de los sitios web de todo el mundo. ... Le permite a los propietarios de sitios web servir contenido en la web, de ahí el nombre de «servidor web»
+                    Las especificaciones comunes de los servicios web incluyen lo siguiente:
                   </p>
 
-                  <p>
-                    XAMPP es una distribución de Apache que incluye varios software libres. El nombre es un acrónimo compuesto por las iniciales de los programas que lo constituyen: el servidor web Apache, los sistemas relacionales de administración de bases de datos MySQL y MariaDB, así como los lenguajes de programación Perl y PHP.
-                  </p>
+                  <ul>
+                    <li>
+                      <strong>Seguridad de los servicios web (WS-Security):</strong> estandariza la forma de proteger y transferir los mensajes usando identificadores únicos llamados tokens.
+                    </li>
+                    <li>
+                      <strong>Mensajería segura de los servicios web (WS-ReliableMessaging):</strong> estandariza el control de errores entre mensajes que se transfieren en infraestructuras de TI poco confiables.
+                    </li>
+                    <li>
+                      <strong>Abordaje de los servicios web (WS-Addressing):</strong> paquetes que enrutan la información como metadatos dentro de los encabezados SOAP, en lugar de mantener la información en un lugar más profundo de la red.
+                    </li>
+                    <li>
+                      <strong>Lenguaje de descripción de los servicios web (WSDL):</strong> describe qué hace un servicio web, así como dónde comienza y termina.
+                    </li>
+                  </ul>
 
                   <p>
-                    XAMPP es la abreviatura de cross-platform, Apache, MySQL, PHP y Perl, y te permite construir un sitio de WordPress sin conexión, en un servidor web local en tu ordenador. Esta solución sencilla y ligera funciona en Windows, Linux y Mac, de ahí lo de "multiplataforma".
+                    El envío de una solicitud de datos a una API de SOAP se puede administrar a través de cualquiera de los protocolos de la capa de la aplicación: HTTP (para los exploradores web), SMTP (para el correo electrónico), TCP, entre otros. Sin embargo, una vez que se recibe una solicitud, los mensajes SOAP de retorno deben ser documentos XML, que es un lenguaje de marcado que comprenden las personas y las máquinas. Una solicitud completa a una API de SOAP no se almacena en caché por un navegador, por lo que no se puede acceder a ella después sin reenviarla a la API.
+                  </p>
+
+                  <h4>Diferencias entre SOAP y REST</h4>
+
+                  <p>
+                    Es posible que muchos sistemas heredados sigan rigiéndose por SOAP, aunque REST haya surgido más tarde y se considere una alternativa más rápida en los escenarios basados en la Web. REST es un conjunto de pautas que ofrece una implementación flexible, mientras que SOAP es un protocolo con requisitos específicos, como en el caso de la mensajería XML.
+                  </p>
+
+                  <div class="imgbox">
+                    <img class="center-fit" src="imgs/soap-message.gif" alt="Img SOAP message.gif">
+                  </div>
+
+                  <p>
+                    Las API de REST son ligeras, así que son ideales para los contextos más nuevos, como el Internet de las cosas (IoT), el desarrollo de aplicaciones móviles y la informática sin servidor. Los servicios web de SOAP ofrecen seguridad y cumplimiento de las operaciones integrados que coinciden con muchas de las necesidades empresariales, pero que también los hacen más pesados. Asimismo, muchas API públicas, como la API de Google Maps, siguen las pautas de REST.
                   </p>
 
               </section>
@@ -206,316 +284,6 @@ and is wrapped around the whole page content, except for the footer in this exam
           <!-- fin de Blog Entry (2) -->
           <hr>
           
-          <!-- Blog entry (3) -->
-        <div class="w3-container w3-white w3-margin w3-padding-large">
-            <div class="w3-center">
-              <h3>¿Cuáles son los servicios que ofrece (XAMPP)?</h3>
-              <h5>Servicios de XAMPP <span class="w3-opacity">feberero 18, 2022</span></h5>
-            </div>
-    
-            <div class="w3-justify">
-              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
-              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
-              
-              <!-- INI: Content -->
-              <section>
-                  <h3 class="main-header">¿Cuáles son los servicios que ofrece (XAMPP)?</h3>
-                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
-
-                  <!-- 
-                  <div class="imgbox">
-                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
-                  </div>
-                  -->
-                  <ol>
-                    <li>
-                      <strong>Apache:</strong>
-                      <p>
-                        Apache HTTP Server es un software de servidor web gratuito y de código abierto para plataformas Unix con el cual se ejecutan el 46% de los sitios web de todo el mundo. Es mantenido y desarrollado por la Apache Software Foundation.
-                      </p>
-                      <p>
-                        Le permite a los propietarios de sitios web servir contenido en la web y es uno de los servidores más antiguos y confiables, con la primera versión lanzada hace más de 20 años, en 1995.
-                      </p>
-                      <p>
-                        Un servidor web es un programa de tipo informático que se encarga de procesar una aplicación del lado del servidor, cada una de las cuales puede acceder a archivos almacenados en un servidor físico y usarlos para diferentes propósitos, mediante conexiones bidireccionales o unidireccionales con la máquina del cliente, tras lo cual se genera una respuesta del lado del cliente.
-                      </p>
-                    </li>              
-                    <li>
-                      <strong>Maria DB:</strong>
-                      <p>
-                        MariaDB es un sistema de gestión de bases de datos que está muy relacionado con MySQL, ya que fue desarrollado por uno de los desarrolladores, Michael “Monty” Widenius. El objetivo de su desarrollo fue el de mantener el software de gestión de base de datos en un modelo de software libre.
-                      </p>
-
-                      <p>
-                        El sistema de gestión de bases de datos MariaDB incorpora las distintas funciones características de MySQL añadiendo algunas mejoras, como la posibilidad de ejecutar consultas complejas y almacenarlas directamente en caché, la nueva gestión de conexiones a BD, la posibilidad de acceder a cluster de datos (interesante para el trabajo en la nube) o el soportar la utilización de jerarquías de graphs y estructuras más complejas.
-                      </p>
-
-                      <p>
-                        En cuanto a seguridad y rendimiento, MariaDB incorpora mejoras, estando siempre en constante evolución gracias a la aportación de una gran comunidad que se encuentra tras de ella.
-                      </p>
-
-                    </li>
-                    <li>
-                      <strong>PHP:</strong>
-                      <p>
-                        PHP (un acrónimo recursivo para PHP: preprocesador de hipertexto) es un subconjunto de lenguajes de secuencia como JavaScript y Python. La diferencia es que PHP se usa principalmente para la comunicación del lado del servidor, mientras que JavaScript se puede usar tanto para el front-end y el back-end, y Python se usa solo para el lado del servidor (back-end).
-                      </p>
-                      <p>
-                        Un lenguaje de script (o de secuencia de comandos) es un lenguaje que automatiza la ejecución de tareas en un entorno de tiempo de ejecución especial. Esto incluye decirle a una página estática (creada con HTML y CSS) que realice acciones específicas con reglas que hayas definido de antemano.
-                      </p>
-                      <p>
-                        Por ejemplo, puedes usar un script para validar un formulario para asegurarte de que todos los campos se hayan completado antes de que el formulario se envíe de vuelta al servidor. El script se ejecutará y luego verificará todos los campos cuando un usuario envíe el formulario.
-                      </p>
-                      <p>
-                        Otros usos comunes de los lenguajes de script incluyen mostrar un efecto desplegable cuando un cursor se desplaza sobre el menú principal, los botones de desplazamiento y la animación, abrir cuadros de diálogo, etc.
-                      </p>
-
-                    </li>
-                    <li>
-                      <strong>Perl:</strong>
-                      <p>
-                        Perl es un lenguaje de programación muy utilizado para construir aplicaciones CGI para el web. Perl es un acrónimo de Practical Extracting and Reporting Languaje, que viene a indicar que se trata de un lenguaje de programación muy práctico para extraer información de archivos de texto y generar informes a partir del contendido de los ficheros.
-                      </p>
-                      <p>
-                        Es un lenguaje libre de uso, eso quiere decir que es gratuito. Antes estaba muy asociado a la plataforma Uníx, pero en la actualidad está disponible en otros sistemas operativos como Windows.
-                      </p>
-                      <p>
-                        Perl es un lenguaje de programación interpretado, al igual que muchos otros lenguajes de Internet como Javascript o ASP. Esto quiere decir que el código de los scripts en Perl no se compila sino que cada vez que se quiere ejecutar se lee el código y se pone en marcha interpretando lo que hay escrito. Además es extensible a partir de otros lenguajes, ya que desde Perl podremos hacer llamadas a subprogramas escritos en otros lenguajes. También desde otros lenguajes podremos ejecutar código Perl.
-                      </p>
-                    </li>
-                  </ol>
-                  
-              </section>
-              <!-- FIN: Content -->
-              
-              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
-              <p class="w3-clear"></p>
-              <div class="w3-row w3-margin-bottom" id="demo3" style="display:none">
-                <hr>
-                  <div class="w3-col l2 m3">
-                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
-                  </div>
-                  <div class="w3-col l10 m9">
-                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
-                    <p>¡Excelente contenido! Siguiendo.</p>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <!-- fin de Blog Entry (3) -->
-          <hr>
-
-          <!-- Blog entry (4) -->
-        <div class="w3-container w3-white w3-margin w3-padding-large">
-            <div class="w3-center">
-              <h3>Ventajas y desventajas (XAMPP)</h3>
-              <h5>XAMPP <span class="w3-opacity">feberero 18, 2022</span></h5>
-            </div>
-    
-            <div class="w3-justify">
-              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
-              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
-              
-              <!-- INI: Content -->
-              <section>
-                  <h3 class="main-header">Ventajas y desventajas (XAMPP)</h3>
-                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
-      
-                  <h4>Ventajas de XAMPP</h4>
-                
-                  <ul>
-                    <li>
-                      Es fácil de instalar en comparación con otros servidores web como WAMP.
-                    </li>
-                    <li>
-                      Es multiplataforma, lo que significa que XAMPP está disponible para Windows y Linux.
-                    </li>
-                    <li>
-                      También viene con un número de otros módulos incluyendo OpenSSL, phpMyAdmin, MediaWiki, Joomla, WordPress y más. 
-                    </li>
-                    <li>
-                      XAMPP se ofrece tanto en una versión completa como en una versión estándar (versión más pequeña).
-                    </li>
-                    <li>
-                      Puedes iniciar y detener toda la pila de servidor web+base de datos con un solo comando.
-                    </li>
-                  </ul>
-      
-                  <!-- 
-                  <div class="imgbox">
-                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
-                  </div>
-                  -->
-                  
-                  <h4>Desventajas de XAMPP</h4>
-
-                  <ul>
-                    <li>La configuración y los ajustes son difíciles de hacer en comparación con el servidor WAMP.</li>
-                  </ul>
-                  
-              </section>
-              <!-- FIN: Content -->
-              
-              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo4')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
-              <p class="w3-clear"></p>
-              <div class="w3-row w3-margin-bottom" id="demo4" style="display:none">
-                <hr>
-                  <div class="w3-col l2 m3">
-                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
-                  </div>
-                  <div class="w3-col l10 m9">
-                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
-                    <p>¡Excelente contenido! Siguiendo.</p>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <!-- fin de Blog Entry (4) -->
-          <hr>
-
-          <!-- Blog entry (5) -->
-        <div class="w3-container w3-white w3-margin w3-padding-large">
-            <div class="w3-center">
-              <h3>Otros servidores web (parecidos a XAMPP)</h3>
-              <h5>Alternativas a XAMPP <span class="w3-opacity">feberero 18, 2022</span></h5>
-            </div>
-    
-            <div class="w3-justify">
-              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
-              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
-              
-              <!-- INI: Content -->
-              <section>
-                  <h3 class="main-header">Alternativas a XAMPP</h3>
-                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
-
-                  <h4>WampServer</h4>
-
-                  <p>
-                    WampServer es también otra herramienta que se utiliza para crear aplicaciones web y desarrollo PHP. WampServer vendrá junto con tres herramientas principales como PHP, MySQL y Apache. WampServer solo está disponible para el sistema operativo Microsoft Windows.
-                  </p>
-               
-
-                 <div class="imgbox">
-                    <img class="center-fit" src="imgs/wampp_server.png" alt="Wampp Server.png">
-                 </div>
-                  <!-- 
-                  <div class="imgbox">
-                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
-                  </div>
-                  -->
-                  <p>
-                    Una ventaja que ofrece WampServer es la interfaz que está disponible en muchos idiomas. Tiene la capacidad de ver todos los elementos en el navegador. Otra función que vale la pena mencionar es que PhpMyAdmin se encargaría de la administración de la base de datos. También puede probar los modos en línea y sin conexión con WampServer.
-                  </p>
-
-                  <p>
-                    Si la accesibilidad le preocupa, puede limitarla al host local; de lo contrario, puede elegir a todos para obtener el acceso. También puede tener acceso a la configuración del servidor y a los archivos. Otra característica interesante que ofrece WampServer es que puede incorporar todas las próximas versiones de PHP, Apache y MySQL. Por lo tanto, puede seguir actualizándose con nuevas versiones a medida que avanza.
-                  </p>
-
-                  <h4>EasyPHP</h4>
-
-                  <p>
-                    EasyPHP es uno de los mejores contendientes de Xampp. Si solo desea concentrarse en la parte de codificación y dejar el resto del dolor de cabeza de la configuración, entonces esta es la mejor herramienta. Le proporcionará PHP, el lenguaje de programación junto con MySQL para la gestión de bases de datos. Apache se encargará de la aplicación del servidor web.
-                  </p>
-                  
-                  <div class="imgbox">
-                    <img class="center-fit" src="imgs/easy_php.png" alt="Easy PHP.png">
-                 </div>
-
-               <p>
-                Incluso si eres un principiante en la codificación, puedes usar EasyPHP como herramienta de desarrollo. Puede trabajar con aplicaciones como WordPress, Joomla y Drupal con EasyPHP. Pero recuerde, no puede alojar sitios web usando EasyPHP. Si desea convertir su máquina en un alojamiento personal, elija EasyPHP WebServer. Esto permitirá el alojamiento sin conexión en la máquina que será fácil de operar y también estará protegido. Si desea un entorno WAMP para su máquina, elija EasyPHP DevServer. Estas versiones tendrán diferencia en los programas ofrecidos, además de los básicos.
-               </p>
-
-               <h4>Servidor UwAmp</h4>
-
-               <p>
-                UwAmp Server es otra herramienta de desarrollo para aplicaciones web del sistema operativo Microsoft Windows. UwAmp Server tiene herramientas como SQLite, Apache y PHP integradas. Con UwAmp Server, si el usuario decide probar las aplicaciones web sin conexión, eso sería posible. Por lo tanto, en realidad no necesitaría una conexión a Internet para probar las aplicaciones. Los usuarios que estén preocupados por la instalación de UwAmp Server no deben preocuparse porque no necesita una instalación. Muy bien puede comenzar con un archivo comprimido.
-               </p>
-
-               <div class="imgbox">
-                 <img class="center-fit" src="imgs/uwamp_server.png" alt="UwAmp Server.png">
-               </div>
-
-               <p>
-                Los usuarios seguramente encontrarán la interfaz para UwAmp Server muy interactiva. Los usuarios podrán encontrar mucha información con la interfaz. Puede verificar los ajustes de configuración junto con los comandos en la interfaz. Si va a ejecutar nuevas versiones de PHP junto con UwAmp Server, entonces sería factible. Los usuarios también podrán obtener datos sobre el uso de la CPU. Los usuarios pueden incluso ejecutar el servidor web desde el disco flash utilizando UwAmp Server.
-               </p>
-
-               <h4>AMPPS</h4>
-
-               <p>
-                Los usuarios pueden utilizar AMPPS para desarrollar aplicaciones web en PHP. AMPPS (de Softaculous) se puede ejecutar en Microsoft Windows, Mac y Linux OS. La disponibilidad de AMPPS en otros sistemas operativos de Microsoft Windows le da una posición sólida entre los primeros. La instalación es demasiado fácil y el usuario puede comenzar minutos después de la instalación.
-               </p>
-
-               <div class="imgbox">
-                  <img class="center-fit" src="imgs/ampps_server.jpg" alt="Ampps Server.jpg">
-               </div>
-
-               <p>
-                Con AMPPS, encontrará herramientas integradas como Apache, MySQL, Python, MongoDB y Perl. Sin duda, es una herramienta importante para PHP. Los usuarios pueden obtener acceso a más de 300 aplicaciones web PHP junto con miles de clases de PHP. Todas las ediciones de PHP son compatibles con AMPPS.
-               </p>
-
-               <p>
-                Los usuarios pueden realizar el desarrollo del sitio web mediante la programación ellos mismos o mediante aplicaciones web de código abierto. Con un solo clic del mouse, los usuarios podrán administrar la base de datos. La parte de secuencias de comandos con AMPPS se ha simplificado para los usuarios. Puede trabajar en cualquier aplicación que se adapte a sus necesidades como WordPress, Joomla o Drupal.
-               </p>
-
-               <h4>The Uniform Server</h4>
-
-               <p>
-                Uniform Server también se encuentra en la categoría superior de herramientas utilizadas para ejecutar servidores web, principalmente para verificar y validar la codificación HTML. El servidor uniforme solo se puede ejecutar en el sistema operativo Microsoft Windows. El servidor uniforme viene con Apache, PHP, Perl y MySQL. Todas las últimas versiones son compatibles con The Uniform Server.
-               </p>
-
-               <div class="imgbox">
-                <img class="center-fit" src="imgs/uniform_server.png" alt="Uniform Server.png">
-               </div>
-
-               <p>
-                Las características que a la mayoría de los usuarios les gusta de The Uniform Server son que no requiere instalación y el hecho de que consumirá menos de 10 MB de espacio de almacenamiento. Esto es realmente genial para los usuarios que tienen que pasar por el engorroso proceso de configuración y también que consume mucho espacio. Los usuarios pueden obtener actualizaciones de forma regular, junto con un excelente soporte para resolver consultas a tiempo. Los usuarios también pueden ir un paso más allá y cambiar la configuración para tener un mejor control sobre la programación. Entonces, si está buscando configuraciones y ajustes adicionales, entonces The Uniform Server es una de las mejores opciones.
-               </p>
-
-               <h4>MAMP</h4>
-
-               <p>
-                MAMP es una herramienta para ejecutar sitios web que son de naturaleza más compleja, como los sitios web dinámicos. Anteriormente, MAMP solo estaba sirviendo el sistema operativo Mac. Como está hecho para Macintosh, se llama MAMP. Entonces, si se encontró con el término LAMP, entonces es una versión similar a MAMP, pero se usa para el sistema operativo Linux. Incluso puede encontrar una versión similar para Microsoft Windows.
-               </p>
-
-               <div class="imgbox">
-                  <img class="center-fit" src="imgs/mamp.png" alt="MAMP logo.png">
-               </div>
-
-               <p>
-                MAMP es una gran herramienta que viene con un sistema de administración de bases de datos, un servidor web e innumerables lenguajes de programación. Entonces, a estas alturas ya habría adivinado que tiene soporte para Apache, MySQL, Perl, Python y PHP.
-               </p>
-
-               <p>
-                MAMP es de código abierto. A los usuarios les gusta usar MAMP con aplicaciones como Drupal y otras aplicaciones del sistema de gestión de contenido. A los usuarios incluso les gusta MAMP por el hecho de que no manipula otras aplicaciones existentes en el sistema. Ni siquiera realizan modificaciones en la configuración.
-               </p>
-
-               <p>
-                Al eliminar MAMP, los usuarios se sorprenderán al saber que el sistema sigue siendo normal como antes. MAMP también tiene una versión pro para ofrecer. Por lo general, lo necesitará si es un programador profesional y desea obtener funciones adicionales para varios alojamientos junto con funciones como servidor virtual, DNS dinámico, Multi-PHP y acceso LAN.
-               </p>
-
-              </section>
-              <!-- FIN: Content -->
-              
-              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo5')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
-              <p class="w3-clear"></p>
-              <div class="w3-row w3-margin-bottom" id="demo5" style="display:none">
-                <hr>
-                  <div class="w3-col l2 m3">
-                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
-                  </div>
-                  <div class="w3-col l10 m9">
-                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
-                    <p>¡Excelente contenido! Siguiendo.</p>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <!-- fin de Blog Entry (5) -->
-          <hr>
       <!-- END BLOG ENTRIES -->
       </div>
   
