@@ -15,8 +15,24 @@ Author URL: http://w3layouts.com
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link rel="stylesheet" href="assets/css/estilo-modal.css">
+
+    <!-- INI : W3CSS Template-->
+    <!--
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    -->
+    <!-- FIN : W3CSS Template -->
+
   </head>
   <body>
+  <main class="container">
 <!--w3l-header-->
 
 <header class="w3l-header-nav">
@@ -416,6 +432,29 @@ Author URL: http://w3layouts.com
             <input type="email" name="email" placeholder="Su dirección de e-mail" required="">
             <button><span class="fa fa-envelope-o"></span></button>
           </form>
+          <br>
+          <hr>
+          <ul>
+              <!-- 
+                 <li>
+                    <a href="javascript:document.getElementById('subscribe').style.display='block'">Administrar</a>
+                    <a href="javascript:">Administrar</a>
+                
+                    <button class="btn btn-primary" data-bs-toogle="modal" data-bs-target="#login-modal">
+                        Administrar
+                    </button>
+                </li>     
+              -->
+
+            <li>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#ventanaModal">
+                    Administrar
+                </button>
+                <!-- <a href="#login-modal" id="show-modal">Administrar</a> -->
+
+            </li>
+          </ul>
+
         </div>
       </div>
     </div>
@@ -465,7 +504,51 @@ Author URL: http://w3layouts.com
 <!-- /move top -->
 </section>
 
+
+  <!--
+  <div class="modal-container">
+    <div class="modal modal-close">
+        <p class="close">X</p>
+        <div class="modal-textos">
+            <h2>Acceso.</h2>
+            <p>Ingrese sus credenciales.</p>
+        </div>
+    </div>
+  </div>
+  -->
+
+  <div class="modal fade" id="ventanaModal" tabindex="-1" role="dialog" aria-labelledby="tituloVentana" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="tituloVentana">Acceso</h5>
+                <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="alert alert-sucess">
+                    <h6>Ingrese sus credenciales.</h6>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-warning" type="button" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button class="btn btn-success" type="button">
+                    Ingresar
+                </button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</main>
+
+
+
 <!-- Template JavaScript -->
+<script src="assets/js/modal-js.js"></script>
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 
 <script src="assets/js/owl.carousel.js"></script>
