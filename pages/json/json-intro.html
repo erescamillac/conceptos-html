@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<!-- INI: inlinestyle -->
+<style>
+        
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+        /* FIN: estilo para CENTRAR imagenes y redimensionarlas ('escalarlas') para ocupar el 100% del ancho disponible de la ventana*/
+
+</style>
+<!-- FIN: inlinestyle -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/eec-styles.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/erick-style1.css">
+    <link rel="stylesheet" href="/assets/css/erick-style2.css"> 
+
+    <title>JSON (por Erick Escamilla C. -2010067-).</title>
+</head>
+<body>
+    <header>
+        <div class="w3-bar w3-black w3-hide-small">
+            <a href="/pages/menus/menu-tercer-par.html" class="w3-bar-item w3-button">
+                <img width="16" src="/assets/images/navigation/back_icon.png" alt="Regresar">
+            </a>
+            <a href="/index.html" class="w3-bar-item w3-button">
+                <img width="16" src="/assets/images/navigation/home_icon.png" alt="Home">
+            </a>
+            <!--
+            <a href="/pages/arquitecturas/arquitecturas-menu.html" class="w3-bar-item w3-button">Arquitecturas</a>
+            <a href="/pages/webapps/web-apps-1-menu.html" class="w3-bar-item w3-button">Aplicaciones Web 1</a>
+            <a href="/pages/calculadora-js/calculadora-eec.html" class="w3-bar-item w3-button">CALCULADORA JS</a>
+            <a href="/pages/sw-servidores-desarrollo/sw-serv-des-menu.html" class="w3-bar-item w3-button">Servidores de DESARROLLO (2022-ene-24)</a>
+            <a href="/pages/plantillas/plantilla-1.html" class="w3-bar-item w3-button">Plantilla 1 (SSL, SSH, HTTPS) -2022/ene/25-</a>
+            -->
+            <a href="/pages/certificado/certificado.html" class="w3-bar-item w3-button">CERTIFICADO</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- INI: Skeleton -->
+        <!-- INI: plantilla (skeleton) -->
+    <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-48 w3-white">
+      <h1 class="w3-xxxlarge"><b>JSON (JavaScript Object Notation)</b></h1>
+      <h6>Plantilla Original <a href="https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm" target="_blank"><span class="w3-tag">https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm</span></a></h6>
+      <h6>Modificada por: <span class="w3-tag">Erick Escamilla C.</span> </h6>
+    </header>
+  
+    <!-- Image header -->
+    <header class="w3-display-container w3-wide" id="home">
+      <!-- <img class="w3-image" src="w3images/jane.jpg" alt="Fashion Blog" width="1600" height="1060"> -->
+      <img class="w3-image" src="/pages/plantillas/w3images/ssh-header-blog.png" alt="SSH Blog" width="1600" height="1060">
+      <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Erick's</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>TECH WORLD</b></h1>
+        <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUSCRIBIRME</button></h6>
+      </div>
+    </header>
+  
+    <!-- Grid -->
+    <div class="w3-row w3-padding w3-border">
+  
+      <!-- Blog entries -->
+      <div class="w3-col l8 s12">
+      
+        <!-- Blog entry (1) :: ['1. ¿Qué es JSON?'] -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+          <div class="w3-center">
+            <h3>1. ¿Qué es JSON?</h3>
+            <h5>JavaScript Object Notation <span class="w3-opacity">marzo 22, 2022</span></h5>
+          </div>
+  
+          <div class="w3-justify">
+            <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+            <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+            
+            <!-- INI: Content -->
+            <section>
+                <h3 class="main-header">1. ¿Qué es JSON?</h3>
+                <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+    
+                <p>
+                    <strong>JSON</strong> <em> (JavaScript Object Notation)</em> es un <strong><em>formato ligero de intercambio de datos</em></strong>. Es fácil de leer y escribir para los humanos. Es fácil de analizar y generar para las máquinas. Se basa en un subconjunto del estándar del lenguaje de programación JavaScript ECMA-262 3ª edición - diciembre de 1999. JSON es un <em>formato de texto</em> completamente independiente del lenguaje, pero utiliza convenciones que resultan familiares a los programadores de la familia de lenguajes C, como C, C++, C#, Java, JavaScript, Perl, Python y muchos otros. Estas propiedades hacen de JSON un lenguaje de intercambio de datos ideal.
+                </p>
+    
+                <div class="imgbox">
+                    <img class="center-fit" src="imgs/json_img.png" alt="Img ejemplo_1 de JSON">
+                </div>
+                
+               <p>
+                JavaScript Object Notation (JSON) es un formato basado en texto estándar para representar datos estructurados en la sintaxis de objetos de JavaScript. Es comúnmente utilizado para transmitir datos en aplicaciones web (por ejemplo: enviar algunos datos desde el servidor al cliente, así estos datos pueden ser mostrados en páginas web, o vice versa).
+               </p>
+
+               <h4>¿Qué es realmente JSON?</h4>
+
+               <p>
+                JSON es un formato de datos basado en texto que sigue la sintaxis de objeto de JavaScript, popularizado por Douglas Crockford. Aunque es muy parecido a la sintaxis de objeto literal de JavaScript, puede ser utilizado independientemente de JavaScript, y muchos entornos de programación poseen la capacidad de leer (convertir; parsear) y generar JSON.
+               </p>
+
+               <p>
+                Los JSON son cadenas - útiles cuando se quiere transmitir datos a través de una red. Debe ser convertido a un objeto nativo de JavaScript cuando se requiera acceder a sus datos. Ésto no es un problema, dado que JavaScript posee un objeto global JSON que tiene los métodos disponibles para convertir entre ellos.
+               </p>
+
+               <!--
+                  <code>
+                    <pre>
+                   
+                    </pre>
+                </code>
+               -->
+             
+               <p>
+                <strong>Nota:</strong> Convertir una cadena a un objeto nativo se denomina <em>parsing</em>, mientras que convertir un objeto nativo a una cadena para que pueda ser transferido a través de la red se denomina <em>stringification</em>.
+               </p>
+
+               <p>
+                Un objeto JSON puede ser almacenado en su propio archivo, que es básicamente sólo un archivo de texto con una extension .json, y un MIME type (en-US) de <code>application/json</code>.
+               </p>
+
+            </section>
+            <!-- FIN: Content -->
+            
+            <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+            <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+            <p class="w3-clear"></p>
+            <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+              <hr>
+                <div class="w3-col l2 m3">
+                  <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                </div>
+                <div class="w3-col l10 m9">
+                  <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                  <p>¡Excelente contenido! Siguiendo.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- fin de Blog Entry (1) -->
+        <hr>
+
+        <!-- Blog entry (2) :: ['2. ¿Cuál es la estructura de JSON?'] -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+            <div class="w3-center">
+              <h3>2. ¿Cuál es la estructura de JSON?</h3>
+              <h5>Estructura de JSON <span class="w3-opacity">marzo 22, 2022</span></h5>
+            </div>
+    
+            <div class="w3-justify">
+              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+              
+              <!-- INI: Content -->
+              <section>
+                  <h3 class="main-header">2. ¿Cuál es la estructura de JSON?</h3>
+                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+
+                  <h4>Estructura de JSON.</h4>
+      
+                  <p>
+                    JSON se basa en dos estructuras:
+                  </p>
+
+                  <ul>
+                      <li>
+                          <p>
+                            Una colección de <em>pares <strong>nombre/valor</strong></em>. En varios lenguajes, esto se realiza como un objeto, un registro, una estructura, un diccionario, una tabla hash, una lista con claves o una matriz asociativa.
+                          </p>
+                        </li>
+                      <li>
+                          <p>
+                            Una lista ordenada de valores. En la mayoría de los lenguajes, se realiza como una matriz, un vector, una lista o una secuencia.
+                          </p>
+                      </li>
+                  </ul>
+      
+                  <!-- 
+                  <div class="imgbox">
+                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
+                  </div>
+                  -->
+
+                  <p>
+                    Son estructuras de datos universales. Prácticamente todos los lenguajes de programación modernos las soportan de una forma u otra. Es lógico que un formato de datos que sea intercambiable con los lenguajes de programación se base también en estas estructuras.
+                  </p>
+
+                  <p>
+                    En JSON, adoptan estas formas:
+                  </p>
+
+                  <p>
+                    Un <em>objeto</em> es un conjunto desordenado de pares <strong>nombre/valor</strong>. Un objeto comienza con una llave izquierda <em><strong>{</strong></em>  y termina con una llave derecha <em><strong>}</strong></em>. Cada nombre va seguido de <em><strong>:</strong></em> (dos puntos) y los pares nombre/valor están separados por una <em><strong>,</strong></em> (coma).
+                  </p>
+
+                  <div class="imgbox">
+                    <img class="center-fit" src="imgs/object_json.png" alt="Img object JSON">
+                  </div>
+
+                  <p>
+                    Un <em>array</em> es una colección ordenada de valores. Un array comienza con un corchete izquierdo <em><strong>[</strong></em>  y termina con un corchete derecho <em><strong>]</strong></em>. Los valores se separan con una coma.
+                  </p>
+
+                  <div class="imgbox">
+                    <img class="center-fit" src="imgs/array_json.png" alt="Array JSON">
+                  </div>
+
+                  <p>
+                    Un <em>valor</em>  puede ser una <em>cadena</em>  entre comillas dobles, un número, true, false, null, un <strong>objeto</strong>  o un <strong>array</strong>. Estas estructuras <em><strong>pueden estar anidadas</strong></em>.
+                  </p>
+
+                  <div class="imgbox">
+                    <img class="center-fit" src="imgs/valores_json.png" alt="Valores JSON">
+                  </div>
+  
+              </section>
+              <!-- FIN: Content -->
+              
+              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo2')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+              <p class="w3-clear"></p>
+              <div class="w3-row w3-margin-bottom" id="demo2" style="display:none">
+                <hr>
+                  <div class="w3-col l2 m3">
+                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                  </div>
+                  <div class="w3-col l10 m9">
+                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                    <p>¡Excelente contenido! Siguiendo.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- fin de Blog Entry (2) -->
+          <hr>
+          
+          <!-- Blog entry (3) :: ['3. ¿Por qué usar JSON?'] -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+            <div class="w3-center">
+              <h3>3. ¿Por qué usar JSON?</h3>
+              <h5>Razones para usar JSON <span class="w3-opacity">marzo 22, 2022</span></h5>
+            </div>
+    
+            <div class="w3-justify">
+              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+              
+              <!-- INI: Content -->
+              <section>
+                  <h3 class="main-header">3. ¿Por qué usar JSON?</h3>
+                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+
+                  <p>
+                    JSON es un enfoque simple de serialización de objetos basado en la sintaxis de inicializadores de objetos de JavaScript. El código del inicializador (literal de objeto) se pone en una cadena y luego se interpreta utilizando el <em>parser</em>  JSON.
+                  </p>
+
+                 <code>
+                   <pre>
+                    serializedObj='{firstName:"john", lastName:"doe"}';
+                    ...
+                    var person = JSON.parse(serializedObj);
+                    document.getElementById("firstName").innerHTML=person.firstName;
+                   </pre>
+                 </code>
+      
+                  <p>
+                    JSON se utiliza ampliamente en varios frameworks y kits de herramientas AJAX para proporcionar una fácil serialización de objetos para las llamadas remotas. Hay una creciente comprensión de que tal vez JSON debe ser considerado como una opción al implementar SOA, por ejemplo, Dion Hinchcliffe publicó recientemente una entrada de blog sugiriendo que JSON (y otras tecnologías Web 2.0) debe ser considerado seriamente por los arquitectos de SOA (Service Oriented Architecture).
+                  </p>
+
+                  <p>
+                    A continuación, se listan algunas de las ventajas de utilizar JSON en lugar de XML:
+                  </p>
+
+                  <ul>
+                    <li>
+                      Manera totalmente automatizada de de-serializar/serializar objetos de JavaScript, con mínima o ninguna codificación.
+                    </li>
+                    <li>
+                      Muy buena compatibilidad con todos los navegadores.
+                    </li>
+                    <li>
+                      Formato conciso gracias al enfoque basado en el par nombre/valor
+                    </li>
+                    <li>
+                      Deserialización rápida de objetos en JavaScript
+                    </li>
+                    <li>
+                      Compatible con muchos conjuntos de herramientas AJAX y bibliotecas JavaScript
+                    </li>
+                    <li>
+                      API sencilla (disponible para JavaScript y otros lenguajes)
+                    </li>
+                  </ul>
+                  <!-- 
+                  <div class="imgbox">
+                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
+                  </div>
+                  -->
+                  
+              </section>
+              <!-- FIN: Content -->
+              
+              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+              <p class="w3-clear"></p>
+              <div class="w3-row w3-margin-bottom" id="demo3" style="display:none">
+                <hr>
+                  <div class="w3-col l2 m3">
+                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                  </div>
+                  <div class="w3-col l10 m9">
+                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                    <p>¡Excelente contenido! Siguiendo.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- fin de Blog Entry (3) -->
+          <hr>
+
+          <!-- Blog entry (4) :: ['4. Funciones (métodos) de JSON'] -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+            <div class="w3-center">
+              <h3>4. Funciones (métodos) de JSON</h3>
+              <h5>El objego GLOBAL JSON de Javascript <span class="w3-opacity">marzo 22, 2022</span></h5>
+            </div>
+    
+            <div class="w3-justify">
+              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+              
+              <!-- INI: Content -->
+              <section>
+                  <h3 class="main-header">4. Funciones (métodos) de JSON (Objeto global de JS)</h3>
+                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+      
+                 <p>
+                  El <strong>objeto JSON</strong> contiene métodos para analizar la Notación de Objetos de JavaScript (JSON) y convertir valores a JSON. No se puede llamar ni construir, y aparte de sus dos propiedades de método, no tiene ninguna funcionalidad interesante propia.
+                 </p>
+      
+                 <h4>Métodos estáticos</h4>
+
+                 <p><code>JSON.<strong>parse</strong>(text[, reviver])</code></p>
+
+                 <p>
+                  Analiza la cadena de texto como JSON, opcionalmente transforma el valor producido y sus propiedades, y devuelve el valor. Cualquier violación de la sintaxis de JSON, incluyendo las diferencias entre JavaScript y JSON, provoca un SyntaxError. La opción reviver permite interpretar lo que el reponedor ha utilizado para sustituir a otros tipos de datos.
+                 </p>
+
+                 <p><code>JSON.<strong>stringify</strong>(value[, replacer[, space]])</code></p>
+
+                 <p>
+                  Devuelve una cadena JSON correspondiente al valor especificado, incluyendo opcionalmente sólo ciertas propiedades o sustituyendo los valores de las propiedades de una manera definida por el usuario. Por defecto, todas las instancias de undefined son reemplazadas por null, y otros tipos de datos nativos no soportados son censurados. La opción de reemplazo permite especificar otro comportamiento.
+                 </p>
+                  <!-- 
+                  <div class="imgbox">
+                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
+                  </div>
+                  -->
+                  <div class="imgbox">
+                      <img class="center-fit" src="imgs/json_parse_stringify.jpg" alt="Img JSON parse stringify.jpg">
+                  </div>
+
+              </section>
+              <!-- FIN: Content -->
+              
+              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo4')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+              <p class="w3-clear"></p>
+              <div class="w3-row w3-margin-bottom" id="demo4" style="display:none">
+                <hr>
+                  <div class="w3-col l2 m3">
+                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                  </div>
+                  <div class="w3-col l10 m9">
+                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                    <p>¡Excelente contenido! Siguiendo.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- fin de Blog Entry (4) -->
+          <hr>
+
+          <!-- Blog entry (5) :: ['5. Diferencia entre JSON y JS'] -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+            <div class="w3-center">
+              <h3>5. Diferencia entre JSON y JS</h3>
+              <h5>JSON vs. JS <span class="w3-opacity">marzo 22, 2022</span></h5>
+            </div>
+    
+            <div class="w3-justify">
+              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+              
+              <!-- INI: Content -->
+              <section>
+                  <h3 class="main-header">5. Diferencia entre JSON y JS</h3>
+                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+
+                 <h4>Diferencia entre JSON y JS</h4>
+
+                 <p>
+                    Aunque la sintaxis de JSON es similar a la de los objetos de JavaScript, JSON es diferente de los objetos de JavaScript.
+                 </p>
+
+
+                  <!-- 
+                  <div class="imgbox">
+                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
+                  </div>
+                  -->
+
+                  <table>
+                    <caption>Diferencia entre JSON y Javascript</caption>
+                    <thead>
+                        <tr>
+                           <th>JSON</th>
+                           <th>Javascript Object</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          La clave del par clave/valor debe ir entre comillas dobles.
+                        </td>
+                        <td>
+                          La clave del par clave/valor puede ir sin comillas dobles.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          JSON no puede contener funciones.
+                        </td>
+                        <td>
+                          Los objetos de JavaScript pueden contener funciones.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          JSON puede ser creado y utilizado por otros lenguajes de programación.
+                        </td>
+                        <td>
+                          Los objetos JavaScript sólo pueden utilizarse en JavaScript.
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>
+
+                <p>
+                  JSON es una sintaxis para serializar objetos, matrices, números, cadenas, booleanos y nulos. Se basa en la sintaxis de JavaScript, pero es distinta de ella: un poco de JavaScript no es JSON.
+                </p>
+
+                <ul>
+                  <li>
+                    <p><strong>Objetos y matrices</strong></p>
+                    Los nombres de las propiedades deben estar entre comillas dobles; las comas al final están prohibidas.
+                  </li>
+                  <li>
+                    <p><strong>Números</strong></p>
+                    Los ceros a la izquierda están prohibidos. Un punto decimal debe ir seguido de al menos un dígito. No se admite NaN ni Infinito.
+                  </li>
+                  <li>
+                    <p><strong>Cualquier texto JSON es una expresión JavaScript válida...</strong></p>
+                    ...Pero sólo en los motores de JavaScript que han implementado la propuesta para que todo el texto JSON sea válido ECMA-262. En los motores que no han implementado la propuesta, U+2028 LINE SEPARATOR y U+2029 PARAGRAPH SEPARATOR están permitidos en los literales de cadena y las claves de propiedades en JSON; pero su uso en estas características en los literales de cadena de JavaScript es un SyntaxError.
+                  </li>
+                </ul>
+                  
+                <p>
+                  Considere este ejemplo donde JSON.parse() analiza la cadena como JSON y eval ejecuta la cadena como JavaScript:
+                </p>
+
+                <code>
+                  <pre>
+                    let code = '"\u2028\u2029"'
+                    JSON.parse(code)  // evaluates to "\u2028\u2029" in all engines
+                    eval(code)        // throws a SyntaxError in old engines
+                  </pre>
+                </code>
+
+                <p>
+                  Otras diferencias son que sólo permite cadenas con comillas dobles y que no tiene disposiciones para indefinidos o comentarios. Para aquellos que deseen utilizar un formato de configuración más amigable basado en JSON, existe JSON5, utilizado por el compilador Babel, y el más comúnmente utilizado YAML
+                </p>
+
+              </section>
+              <!-- FIN: Content -->
+              
+              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo5')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+              <p class="w3-clear"></p>
+              <div class="w3-row w3-margin-bottom" id="demo5" style="display:none">
+                <hr>
+                  <div class="w3-col l2 m3">
+                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                  </div>
+                  <div class="w3-col l10 m9">
+                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                    <p>¡Excelente contenido! Siguiendo.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- fin de Blog Entry (5) -->
+
+          <!-- Blog entry (6) :: ['6. Ejemplo de JSON y PHP.'] -->
+          <div class="w3-container w3-white w3-margin w3-padding-large">
+            <div class="w3-center">
+              <h3>6. Ejemplo de JSON y PHP.</h3>
+              <h5>Ejemplo JSON-PHP <span class="w3-opacity">marzo 22, 2022</span></h5>
+            </div>
+    
+            <div class="w3-justify">
+              <!-- <img src="w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16"> -->
+              <!-- <img src="w3images/ssl-secure-conn-final.png" alt="SSL Secure Connection" style="width:100%" class="w3-padding-16"> -->
+              
+              <!-- INI: Content -->
+              <section>
+                  <h3 class="main-header">6. Ejemplo de JSON y PHP.</h3>
+                  <p class="olive-paragraph">Creado por <strong>Erick Escamilla C.</strong></p>
+
+                 <h4>Ejemplo de JSON y PHP</h4>
+
+                 <p>
+                  Un uso común de JSON es leer datos de un servidor web, y mostrar los datos en una página web.
+                 </p>
+
+                 <h5>Ejemplo 1</h5>
+
+                 <h6>Archivo PHP:</h6>
+
+                 <p>
+                  PHP tiene algunas funciones incorporadas para manejar JSON.
+                 </p>
+
+                 <p>
+                  Los objetos en PHP se pueden convertir en JSON utilizando la función de PHP json_encode():
+                 </p>
+
+                 <code>
+                   <pre>
+                    &#60;&#63;php
+                    $myObj->name = "John";
+                    $myObj->age = 30;
+                    $myObj->city = "New York";
+                    
+                    $myJSON = json_encode($myObj);
+                    
+                    echo $myJSON;
+                    &#63;&#62;
+                   </pre>
+                 </code>
+
+                 <h6>El cliente JavaScript</h6>
+
+                 <p>
+                  Aquí hay un JavaScript en el cliente, utilizando una llamada AJAX para solicitar el archivo PHP del ejemplo anterior:
+                 </p>
+
+                 <code>
+                   <pre>
+                    const xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onload = function() {
+                      const myObj = JSON.parse(this.responseText);
+                      document.getElementById("demo").innerHTML = myObj.name;
+                    }
+                    xmlhttp.open("GET", "demo_file.php");
+                    xmlhttp.send();
+                   </pre>
+                 </code>
+
+                 <!-- 
+                  <div class="imgbox">
+                    <img class="center-fit" src="imgs/sql_vs_mysql.png" alt="Img SQL vs MySQL.png">
+                  </div>
+                 -->
+                 
+                  <!-- 
+                  <div class="imgbox">
+                      <img class="center-fit" src="imgs/php_loho.png" alt="Img logo de PHP">
+                  </div>
+                  -->
+
+                  <h5>Ejemplo 2: Array PHP</h5>
+
+                  <h6>Archivo PHP:</h6>
+
+                  <p>
+                    Las matrices en PHP también se convertirán en JSON cuando se utilice la función de PHP json_encode():
+                  </p>
+
+                  <code>
+                    <pre>
+                      &#60;&#63;php
+                        $myArr = array("John", "Mary", "Peter", "Sally");
+
+                        $myJSON = json_encode($myArr);
+
+                        echo $myJSON;
+                      &#63;&#62;
+                    </pre>
+                  </code>
+
+                  <h6>Cliente Javascript</h6>
+
+                  <p>
+                    Aquí hay un JavaScript en el cliente, usando una llamada AJAX para solicitar el archivo PHP del ejemplo del array anterior:
+                  </p>
+
+                  <code>
+                    <pre>
+                      var xmlhttp = new XMLHttpRequest();
+                      xmlhttp.onload = function() {
+                        const myObj = JSON.parse(this.responseText);
+                        document.getElementById("demo").innerHTML = myObj[2];
+                      }
+                      xmlhttp.open("GET", "demo_file_array.php", true);
+                      xmlhttp.send();
+                    </pre>
+                  </code>
+    
+              </section>
+              <!-- FIN: Content -->
+              
+              <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+              <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo5')" id="myBtn"><b>Respuestas  </b> <span class="w3-tag w3-white">1</span></button></p>
+              <p class="w3-clear"></p>
+              <div class="w3-row w3-margin-bottom" id="demo5" style="display:none">
+                <hr>
+                  <div class="w3-col l2 m3">
+                    <img src="/pages/plantillas/w3images/avatar_smoke.jpg" style="width:90px;">
+                  </div>
+                  <div class="w3-col l10 m9">
+                    <h4>Juan Z. <span class="w3-opacity w3-medium">enero 25, 2022, 8:45 AM</span></h4>
+                    <p>¡Excelente contenido! Siguiendo.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIN de Blog Entry (6) -->
+
+          <hr>
+      <!-- END BLOG ENTRIES -->
+      </div>
+  
+      <!-- About/Information menu -->
+      <div class="w3-col l4">
+        <!-- About Card -->
+        <div class="w3-white w3-margin">
+          <img src="/pages/plantillas/w3images/erick-profile.png" alt="Erick Profile.png" style="width:100%" class="w3-grayscale">
+          <div class="w3-container w3-black">
+            <h4>Erick Escamilla Charco</h4>
+            <p>Ingeniero en Sistemas Computacionales, apasionado por la tecnología. Deasrrollador Web Full-Stack por ocupación e inquisidor por convicción.</p>
+          </div>
+        </div>
+        <hr>
+  
+        <!-- Posts -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Publicaciones populares</h4>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-white">
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">UI/UX</span>
+              <br>
+              <span>Explore las diferencias entre User Interface y User eXperience.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/bandmember.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Django: tutorial para principiantes</span>
+              <br>
+              <span>Descubra uno de los frameworks más populares para desarrollo Web en Python.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Hacking ético con Kali Linux</span>
+              <br>
+              <span>Tome una breve introducción al uso de herramientas de audotoría informática con Kali.</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="/pages/plantillas/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+              <span class="w3-large">Spring Boot</span>
+              <br>
+              <span>Descubra un de los frameworks más populares para desarrollo Back-end con Java EE.</span>
+            </li>
+          </ul>
+        </div>
+        <hr>
+  
+        <!-- Tags -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Tags</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p>
+              <span class="w3-tag w3-black w3-margin-bottom">Desarrollo Web</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Front-end</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Back-end</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSH</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SSL</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTP</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTTPS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">AWS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Azure</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">GCP</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Load-balancing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Jboss EAP</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Java EE</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Spring Boot</span>
+            </p>
+          </div>
+        </div>
+        <hr>
+  
+        <!-- Inspiration -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Inspiración</h4>
+          </div>
+          <div class="w3-row-padding w3-white">
+            <div class="w3-col s6">
+              <p><img src="/pages/plantillas/w3images/inspiracion-1.png" alt="Sala de servidores.png" style="width:100%"></p>
+              <p><img src="/pages/plantillas/w3images/robot-wallp-v2.png" alt="Robot.png" style="width:100%"></p>
+            </div>
+            <div class="w3-col s6">
+              <p><img src="/pages/plantillas/w3images/mr-robot-wallpaper.png" alt="Mr Robot Wallp.png" style="width:100%" class="w3-grayscale"></p>
+              <p><img src="/pages/plantillas/w3images/hacking-wallp-v2.png" alt="Hacking Wallpaper.png" style="width:100%"></p>
+           </div>
+          </div>
+        </div>
+        <hr>
+  
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Sígueme</h4>
+          </div>
+          <div class="w3-container w3-xlarge w3-padding">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+          </div>
+        </div>
+        <hr>
+        
+        <!-- Subscribe -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Suscribirse</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p>Ingrese su e-mail y reciba las últimas noticias.</p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Ingrese e-mail" style="width:100%"></p>
+            <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Suscribir</button></p>
+          </div>
+        </div>
+  
+      <!-- END About/Intro Menu -->
+      </div>
+  
+    <!-- END GRID -->
+    </div>
+  
+  <!-- END w3-content -->
+  </div>
+  
+  <!-- Subscribe MODAL -->
+  <div id="subscribe" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content" style="padding:32px">
+      <div class="w3-container w3-white">
+        <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+        <h2 class="w3-wide">SUSCRIBIR</h2>
+        <!-- <p>Join my mailing list to receive updates on the latest blog posts and other things.</p> -->
+        <p>Únase a la lista de correos de Erick's Tech World para recibir actualizaciones sobre las últimas publicaciones del blog y obtener beneficios adicionales.</p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Ingrese su e-mail"></p>
+        <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Suscribirme</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- cierre del main-->
+   <!-- FIN: contenido principal de la página [MAIN] -->
+    </main>
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-dark-grey" style="padding:32px">
+    <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>Regresar a la parte superior</a>
+    <p>Programación Web: Conceptos, creado por <strong>Erick Escamilla Charco</strong> <em> (2010067)</em>.</p>
+    <p>Hosting:</p>
+    <p>https://www.youtube.com/watch?v=f8UNcMCbhk0</p>
+    <p>Con ayuda de <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+  
+  <script>
+  // Toggle between hiding and showing blog replies/comments
+  document.getElementById("myBtn").click();
+  function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  function likeFunction(x) {
+    x.style.fontWeight = "bold";
+    x.innerHTML = "✓ Liked";
+  }
+  </script>
+  
+    <!-- FIN: plantilla (skeleton) -->
+        <!-- FIN: Skeleton -->
+</body>
+</html>
